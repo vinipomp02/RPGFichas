@@ -9,6 +9,7 @@ namespace RPGFichas.Domain
     public class Increments
     {
         public int incremento { get; set; } = 0;
+
         public string Incrementa()
         {
             if (incremento < 15)

@@ -22,6 +22,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Grids\ArmasGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Grids\ConditionsGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Grids\Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -35,5 +44,15 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PresentationFramework" Version="4.6.0" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 
 </Project>

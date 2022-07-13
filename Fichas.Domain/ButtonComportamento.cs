@@ -19,6 +19,7 @@ namespace RPGFichas.Domain
 
         public void desmarcarAtributo()
         {
+            if (buttonMarcado == null) return;
             buttonMarcado.BackColor = Color.White;
             buttonMarcado = null;
         }

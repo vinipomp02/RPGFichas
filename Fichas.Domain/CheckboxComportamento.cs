@@ -11,6 +11,7 @@ namespace RPGFichas.Domain
     {
         public CheckBox? checkBoxPericiaMarcada { get; set; }
         public CheckBox? checkBoxRollsMarcada { get; set; }
+
         public void marcarCheckBox(CheckBox checkBox,string? tipoCheckBox)
         {
 
@@ -31,6 +32,7 @@ namespace RPGFichas.Domain
         }
         public void desmarcarCheckBox(CheckBox checkBox, string? tipoCheckBox)
         {
+            if (checkBox == null) return;
             checkBox.Checked = false;
             checkBox.BackColor = Color.White;
 
@@ -50,14 +52,8 @@ namespace RPGFichas.Domain
             if (checkBox.Checked) marcarCheckBox(checkBox, tipoCheckBox);
             if (!checkBox.Checked) desmarcarCheckBox(checkBox, tipoCheckBox);
         }
-        public void selecionaCheckBox(object sender)
-        {
-            selecionaCheckBox(sender, null);
-        }
-        public void desmarcarCheckBox(CheckBox checkBox)
-        {
-            desmarcarCheckBox(checkBox, null);
-        }
+        public void selecionaCheckBox(object sender) => selecionaCheckBox(sender, null);
+        public void desmarcarCheckBox(CheckBox checkBox) => desmarcarCheckBox(checkBox, null);
 
     }
 }

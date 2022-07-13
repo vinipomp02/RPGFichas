@@ -5,7 +5,9 @@ VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPGFichas", "RPGFichas\RPGFichas.csproj", "{C9C67E87-5753-4AF7-841D-E49F8B88A05F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGFichas.Domain", "Fichas.Domain\RPGFichas.Domain.csproj", "{10BC21BE-0B30-4312-BD25-6AD1BA643D17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPGFichas.Domain", "Fichas.Domain\RPGFichas.Domain.csproj", "{10BC21BE-0B30-4312-BD25-6AD1BA643D17}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{A2B40F82-B34B-4D9A-9FB4-752FF29DB5DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,8 @@ Global
 		{10BC21BE-0B30-4312-BD25-6AD1BA643D17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10BC21BE-0B30-4312-BD25-6AD1BA643D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10BC21BE-0B30-4312-BD25-6AD1BA643D17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2B40F82-B34B-4D9A-9FB4-752FF29DB5DB}.Debug|Any CPU.ActiveCfg = Debug
+		{A2B40F82-B34B-4D9A-9FB4-752FF29DB5DB}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

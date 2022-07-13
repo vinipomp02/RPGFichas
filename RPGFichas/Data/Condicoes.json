@@ -1,0 +1,247 @@
+[
+  {
+    "Id": 1,
+    "Condicao": "Abalado",
+    "Tipo": "Medo",
+    "Upgrade": "Apavorado",
+    "Descricao": "O personagem sofre -1D em testes. Se ficar abalado novamente, em vez disso fica apavorado. Condicao de medo."
+  },
+  {
+    "Id": 2,
+    "Condicao": "Agarrado",
+    "Tipo": "Paralisia",
+    "Upgrade": null,
+    "Descricao": "O personagem fica desprevenido e imovel, sofre -1D em testes de ataque e so pode atacar com armas leves. Um personagem fazendo um ataque à distancia contra um alvo envolvido na manobra agarrar tem 50% de chance de acertar o alvo errado. Condicao de paralisia"
+  },
+  {
+    "Id": 3,
+    "Condicao": "Alquebrado",
+    "Tipo": "Mental",
+    "Upgrade": null,
+    "Descricao": ". O custo em pontos de esforco das habilidades e Rituais do personagem aumenta em +1. Condicao mental."
+  },
+  {
+    "Id": 4,
+    "Condicao": "Apavorado",
+    "Tipo": "Medo",
+    "Upgrade": null,
+    "Descricao": ". O personagem sofre -2D em testes de pericia e deve fugir da fonte do medo da maneira mais eficiente possivel. Se nao puder, podera agir, mas nao podera se aproximar voluntariamente da fonte do medo. Condicao de medo"
+  },
+  {
+    "Id": 5,
+    "Condicao": "Asfixiado",
+    "Tipo": "Geral",
+    "Upgrade": null,
+    "Descricao": "O personagem nao pode respirar. Um personagem asfixiado pode prender seu folego por um total de rodadas igual ao seu valor de Vigor +1 e, a cada vez que sofre dano enquanto esta nesta condicao, reduz este valor em 1. Ao final de seu turno na ultima dessas rodadas, o personagem fica morrendo."
+  },
+  {
+    "Id": 6,
+    "Condicao": "Atordoado",
+    "Tipo": "Mental",
+    "Upgrade": null,
+    "Descricao": ". O personagem fica desprevenido e nao pode fazer acoes. Condicao mental. "
+  },
+  {
+    "Id": 7,
+    "Condicao": "Caido",
+    "Tipo": "Geral",
+    "Upgrade": null,
+    "Descricao": "Deitado no chao. O personagem sofre -2D em ataques corpo a corpo e seu deslocamento e reduzido a 1,5m. Alem disso, sofre -5 de Defesa contra ataques corpo a corpo, mas recebe +5 de Defesa contra ataques à distancia"
+  },
+  {
+    "Id": 8,
+    "Condicao": "Cego",
+    "Tipo": "Sentidos",
+    "Upgrade": null,
+    "Descricao": "O personagem fica desprevenido e lento, nao pode fazer testes de Percepcao para observar e sofre -2D em testes de pericias baseadas em Forca ou Agilidade. Todos os alvos de seus ataques recebem camuflagem total. Condicao de sentidos."
+  },
+  {
+    "Id": 9,
+    "Condicao": "Confuso",
+    "Tipo": "Mental",
+    "Upgrade": null,
+    "Descricao": "O personagem comporta-se de modo aleatorio. Role 1d6 no inicio de seus turnos. 1) Movimenta-se em uma direcao escolhida por uma rolagem de 1d8; 2-3) Nao pode fazer acoes, exceto reacoes, e fica balbuciando incoerentemente; 4-5) Usa a arma que estiver empunhando para atacar o personagem mais proximo, ou a si mesmo se estiver sozinho (nesse caso, apenas role o dano); 6) A condicao termina e pode agir normalmente. Condicao mental."
+  },
+  {
+    "Id": 10,
+    "Condicao": "Debilitado",
+    "Tipo": "Geral",
+    "Upgrade": null,
+    "Descricao": " O personagem sofre -2D em testes de atributos fisicos (Agilidade, Forca e Vigor). Se o personagem ficar debilitado novamente, em vez disso fica inconsciente"
+  },
+  {
+    "Id": 11,
+    "Condicao": "Desprevenido",
+    "Tipo": "Geral",
+    "Upgrade": null,
+    "Descricao": "Despreparado para reagir. O personagem sofre -5 na Defesa e -2D em Reflexos. Você fica desprevenido contra inimigos que nao possa ver"
+  },
+  {
+    "Id": 12,
+    "Condicao": "Doente",
+    "Tipo": "Geral",
+    "Upgrade": null,
+    "Descricao": "Sob efeito de uma doenca."
+  },
+  {
+    "Id": 13,
+    "Condicao": "Em Chamas",
+    "Tipo": "Geral",
+    "Upgrade": null,
+    "Descricao": "O personagem esta pegando fogo. No inicio de seus turnos, sofre 1d6 pontos de dano fisico. O personagem pode gastar uma acao padrao para apagar o fogo com as maos. Imersao em agua tambem apaga as chamas"
+  },
+  {
+    "Id": 14,
+    "Condicao": "Enjoado",
+    "Tipo": "Geral",
+    "Upgrade": null,
+    "Descricao": "O personagem so pode realizar uma acao padrao ou de movimento (nao ambas) por lancarrodada"
+  },
+  {
+    "Id": 15,
+    "Condicao": "Enredado",
+    "Tipo": "Paralisia",
+    "Upgrade": null,
+    "Descricao": " O personagem fica lento, vulneravel e sofre -1D em testes de ataque. Condicao de paralisia"
+  },
+  {
+    "Id": 16,
+    "Condicao": "Envenenado",
+    "Tipo": "Geral",
+    "Upgrade": null,
+    "Descricao": ". O efeito desta condicao varia de acordo com o veneno. Pode ser outra condicao (por exemplo, fraco ou enjoado) ou dano recorrente (por exemplo, 1d12 pontos de dano por rodada). A descricao do veneno determina a duracao dele (caso nada seja dito, a condicao dura pela cena)."
+  },
+  {
+    "Id": 17,
+    "Condicao": "Esmorecido",
+    "Tipo": "Mental",
+    "Upgrade": null,
+    "Descricao": "O personagem sofre -2D em testes de atributos mentais (Intelecto e Presenca). Condicao mental."
+  },
+  {
+    "Id": 18,
+    "Condicao": "Exausto",
+    "Tipo": "Geral",
+    "Upgrade": "Inconsciente",
+    "Descricao": "O personagem fica debilitado, lento e vulneravel. Se ficar exaustonovamente, em vez disso fica inconsciente. Condicao de fadiga"
+  },
+  {
+    "Id": 19,
+    "Condicao": "Fascinado",
+    "Tipo": "Mental",
+    "Upgrade": null,
+    "Descricao": " Com a atencao presa em alguma coisa. O personagem sofre -2D em Percepcao e nao pode fazer acoes, exceto observar aquilo que o fascinou. Qualquer acao hostil contra o personagem anula esta condicao. Chacoalhar um personagem fascinado para tira-lo desse estado gasta uma acao padrao. Condicao mental."
+  },
+  {
+    "Id": 20,
+    "Condicao": "Fatigado",
+    "Tipo": "Geral",
+    "Upgrade": "Exausto",
+    "Descricao": "O personagem fica fraco e vulneravel. Se o personagem ficar fatigadonovamente, em vez disso fica exausto. Condicao de fadiga."
+  },
+  {
+    "Id": 21,
+    "Condicao": "Fraco",
+    "Tipo": "Geral",
+    "Upgrade": "Debilitado",
+    "Descricao": ". O personagem sofre -1D em testes de atributos fisicos (Agilidade, Fisico e Vigor). Se ficar fraco novamente, em vez disso fica debilitado"
+  },
+  {
+    "Id": 22,
+    "Condicao": "Frustrado",
+    "Tipo": "Mental",
+    "Upgrade": "Esmorecido",
+    "Descricao": " O personagem sofre -1D em testes de atributos mentais (Intelecto e Presenca). Se ficar frustrado novamente, em vez disso fica esmorecido. Condicao mental."
+  },
+  {
+    "Id": 23,
+    "Condicao": "Imovel",
+    "Tipo": "Paralisia",
+    "Upgrade": null,
+    "Descricao": "Todas as formas de deslocamento do personagem sao reduzidas a 0m. Condicao de paralisia"
+  },
+  {
+    "Id": 24,
+    "Condicao": "Inconsciente",
+    "Tipo": "Geral",
+    "Upgrade": null,
+    "Descricao": " O personagem fica indefeso e nao pode fazer acoes. Chacoalhar um personagem para acorda-lo gasta uma acao padrao"
+  },
+  {
+    "Id": 25,
+    "Condicao": "Indefeso",
+    "Tipo": "Geral",
+    "Upgrade": null,
+    "Descricao": " O personagem e considerado desprevenido, mas sofre -10 na Defesa, falha automaticamente em testes de Reflexos e pode sofrer golpes de misericordia"
+  },
+  {
+    "Id": 26,
+    "Condicao": "Lento",
+    "Tipo": "Lento",
+    "Upgrade": null,
+    "Descricao": "Todas as formas de deslocamento do personagem sao reduzidas à metade (arredonde para baixo para o primeiro incremento de 1,5m) e ele nao pode correr ou fazer investidas. Condicao de paralisia."
+  },
+  {
+    "Id": 27,
+    "Condicao": "Machucado",
+    "Tipo": "Geral",
+    "Upgrade": null,
+    "Descricao": "O personagem esta abaixo da metade dos pontos de vida totais."
+  },
+  {
+    "Id": 28,
+    "Condicao": "Ofuscado",
+    "Tipo": "Sentidos",
+    "Upgrade": null,
+    "Descricao": "O personagem sofre -1D em testes de ataque e de Percepcao. Condicao de sentidos"
+  },
+  {
+    "Id": 29,
+    "Condicao": "Paralisado",
+    "Tipo": "Paralisia",
+    "Upgrade": null,
+    "Descricao": "O personagem fica imovel e indefeso e so pode realizar acoes puramente mentais. Condicao de paralisia."
+  },
+  {
+    "Id": 30,
+    "Condicao": "Pasmo",
+    "Tipo": "Mental",
+    "Upgrade": null,
+    "Descricao": "O personagem nao pode fazer acoes, exceto reacoes. Condicao mental."
+  },
+  {
+    "Id": 31,
+    "Condicao": "Petrificado",
+    "Tipo": "Geral",
+    "Upgrade": null,
+    "Descricao": " O personagem fica inconsciente e recebe Resistência Fisico 10."
+  },
+  {
+    "Id": 32,
+    "Condicao": "Sangrando",
+    "Tipo": "Geral",
+    "Upgrade": null,
+    "Descricao": "Com um ferimento aberto. No inicio de seus turnos, o personagem deve fazer um teste de Constituicao (DT 15). Se passar, estabiliza e remove essa condicao. Se falhar, sofre 1d6 pontos de dano e continua sangrando"
+  },
+  {
+    "Id": 33,
+    "Condicao": "Surdo",
+    "Tipo": "Sentidos",
+    "Upgrade": null,
+    "Descricao": "O personagem nao pode fazer testes de Percepcao para ouvir e sofre -2D em testes de Agilidade para determinar iniciativa. Alem disso, e considerado em condicao ruim para conjurar Rituais. Condicao de sentidos"
+  },
+  {
+    "Id": 34,
+    "Condicao": "Surpreendido",
+    "Tipo": "Geral",
+    "Upgrade": null,
+    "Descricao": ". Nao ciente de seus inimigos. O personagem fica desprevenido e nao pode fazer acoes, exceto reacoes"
+  },
+  {
+    "Id": 35,
+    "Condicao": "Vulneravel",
+    "Tipo": "Geral",
+    "Upgrade": null,
+    "Descricao": "O personagem sofre -5 na Defesa"
+  }
+]
