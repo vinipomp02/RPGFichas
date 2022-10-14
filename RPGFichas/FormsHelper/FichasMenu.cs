@@ -37,8 +37,17 @@ namespace RPGFichas.FormsHelper
         {
             if (fichaObject.ImageFile == null) return;
             imageFile = fichaObject.ImageFile;
-            btnImage.BackgroundImage = Image.FromFile(imageFile);
-            btnImage.Text = null;
+            try
+            {
+                btnImage.BackgroundImage = Image.FromFile(imageFile);
+                btnImage.Text = null;
+            }
+            catch
+            {
+                btnImage.Text = "ImgNotFound";
+            }
+            
+            
         }
         private void LoadJson()
         {

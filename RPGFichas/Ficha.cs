@@ -1,6 +1,9 @@
 ﻿using System.Security;
 using System.Text.Json;
 using System.Text.RegularExpressions;
+using Microsoft.VisualBasic;
+using ProgressBarSample;
+using ProjectMentor.Windows.Controls;
 using RPGFichas.Domain;
 using RPGFichas.Domain.Collections;
 using RPGFichas.Domain.Objects;
@@ -11,7 +14,7 @@ namespace RPGFichas
 {
     public partial class Ficha : Form
     {
-        DgvComportamento DgvComportamento = new();
+        public DgvComportamento DgvComportamento = new();
         Dados Dados = new();
         Increments Increments = new();
         CheckboxComportamento CheckboxComportamento = new();
@@ -23,13 +26,11 @@ namespace RPGFichas
 
         public ArmasGrid ArmaGrid;
         public ConditionsGrid ConditionGrid;
-        public RitualForm RitualForm;
-        public PoderForm PoderForm;
         public Inventario Inventario;
         public DanoArmaEdit DanoEdit;
         public CritArmaEdit CritEdit;
 
-        public Ficha(string Modo, Menu menu, FichaObject? ficha,string? imageFile)
+        public Ficha(string Modo, Menu menu, FichaObject? ficha, string? imageFile)
         {
             InitializeComponent();
 
@@ -38,8 +39,8 @@ namespace RPGFichas
 
             int nex = 0;
             if (Modo == "Jogo")
-            { 
-                int.TryParse(txtNEX.Text.Replace("%",""), out nex);
+            {
+                int.TryParse(txtNEX.Text.Replace("%", ""), out nex);
                 btnAddFicha.Visible = false;
                 btnAddFicha.Enabled = false;
             }
@@ -52,9 +53,7 @@ namespace RPGFichas
 
             }
 
-            if(imageFile != null) ImageFile = imageFile;
-
-            PoderForm = new(this, cbxClasse.Text, cbxOrigem.Text, nex);
+            if (imageFile != null) ImageFile = imageFile;
         }
 
         private void Ficha_Load(object sender, EventArgs e)
@@ -62,9 +61,8 @@ namespace RPGFichas
             ArmaGrid = new(this);
             ConditionGrid = new(this);
             Inventario = new(this);
-            RitualForm = new(this);
 
-            carregaInfos(); 
+            carregaInfos();
             carregaData(fichaBase);
         }
         private void Ficha_FormClosed(object sender, FormClosedEventArgs e) => Menu.Show();
@@ -73,31 +71,37 @@ namespace RPGFichas
             Menu.Form1_Load(sender, e);
 
             if (txtNome.Text == "" || txtNome.Text == null) return;
-
-            var salvar = MessageBox.Show("Voce Deseja Salvar a Ficha?", "Salvar a Ficha", MessageBoxButtons.YesNo);
-            if (salvar == DialogResult.Yes) this.salvar(sender, e);
+            this.salvar(sender, e,"manual");
         }
-
-        #region Atributos e Pericias
-
+        private void cbxClasse_SelectedIndexChanged(object sender, EventArgs e) => carregaTrilhas();
+        private void carregaTrilhas()
+        {
+            if (cbxClasse.Text == null) return;
+            Trilhas trilha = new Trilhas();
+            var trilhas = trilha.GetTrilhas().Where(x => x.Classe == cbxClasse.Text.ToString()).Select(x => x.Trilha);
+            cbxTrilha.Items.Clear();
+            cbxTrilha.Items.AddRange(trilhas.ToArray());
+        }
         private void carregaInfos()
         {
+            carregaTrilhas();
+
             if (CheckboxComportamento.checkBoxRollsMarcada == null)
             {
                 CheckboxComportamento.selecionaCheckBox(cbxRollAll, "Roll");
             }
 
-            switch (btnFor.Text)
-            {
-                case "0": lblEspacoTotal.Text = "/2"; break;
-                default: lblEspacoTotal.Text = "/" + (int.Parse(btnFor.Text) * 5).ToString(); break;
-            }
-            atualizaPeso();
 
-
-            txtDefBloqueio.Text = (int.Parse(txtDefPassiva.Text) + int.Parse(cbxLuta.Text)).ToString();
+            AtualizaPeso();
+            AtualizaDefesas();
+        }
+        private void AtualizaDefesas()
+        {
+            if (txtDefPassiva.Text == null || txtDefPassiva.Text == "") return;
             txtDefEsquiva.Text = (int.Parse(txtDefPassiva.Text) + int.Parse(cbxReflexos.Text)).ToString();
         }
+
+        #region Atributos e Pericias
         protected void SelecionaElemento(object sender)
         {
 
@@ -128,6 +132,11 @@ namespace RPGFichas
         private void btnDesvantagem_Click(object sender, EventArgs e) => lblVantagem.Text = Increments.Decrementa();
         private void btnSelect(object sender, EventArgs e) => SelecionaElemento(sender);
         private void cbxSelect(object sender, EventArgs e) => SelecionaElemento(sender);
+        private void btnFor_TextChanged(object sender, EventArgs e) => AtualizaPeso();
+        private void cbxReflexos_TextChanged(object sender, EventArgs e) => AtualizaDefesas();
+        private void txtDefPassiva_TextChanged(object sender, EventArgs e) => AtualizaDefesas();
+
+
         #endregion
 
         #region RollActions
@@ -188,97 +197,58 @@ namespace RPGFichas
         }
         #endregion
 
-        #region GridArmaActions
+        #region LayoutPanelArmasActions
         private void btnAddArma_Click(object sender, EventArgs e) => ArmaGrid.ShowDialog();
+        public void ExcluirArma(string nome)
+        {
+            for (int i = 0; i < dgvItens.Rows.Count; i++)
+            {
+                if (dgvItens.Rows[i].Cells["Item"].Value.ToString() == nome)
+                {
+                    dgvItens.Rows.RemoveAt(i);
+                }
+            }
+        }
         public bool AdicionaArma(Arma arma, string Nome, string[] Modificadores)
         {
-            DataGridViewRow rowInventario = new();
-            DataGridViewCell[] dgvColumns = new DataGridViewCell[5];
-            for (int i = 0; i < dgvColumns.Length; i++)
+            int.TryParse(Regex.Replace((string?)lblEspacoTotal.Text, "[^0-9]", ""), out int espacoTotal);
+            var espacoAtual = int.Parse(lblEspacoAtual.Text);
+
+            if(espacoAtual - arma.Espacos < -espacoTotal)
             {
-                dgvColumns[i] = new DataGridViewTextBoxCell();
+                MessageBox.Show("Inventário cheio de mais, não consegue pegar essa arma","Inventário Cheio",MessageBoxButtons.OK);
+                return false;
             }
-            rowInventario.Cells.AddRange(dgvColumns);
-            rowInventario.Cells[0].Value = "1";
-            rowInventario.Cells[1].Value = Nome;
-            rowInventario.Cells[2].Value = arma.Tipo;
-            rowInventario.Cells[3].Value = arma.Espacos.ToString();
-            rowInventario.Cells[4].Value = arma.Categoria.ToString();
+            ArmaForms armaForms = new ArmaForms(this, lblMelhorDado, arma, Nome, Modificadores);
+            armaForms.Show();
+            armaForms.TopLevel = false;
+            flpArmas.Controls.Add(armaForms);
+            flpArmas.Controls.SetChildIndex(flpArmas.Controls["btnAddArma"], flpArmas.Controls.GetChildIndex(btnAddArma) + 1);
 
-            bool itemAdcionado = AdicionarItem(rowInventario);
-            if (!itemAdcionado) return false;
 
-            if (btnAddArma.Bottom + btnAddArma.Height < dgvArmas.Bottom)
-            {
-                btnAddArma.Location = new Point(btnAddArma.Location.X, btnAddArma.Location.Y + btnAddArma.Height);
-            }
+            DataGridViewRow newRow = dgvItens.Rows[dgvItens.Rows.Add()];
+            newRow.Cells["Quantidade"].Value = 1;
+            newRow.Cells["Item"].Value = Nome;
+            newRow.Cells["Detalhes"].Value = arma.Tipo + "  -  " + arma.Municao;
+            newRow.Cells["Espacos"].Value = arma.Espacos;
+            newRow.Cells["Prestigio"].Value = arma.Categoria + Modificadores.Count();
 
-            DataGridViewRow newRow = dgvArmas.Rows[dgvArmas.Rows.Add()];
-            newRow.Cells["Nome"].Value = Nome;
-            newRow.Cells["Tipo"].Value = $"{arma.Name} ({arma.Tipo})";
-            if (arma.Ataque == "Pontaria") newRow.Cells["Ataque"].Value = cbxPontaria.Text;
-            if (arma.Ataque == "Luta") newRow.Cells["Ataque"].Value = cbxLuta.Text;
-            newRow.Cells["Alcance"].Value = arma.Alcance;
-            newRow.Cells["Critico"].Value = arma.Critico;
-            newRow.Cells["Especial"].Value = arma.Especial;
-            newRow.Cells["Municao"].Value = arma.Municao;
-            if (arma.Dano != null) newRow.Cells["Dano"].Value = arma.Dano.Replace("F", btnFor.Text.ToString());
-            for (int i = 0; i < Modificadores.Length; i++)
-            {
-                newRow.Cells["Modificador"].Value += Modificadores[i];
-                if (i < Modificadores.Length - 1) newRow.Cells["Modificador"].Value += " , ";
-
-            }
-
-            DgvComportamento.ModificaArma(newRow, Modificadores);
-
+            AtualizaPeso();
             return true;
         }
-        private void btnExcluirArma_Click(object sender, EventArgs e) => DgvComportamento.ExcluirLinha(dgvArmas, btnAddArma, dgvItens, btnAddItem);
-        private void dgvArmas_CellContentClick(object sender, DataGridViewCellEventArgs e) => DgvComportamento.DgvArmasActions(sender, lblMelhorDado);
-        private DataGridViewCellEventArgs mouseLocation;
-        private void dgvArmas_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            mouseLocation = e;
-            DgvComportamento.SetMouseType(sender, e);
-        }
-        private void dgvArmas_MouseClick(object sender, MouseEventArgs e)
-        {
-            var dgv = sender as DataGridView;
-
-            List<ToolStripMenuItem> toolStripItem = new();
-
-            ToolStripMenuItem toolStripItem1 = new();
-            toolStripItem1.Text = "Editar Dano";
-            toolStripItem1.Click += new EventHandler((sender, arg) => abreEdicaoDano());
-            toolStripItem.Add(toolStripItem1);
-
-            ToolStripMenuItem toolStripItem2 = new();
-            toolStripItem2.Text = "Editar Critico";
-            toolStripItem2.Click += new EventHandler((sender, args) => abreEdicaoCrit());
-            toolStripItem.Add(toolStripItem2);
-
-            ContextMenuStrip strip = new ContextMenuStrip();
-            foreach (var item in toolStripItem)
-            {
-                strip.Items.Add(item);
-            }
-
-            dgv.ContextMenuStrip = strip;
-        }
-        private void abreEdicaoCrit()
+        public void abreEdicaoCrit(ArmaForms armaForms)
         {
             if (CritEdit != null) CritEdit.Dispose();
-            CritEdit = new(this, mouseLocation.RowIndex);
+            CritEdit = new(this, armaForms);
             CritEdit.ShowDialog();
         }
-        private void abreEdicaoDano()
+        public void abreEdicaoDano(ArmaForms armaForms)
         {
             if (DanoEdit != null) DanoEdit.Dispose();
-            DanoEdit = new(this, mouseLocation.RowIndex);
+            DanoEdit = new(this, armaForms);
             DanoEdit.ShowDialog();
         }
-        public void editaDano(int qtdDados, int qtdLados, int bonus, bool forca, int rowIndex)
+        public void editaDano(int qtdDados, int qtdLados, int bonus, bool forca, ArmaForms armaForms)
         {
             string dano = $"{qtdDados}D{qtdLados}";
 
@@ -286,18 +256,18 @@ namespace RPGFichas
 
             if (forca) dano += $" + {this.btnFor.Text}";
 
-            dgvArmas.Rows[rowIndex].Cells["Dano"].Value = dano;
+            armaForms.Controls["btnDano"].Text = dano;
         }
-        public void editaCritico(int margem, int multiplicador, int rowIndex) => dgvArmas.Rows[rowIndex].Cells["Critico"].Value = $"{margem}/x{multiplicador}";
+        public void editaCritico(int margem, int multiplicador, ArmaForms armaForms) => armaForms.Controls["btnCritico"].Text = $"{margem}/x{multiplicador}";
         #endregion
 
         #region GridCondicoesActions
         private void btnAddCondition_Click(object sender, EventArgs e) => ConditionGrid.ShowDialog();
         public void AdicionaCondicao(Condicoes? condicao)
         {
-            if (btnAddCondition.Location.Y < dgvCondicoes.Location.Y + dgvCondicoes.Height - btnAddCondition.Height * 2)
+            if (btnAddCondicoes.Location.Y < dgvCondicoes.Location.Y + dgvCondicoes.Height - btnAddCondicoes.Height * 2)
             {
-                btnAddCondition.Location = new Point(btnAddCondition.Location.X, btnAddCondition.Location.Y + btnAddCondition.Height);
+                btnAddCondicoes.Location = new Point(btnAddCondicoes.Location.X, btnAddCondicoes.Location.Y + btnAddCondicoes.Height);
             }
 
             DataGridViewRow newRow = dgvCondicoes.Rows[dgvCondicoes.Rows.Add()];
@@ -306,18 +276,16 @@ namespace RPGFichas
             newRow.Cells["Upgrade"].Value = condicao.Upgrade;
         }
         private void dgvCondicoes_CellClick(object sender, DataGridViewCellEventArgs e) => DgvComportamento.DgvCondicoesActions(sender);
-        private void btnExcluirCodicao_Click(object sender, EventArgs e) => DgvComportamento.ExcluirLinha(dgvCondicoes, btnAddCondition);
-        private void dgvCondicoes_CellMouseEnter(object sender, DataGridViewCellEventArgs e) => DgvComportamento.ShowTooltip(sender, e);
         #endregion
 
         #region GridItensAction
         private void btnAddItem_Click(object sender, EventArgs e) => Inventario.ShowDialog();
-        private void btnExcluirItem_Click(object sender, EventArgs e) => DgvComportamento.ExcluirLinha(dgvItens, btnAddItem, lblEspacoAtual, dgvItens, btnAddItem);
+        private void btnExcluirItem_Click(object sender, EventArgs e) => DgvComportamento.ExcluirLinha(dgvItens, btnAddItens, lblEspacoAtual, dgvItens, btnAddItens);
         public bool AdicionarItem(DataGridViewRow item)
         {
-            if (btnAddItem.Location.Y < dgvItens.Location.Y + dgvItens.Height - btnAddItem.Height * 2)
+            if (btnAddItens.Location.Y < dgvItens.Location.Y + dgvItens.Height - btnAddItens.Height * 2)
             {
-                btnAddItem.Location = new Point(btnAddItem.Location.X, btnAddItem.Location.Y + btnAddItem.Height);
+                btnAddItens.Location = new Point(btnAddItens.Location.X, btnAddItens.Location.Y + btnAddItens.Height);
             }
 
             int espacoTotal = int.Parse(lblEspacoTotal.Text.Substring(lblEspacoTotal.Text.IndexOf("/") + 1));
@@ -339,8 +307,14 @@ namespace RPGFichas
             return true;
         }
 
-        public void atualizaPeso()
+        public void AtualizaPeso()
         {
+            switch (btnFor.Text)
+            {
+                case "0": lblEspacoTotal.Text = "/2"; break;
+                default: lblEspacoTotal.Text = "/" + (int.Parse(btnFor.Text) * 5).ToString(); break;
+            }
+
             var espacosUsado = 0;
             int.TryParse(Regex.Replace((string?)lblEspacoTotal.Text, "[^0-9]", ""), out int espacoTotal);
 
@@ -369,8 +343,8 @@ namespace RPGFichas
 
             if (dgv.Columns["Espacos"].Index == e.ColumnIndex || dgv.Columns["Quantidade"].Index == e.ColumnIndex)
             {
-                int.TryParse((string?)dgv.Rows[e.RowIndex].Cells["Quantidade"].Value, out int qtdValue);
-                int.TryParse((string?)dgv.Rows[e.RowIndex].Cells["Espacos"].Value, out int espacoValue);
+                int.TryParse(dgv.Rows[e.RowIndex].Cells["Quantidade"].Value.ToString(), out int qtdValue);
+                int.TryParse(dgv.Rows[e.RowIndex].Cells["Espacos"].Value.ToString(), out int espacoValue);
                 string espacoRestante = null;
 
                 if (dgv.Columns["Espacos"].Index == e.ColumnIndex) espacoRestante = (int.Parse(lblEspacoAtual.Text) + (qtdValue * espacoValue) - (formattedValue * qtdValue)).ToString();
@@ -386,12 +360,16 @@ namespace RPGFichas
                 lblEspacoAtual.Text = espacoRestante;
             }
         }
-        private void atualizaPeso(object sender, DataGridViewRowsRemovedEventArgs e) => atualizaPeso();
+        private void atualizaPeso(object sender, DataGridViewRowsRemovedEventArgs e) => AtualizaPeso();
 
         #endregion
 
         #region LayoutPanelRitualActions
-        private void btnAddRitual_Click(object sender, EventArgs e) => RitualForm.Show();
+        private void btnAddRitual_Click(object sender, EventArgs e)
+        {
+            RitualForm ritual = new RitualForm(this, int.Parse(txtNEX.Text.Replace("%", "")));
+            ritual.Show();
+        }
         public void adicionarRitual(RitualForm ritual)
         {
             if (ritual == null) return;
@@ -410,11 +388,11 @@ namespace RPGFichas
 
         #endregion
 
-        #region LayoutPanelRitualActions
+        #region LayoutPanelPoderActions
         private void btnAddPoder_Click(object sender, EventArgs e)
         {
-            PoderForm = new(this,cbxClasse.Text,cbxOrigem.Text,int.Parse(txtNEX.Text.Replace("%","")));
-            PoderForm.Show();
+            PoderForm poder = new(this, cbxClasse.Text, cbxOrigem.Text, cbxTrilha.Text, int.Parse(txtNEX.Text.Replace("%", "")));
+            poder.Show();
         }
         internal void adcionarPoder(PoderForm poderForm)
         {
@@ -437,7 +415,7 @@ namespace RPGFichas
 
         public void editar()
         {
-            salvar(this,EventArgs.Empty);
+            salvar(this, EventArgs.Empty,"add");
 
             foreach (Button button in this.Controls.OfType<Button>())
             {
@@ -476,19 +454,20 @@ namespace RPGFichas
             btnAddFicha.Enabled = false;
 
             btnAddArma.Enabled = true;
-            btnAddCondition.Enabled = true;
-            btnAddItem.Enabled = true;
+            btnAddCondicoes.Enabled = true;
+            btnAddItens.Enabled = true;
 
             txtNEX.Text = int.Parse(txtNEX.Text.AsSpan(0, txtNEX.Text.IndexOf("%"))).ToString();
-            txtPe.Text = int.Parse(txtPe.Text.AsSpan(0, txtPe.Text.IndexOf("/"))).ToString();
-            txtSan.Text = int.Parse(txtSan.Text.AsSpan(0, txtSan.Text.IndexOf("/"))).ToString();
 
-            txtDefBloqueio.ReadOnly = true;
             txtDefEsquiva.ReadOnly = true;
         }
         public void btnEditarFicha_Click(object sender, EventArgs e) => editar();
         public void finalizaEdit(object sender, EventArgs e)
         {
+            foreach (ComboBox cbx in this.Controls.OfType<ComboBox>())
+            {
+                cbx.Enabled = false; ;
+            }
             foreach (Button button in this.Controls.OfType<Button>())
             {
                 button.Enabled = true;
@@ -496,6 +475,11 @@ namespace RPGFichas
                 {
                     button.Visible = false;
                 }
+            }
+            foreach (ReadOnlyComboBox rcbx in this.Controls.OfType<ReadOnlyComboBox>())
+            {
+                rcbx.ReadOnly = true;
+                rcbx.Enabled = true;
             }
             foreach (CheckBox cbx in this.Controls.OfType<CheckBox>())
             {
@@ -505,7 +489,6 @@ namespace RPGFichas
             {
                 txt.ReadOnly = true;
             }
-
             btnAddFicha.Visible = false;
             btnAddFicha.Enabled = false;
             btnCancel.Visible = false;
@@ -514,18 +497,14 @@ namespace RPGFichas
             btnFinalizaEdicao.Visible = false;
             lblEdicao.Visible = false;
 
-            int.TryParse(txtNEX.Text.Replace("%",""), out int nex);
-            int.TryParse(txtPe.Text.Replace("/", ""), out int pe);
-            int.TryParse(txtSan.Text.Replace("/", ""), out int san);
+            int.TryParse(txtNEX.Text.Replace("%", ""), out int nex);
             txtNEX.Text = $"{nex}%";
-            txtPe.Text = $"{pe}/";
-            txtSan.Text = $"{san}/";
 
-            salvar(sender, e);
+            salvar(sender, e,"auto");
             this.Ficha_Load(sender, e);
 
         }
-        private void btnFinalizaEdicao_Click(object sender, EventArgs e) => finalizaEdit(sender,e);
+        private void btnFinalizaEdicao_Click(object sender, EventArgs e) => finalizaEdit(sender, e);
         private void VerificaInt(object sender, KeyPressEventArgs e)
         {
             {
@@ -570,8 +549,11 @@ namespace RPGFichas
                 }
             }
         }
-        private void incrementaPericiaoBtn(object sender)
+        private void incrementaPericiaoBtn(object sender,MouseButtons mouseButton)
         {
+            int incremento = 5;
+            if(mouseButton == MouseButtons.Right) incremento = 1;
+
             var btn = (Button)sender;
             foreach (var controls in this.Controls)
             {
@@ -581,13 +563,16 @@ namespace RPGFichas
                     if (cbx.Name.Contains(btn.Name.Replace("btnIncrease", "")))
                     {
 
-                        cbx.Text = "+" + (int.Parse(cbx.Text) + 1).ToString();
+                        cbx.Text = "+" + (int.Parse(cbx.Text) + incremento).ToString();
                     }
                 }
             }
         }
-        private void decrementaPericia(object sender)
+        private void decrementaPericia(object sender, MouseButtons mouseButton)
         {
+            int incremento = 5;
+            if (mouseButton == MouseButtons.Right) incremento = 1;
+
             var btn = (Button)sender;
             foreach (var controls in this.Controls)
             {
@@ -596,20 +581,18 @@ namespace RPGFichas
                     var cbx = (CheckBox)controls;
                     if (cbx.Name.Contains(btn.Name.Replace("btnDecrease", "")))
                     {
-                        if (int.Parse(cbx.Text) <= 0) return;
-                        var cbxVal = (int.Parse(cbx.Text) - 1);
+                        if (int.Parse(cbx.Text)-incremento < 0) return;
+                        var cbxVal = (int.Parse(cbx.Text) - incremento);
                         if (cbxVal > 0) cbx.Text = "+" + cbxVal.ToString();
                         else cbx.Text = cbxVal.ToString();
                     }
                 }
             }
         }
-        private void btnIncreasePericia_Click(object sender, EventArgs e) => incrementaPericiaoBtn(sender);
-        private void btnDecreasePericia_Click(object sender, EventArgs e) => decrementaPericia(sender);
         #endregion
 
         #region DataActions
-        public void salvar(object sender, EventArgs e)
+        public void salvar(object sender, EventArgs e, string modo)
         {
             Caracteristicas caracteristicas = new Caracteristicas()
             {
@@ -617,8 +600,9 @@ namespace RPGFichas
                 Nex = int.Parse(Regex.Replace((string)txtNEX.Text, "[^0-9]", "")),
                 Nome = txtNome.Text,
                 Origem = cbxOrigem.Text,
-                Patente = cbxPatente.Text,
+                Patente = rcbxPatente.Text,
                 Prestigio = int.Parse(txtPrestigio.Text),
+                Trilha = cbxTrilha.Text,
             };
 
             Atributos atributos = new Atributos()
@@ -632,12 +616,12 @@ namespace RPGFichas
 
             Saude saude = new Saude()
             {
-                PeAtual = (Int32)numPe.Value,
-                //PvAtual = tpbPV.Value + tpbPV.Incremento,
-                SanAtual = (Int32)numSan.Value,
-                PeTotal = int.Parse(txtPe.Text.Replace("/", "")),
-                //PvTotal = tpbPV.Maximum-50,
-                SanTotal = int.Parse(txtSan.Text.Replace("/","")),
+                PeAtual = tpbPe.Value,
+                PvAtual = tpbPv.Value,
+                SanAtual = tpbSan.Value,
+                PeTotal = tpbPe.Maximum,
+                PvTotal = tpbPv.Maximum,
+                SanTotal = tpbSan.Maximum,
             };
 
             Defesas defesas = new Defesas()
@@ -694,20 +678,26 @@ namespace RPGFichas
 
             List<ArmaObject> armas = new List<ArmaObject>();
             {
-                for (int i = 0; i < dgvArmas.Rows.Count; i++)
+                for (int i = 0; i < flpArmas.Controls.Count; i++)
                 {
-                    armas.Add(new ArmaObject()
+                    if (flpArmas.Controls[i].GetType() == typeof(ArmaForms))
                     {
-                        Ataque = (String)dgvArmas.Rows[i].Cells["Ataque"].Value,
-                        Alcance = (String)dgvArmas.Rows[i].Cells["Alcance"].Value,
-                        Critico = (String)dgvArmas.Rows[i].Cells["Critico"].Value,
-                        Dano = (String)dgvArmas.Rows[i].Cells["Dano"].Value,
-                        Especial = (String)dgvArmas.Rows[i].Cells["Especial"].Value,
-                        Modificador = (String)dgvArmas.Rows[i].Cells["Modificador"].Value,
-                        Municao = (String)dgvArmas.Rows[i].Cells["Municao"].Value,
-                        Nome = (String)dgvArmas.Rows[i].Cells["Nome"].Value,
-                        Tipo = (String)dgvArmas.Rows[i].Cells["Tipo"].Value,
-                    });
+
+                        var arma = flpArmas.Controls[i] as ArmaForms;
+
+                        armas.Add(new ArmaObject()
+                        {
+                            Ataque = (String)arma.Controls["txtAtaque"].Text,
+                            Alcance = (String)arma.Controls["txtAlcance"].Text,
+                            Critico = (String)arma.Controls["btnCritico"].Text,
+                            Dano = (String)arma.Controls["btnDano"].Text,
+                            Especial = (String)arma.Controls["txtEspecial"].Text,
+                            Modificador = (String)arma.Controls["txtModificadores"].Text,
+                            Municao = (String)arma.Controls["txtMunicao"].Text,
+                            Nome = (String)arma.Controls["txtNome"].Text,
+                            Tipo = (String)arma.Controls["txtTipo"].Text,
+                        });
+                    }
                 }
             }
 
@@ -815,16 +805,42 @@ namespace RPGFichas
                 RitualObject = rituais,
                 PoderObject = poderes
             };
+            
+            string fileName = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent + $@"\FichasData\{caracteristicas.Nome}.json";
+            string jsonStringSerialize = JsonSerializer.Serialize(fichaObject);
 
-                string fileName = Directory.GetParent( Directory.GetCurrentDirectory()).Parent.Parent + $@"\FichasData\{caracteristicas.Nome}.json";
-                string jsonString = JsonSerializer.Serialize(fichaObject);
+            if (modo != "add")
+            {
+                string jsonStringDeserialize = null;
+                try
+                {
+                    jsonStringDeserialize = File.ReadAllText(fileName);
 
+                }
+                catch
+                {
+                    salvar(sender, e, "add");
+                }
+                if (jsonStringSerialize == jsonStringDeserialize) return;
+
+            }
+            if (modo == "manual")
+            {
+                var salvar = MessageBox.Show("Voce Deseja Salvar a Ficha?", "Salvar a Ficha", MessageBoxButtons.YesNo);
+                if (salvar == DialogResult.Yes)
+                {
+                    fichaBase = fichaObject;
+                    File.WriteAllText(fileName, jsonStringSerialize);
+                }
+            }
+            else
+            {
                 fichaBase = fichaObject;
-                File.WriteAllText(fileName, jsonString);
-            
-            
+            }
+
+
         }
-        private void btnSalvar_Click(object sender, EventArgs e) => salvar(sender,e);
+        private void btnSalvar_Click(object sender, EventArgs e) => salvar(sender, e,"manual");
         private void carregaData(FichaObject fichaObject)
         {
             if (fichaObject.ImageFile != null)
@@ -833,7 +849,7 @@ namespace RPGFichas
             }
             else
             {
-                if (ImageFile!=null)
+                if (ImageFile != null)
                 {
                     pbxToken.Image = Image.FromFile(ImageFile);
                 }
@@ -843,7 +859,8 @@ namespace RPGFichas
             txtNEX.Text = fichaObject.Caracteristicas.Nex + "%";
             txtNome.Text = fichaObject.Caracteristicas.Nome;
             cbxOrigem.Text = fichaObject.Caracteristicas.Origem;
-            cbxPatente.Text = fichaObject.Caracteristicas.Patente;
+            rcbxPatente.Text = fichaObject.Caracteristicas.Patente;
+            cbxTrilha.Text = fichaObject.Caracteristicas.Trilha;
             txtPrestigio.Text = fichaObject.Caracteristicas.Prestigio.ToString();
 
             btnAgi.Text = fichaObject.Atributos.Agi.ToString();
@@ -852,13 +869,12 @@ namespace RPGFichas
             btnPre.Text = fichaObject.Atributos.Pre.ToString();
             btnVig.Text = fichaObject.Atributos.Vig.ToString();
 
-            numPe.Value = fichaObject.Saude.PeAtual;
-            //tpbPV.Value = fichaObject.Saude.PvAtual;
-            numSan.Value = fichaObject.Saude.SanAtual;
-            txtPe.Text = fichaObject.Saude.PeTotal.ToString() + "/";
-            //tpbPV.Maximum = fichaObject.Saude.PvTotal + 50;
-            txtSan.Text = fichaObject.Saude.SanTotal.ToString() + "/";
-
+            tpbPe.Maximum = fichaObject.Saude.PeTotal;
+            tpbPv.Maximum = fichaObject.Saude.PvTotal;
+            tpbSan.Maximum = fichaObject.Saude.SanTotal;
+            tpbPe.Value = fichaObject.Saude.PeAtual;
+            tpbPv.Value = fichaObject.Saude.PvAtual;
+            tpbSan.Value = fichaObject.Saude.SanAtual;
 
             txtResAcido.Text = fichaObject.Defesas.ResAcido.ToString();
             txtDefPassiva.Text = fichaObject.Defesas.DefPassiva.ToString();
@@ -906,26 +922,44 @@ namespace RPGFichas
             cbxTecnologia.Text = fichaObject.Pericias.Tecnologia;
             cbxVontade.Text = fichaObject.Pericias.Vontade;
 
-            dgvArmas.Rows.Clear();
+
+
+            flpArmas.Controls.Clear();
+            flpArmas.Controls.Add(btnAddArma);
             for (int i = 0; i < fichaObject.Armas.Count; i++)
             {
-                DataGridViewRow newRow = dgvArmas.Rows[dgvArmas.Rows.Add()];
-                newRow.Cells["Nome"].Value = fichaObject.Armas[i].Nome;
-                newRow.Cells["Tipo"].Value = fichaObject.Armas[i].Tipo;
-                newRow.Cells["Dano"].Value = fichaObject.Armas[i].Dano;
-                newRow.Cells["Ataque"].Value = fichaObject.Armas[i].Ataque;
-                newRow.Cells["Alcance"].Value = fichaObject.Armas[i].Alcance;
-                newRow.Cells["Critico"].Value = fichaObject.Armas[i].Critico;
-                newRow.Cells["Especial"].Value = fichaObject.Armas[i].Especial;
-                newRow.Cells["Municao"].Value = fichaObject.Armas[i].Municao;
-                newRow.Cells["Modificador"].Value = fichaObject.Armas[i].Modificador;
+                var armaName = fichaObject.Armas[i].Tipo.Substring(0, fichaObject.Armas[i].Tipo.IndexOf(" ("));
+                var arma = new Arma().GetArmas().Where(x => x.Name == armaName).FirstOrDefault();
+                if (fichaObject.Armas[i].Modificador == null) fichaObject.Armas[i].Modificador = "";
+                ArmaForms armas = new ArmaForms(this, lblMelhorDado, arma, fichaObject.Armas[i].Nome, fichaObject.Armas[i].Modificador.Split(", "));
+                armas.Show();
+
+                armas.Controls["txtNome"].Text = fichaObject.Armas[i].Nome;
+                armas.Controls["txtAtaque"].Text = fichaObject.Armas[i].Ataque;
+                armas.Controls["txtAlcance"].Text = fichaObject.Armas[i].Alcance;
+                armas.Controls["txtTipo"].Text = fichaObject.Armas[i].Tipo;
+                armas.Controls["txtMunicao"].Text = fichaObject.Armas[i].Municao;
+                armas.Controls["btnDano"].Text = fichaObject.Armas[i].Dano;
+                armas.Controls["btnCritico"].Text = fichaObject.Armas[i].Critico;
+                armas.Controls["txtModificadores"].Text = fichaObject.Armas[i].Modificador;
+                armas.Controls["txtEspecial"].Text = fichaObject.Armas[i].Especial;
+
+                flpArmas.Controls.Add(armas);
+                flpArmas.Controls.SetChildIndex(flpArmas.Controls["btnAddArma"], flpArmas.Controls.GetChildIndex(btnAddArma) + 1);
+
             }
+
 
             txtProeficiencia.Text = fichaObject.Proeficiencias;
 
             dgvCondicoes.Rows.Clear();
             for (int i = 0; i < fichaObject.Condicao.Count; i++)
             {
+                if (btnAddCondicoes.Location.Y < dgvCondicoes.Bottom - btnAddCondicoes.Height * 2)
+                {
+                    btnAddCondicoes.Location = new Point(btnAddCondicoes.Location.X, btnAddCondicoes.Location.Y + btnAddCondicoes.Height);
+                }
+
                 DataGridViewRow newRow = dgvCondicoes.Rows[dgvCondicoes.Rows.Add()];
                 newRow.Cells["Condicao"].Value = fichaObject.Condicao[i].NomeCondicao;
                 newRow.Cells["TipoCondicao"].Value = fichaObject.Condicao[i].Tipo;
@@ -935,6 +969,11 @@ namespace RPGFichas
             dgvItens.Rows.Clear();
             for (int i = 0; i < fichaObject.Inventario.Count; i++)
             {
+                if (btnAddItens.Location.Y < dgvItens.Bottom - btnAddItens.Height * 2)
+                {
+                    btnAddItens.Location = new Point(btnAddItens.Location.X, btnAddItens.Location.Y + btnAddItens.Height);
+                }
+
                 DataGridViewRow newRow = dgvItens.Rows[dgvItens.Rows.Add()];
                 newRow.Cells["Quantidade"].Value = fichaObject.Inventario[i].Qtd;
                 newRow.Cells["Espacos"].Value = fichaObject.Inventario[i].Espacos;
@@ -948,7 +987,7 @@ namespace RPGFichas
             flpRituais.Controls.Add(btnAddRitual);
             for (int i = 0; i < fichaObject.RitualObject.Count; i++)
             {
-                RitualForm ritual = new RitualForm(this);
+                RitualForm ritual = new RitualForm(this, int.Parse(txtNEX.Text.Replace("%", "")));
                 ritual.Show();
 
                 ritual.Controls["cbxRitual"].Text = fichaObject.RitualObject[i].Ritual;
@@ -957,26 +996,27 @@ namespace RPGFichas
                 ritual.Controls["txtAcao"].Text = fichaObject.RitualObject[i].Acao;
                 ritual.Controls["txtAlcance"].Text = fichaObject.RitualObject[i].Alcance;
                 ritual.Controls["txtCusto"].Text = fichaObject.RitualObject[i].Custo;
-                ritual.Controls["txtDescricao"].Text = fichaObject.RitualObject[i].Descricao;
+                ritual.Controls["txtDescricao"].Text = fichaObject.RitualObject[i].Descricao.Replace("\n", Environment.NewLine); ;
                 ritual.Controls["txtResistencia"].Text = fichaObject.RitualObject[i].Resistencia;
                 ritual.Controls["txtDuracao"].Text = fichaObject.RitualObject[i].Duracao;
 
                 ritual.addRitual();
-                
+
             }
+
             flpPoderes.Controls.Clear();
             flpPoderes.Controls.Add(btnAddPoder);
 
             for (int i = 0; i < fichaObject.PoderObject.Count; i++)
             {
-                PoderForm poderes = new PoderForm(this,cbxClasse.Text,cbxOrigem.Text,int.Parse(txtNEX.Text.Replace("%","")));
+                PoderForm poderes = new PoderForm(this, cbxClasse.Text, cbxOrigem.Text, cbxTrilha.Text, int.Parse(txtNEX.Text.Replace("%", "")));
                 poderes.Show();
 
                 poderes.Controls["cbxPoder"].Text = fichaObject.PoderObject[i].Poder;
                 poderes.Controls["txtElemento"].Text = fichaObject.PoderObject[i].Elemento;
                 poderes.Controls["txtRequisito"].Text = fichaObject.PoderObject[i].Requisito;
                 poderes.Controls["txtDescricao"].Text = fichaObject.PoderObject[i].Descricao;
-                
+
 
                 poderes.addPoder();
 
@@ -988,19 +1028,19 @@ namespace RPGFichas
         private void btnAddFicha_Click(object sender, EventArgs e)
         {
             bool infoFaltando = false;
-            if (cbxClasse.Text == "" || cbxClasse.Text == null) { cbxClasse.BackColor = Color.Red; infoFaltando = true; }
-            if (txtNome.Text == "" || txtNome.Text == null) { txtNome.BackColor = Color.Red; infoFaltando = true; }
-            if (cbxOrigem.Text == "" || cbxOrigem.Text == null) { cbxOrigem.BackColor = Color.Red; infoFaltando = true; }
-            if (cbxPatente.Text == "" || cbxPatente.Text == null) { cbxPatente.BackColor = Color.Red; infoFaltando = true; }
+            if (cbxClasse.Text == "" || cbxClasse.Text == null) { cbxClasse.BackColor = Color.Red; infoFaltando = true; } else { cbxClasse.BackColor = Color.White; }
+            if (txtNome.Text == "" || txtNome.Text == null) { txtNome.BackColor = Color.Red; infoFaltando = true; } else { txtNome.BackColor = Color.White; }
+            if (cbxOrigem.Text == "" || cbxOrigem.Text == null) { cbxOrigem.BackColor = Color.Red; infoFaltando = true; } else { cbxOrigem.BackColor = Color.White; }
+            if (cbxTrilha.Text == "" || cbxTrilha.Text == null) { cbxTrilha.BackColor = Color.Red; infoFaltando = true; } else { cbxTrilha.BackColor = Color.White; }
 
             if (infoFaltando) return;
 
             txtNome.Text = txtNome.Text.ToUpper();
 
-            salvar(sender,e);
+            salvar(sender, e,"add");
             this.finalizaEdit(sender, e);
 
-            Menu.Form1_Load(sender,e);
+            Menu.Form1_Load(sender, e);
         }
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -1018,8 +1058,6 @@ namespace RPGFichas
             }
 
         }
-
-
         #endregion
 
         private void pbxToken_MouseDown(object sender, MouseEventArgs e)
@@ -1043,7 +1081,6 @@ namespace RPGFichas
             }
             pbxToken.ContextMenuStrip = strip;
         }
-
         private void AddImg()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -1090,7 +1127,192 @@ namespace RPGFichas
             ImageFile = null;
             pbxToken.Image = null;
         }
-        private void SaveTimer_tick(object sender, EventArgs e) => salvar(sender, e);
+        private void SaveTimer_tick(object sender, EventArgs e)
+        {
+            if (!lblEdicao.Visible) salvar(sender, e,"auto");
+        }
+        private void tpb_MouseMove(object sender, MouseEventArgs e)
+        {
+            var tpb = sender as TextProgressBar;
+            if (MousePosition.X > (tpb.Left + tpb.Width / 2)) Cursor = Cursors.Cross;
+            if (MousePosition.X < (tpb.Left + tpb.Width / 2)) Cursor = Cursors.PanWest;
+            MousePositionX = MousePosition.X;
+        }
+        private int MousePositionX = 0;
+        private MouseButtons buttonPressed;
+        private void tpb_MouseDown(object sender, MouseEventArgs e) => buttonPressed = e.Button;
+        private void tpb_MouseLeave(object sender, EventArgs e) => Cursor = Cursors.Default;
+        private void tpb_Click(object sender, EventArgs e)
+        {
+            var tpb = sender as TextProgressBar;
+            if (buttonPressed == MouseButtons.Left)
+            {
+                modificaProgress(1, tpb);
+            }
+            if (buttonPressed == MouseButtons.Right)
+            {
+                SaudeForms saude = new SaudeForms(tpb);
+                saude.ShowDialog();
+            }
+        }
+        public void modificaProgress(int val, TextProgressBar tpb)
+        {
+            if (MousePositionX > tpb.Left + (tpb.Width / 2))
+            {
+                if (tpb.Value == tpb.Maximum)
+                {
+                    tpb.Incremento += val;
+                }
+                else
+                {
+                    tpb.Increment(val);
+                    if (tpb.Value >= tpb.Maximum / 2 + 0.5)
+                    {
+                        for (int i = 0; i < dgvCondicoes.Rows.Count; i++)
+                        {
+                            var condicao = "";
+                            if (tpb.Name.Contains("San")) condicao = "Perturbado";
+                            if (tpb.Name.Contains("Pv")) condicao = "Machucado";
+                            if (tpb.Name.Contains("Pe")) return;
+                            if (dgvCondicoes.Rows[i].Cells[0].Value.ToString() == condicao)
+                            {
+                                dgvCondicoes.Rows.RemoveAt(i);
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                if (tpb.Incremento > 0)
+                {
+                    tpb.Incremento -= val;
+                }
+                else
+                {
+                    tpb.Increment(-val);
+
+                    if (tpb.Value < tpb.Maximum / 2 + 0.5)
+                    {
+                        var condicao = "";
+                        var tipo = "";
+                        if (tpb.Name.Contains("San")) { condicao = "Perturbado"; tipo = "Mental"; }
+                        if (tpb.Name.Contains("Pv")) {condicao = "Machucado"; tipo = "Geral";}
+                        if (tpb.Name.Contains("Pe")) return;
+                        for (int i = 0; i < dgvCondicoes.Rows.Count; i++)
+                        {
+                            if (dgvCondicoes.Rows[i].Cells[0].Value.ToString() == condicao) return;
+                        }
+                        DataGridViewRow newRow = dgvCondicoes.Rows[dgvCondicoes.Rows.Add()];
+                        newRow.Cells[0].Value = condicao;
+                        newRow.Cells[1].Value = tipo;
+                    }
+                }
+            }
+        }
+        private void editaSaude(object sender, EventArgs e)
+        {
+            var btn = sender as Button;
+            if (btn.Name.Contains("Increase"))
+            {
+                foreach (var controls in this.Controls)
+                {
+                    if (controls.GetType() == typeof(TextProgressBar))
+                    {
+                        var tpb = (TextProgressBar)controls;
+                        tpb.Incremento = 0;
+
+                        if (tpb.Name.Contains(btn.Name.Replace("btnIncrease", "")))
+                        {
+                            tpb.Maximum++;
+                        }
+                    }
+                }
+            }
+            else if (btn.Name.Contains("Decrease"))
+            {
+                foreach (var controls in this.Controls)
+                {
+                    if (controls.GetType() == typeof(TextProgressBar))
+                    {
+                        var tpb = (TextProgressBar)controls;
+                        tpb.Incremento = 0;
+
+                        if (tpb.Name.Contains(btn.Name.Replace("btnDecrease", "")) && tpb.Maximum>0)
+                        {
+                            tpb.Maximum--;
+                        }
+                    }
+                }
+            }
+        }
+        private void dgv_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+            var dgv = sender as DataGridView;
+            if (dgv.Rows.Count <= 0 || e.RowIndex < 0) return;
+            dgv.CurrentCell = dgv.Rows[e.RowIndex].Cells[e.ColumnIndex];
+
+
+            if (dgv.ContextMenuStrip != null) dgv.ContextMenuStrip.Dispose();
+            if (dgv.Rows.Count <= 0) return;
+
+            Button btn = this.Controls[dgv.Name.Replace("dgv", "btnAdd")] as Button;
+
+            List<ToolStripMenuItem> toolStripItem = new();
+
+            ToolStripMenuItem toolStripItem1 = new();
+            toolStripItem1.Text = "Excluir Item";
+            toolStripItem1.Click += new EventHandler((sender, arg) => DgvComportamento.ExcluirLinha(dgv, btn, null, dgvItens, btnAddItens));
+            toolStripItem.Add(toolStripItem1);
+
+            ContextMenuStrip strip = new ContextMenuStrip();
+
+            foreach (var item in toolStripItem)
+            {
+                strip.Items.Add(item);
+            }
+
+            dgv.ContextMenuStrip = strip;
+
+        }
+        private DataGridViewCellEventArgs mouseLocation;
+        private void dgv_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            mouseLocation = e;
+            DgvComportamento.SetMouseType(sender, e);
+            var dgv = sender as DataGridView;
+            if (dgv.Name.Contains("Condicoes")) DgvComportamento.ShowTooltipCondicoes(sender, e);
+        }
+        private void readOnlyComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tipPatente.ShowAlways = true;
+            if (rcbxPatente.Text == "Recruta") tipPatente.SetToolTip(this.rcbxPatente, "Crédito Baixo\n\nPrestígio\nI - 2\nII - 0\nIII - 0\nIV - 0\n");
+            if (rcbxPatente.Text == "Operador") tipPatente.SetToolTip(this.rcbxPatente, "Crédito Médio\n\nPrestígio\nI - 3\nII - 1\nIII - 0\nIV - 0\n");
+            if (rcbxPatente.Text == "Agente especial") tipPatente.SetToolTip(this.rcbxPatente, "Crédito Médio\n\nPrestígio\nI - 3\nII - 2\nIII - 1\nIV - 0\n");
+            if (rcbxPatente.Text == "Oficial de operações") tipPatente.SetToolTip(this.rcbxPatente, "Crédito Alto\n\nPrestígio\nI - 3\nII - 3\nIII - 2\nIV - 1\n");
+            if (rcbxPatente.Text == "Agente de elite") tipPatente.SetToolTip(this.rcbxPatente, "Crédito Ilimitado\n\nPrestígio\nI - 3\nII - 3\nIII - 3\nIV - 2\n");
+        }
+        private void rcbxPatente_MouseHover(object sender, EventArgs e)
+        {
+            tipPatente.Show(tipPatente.GetToolTip(rcbxPatente), rcbxPatente);
+        }
+        private void rcbxPatente_MouseLeave(object sender, EventArgs e)
+        {
+            tipPatente.Hide(rcbxPatente);
+        }
+        private void txtPrestigio_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPrestigio.Text == null || txtPrestigio.Text == "") return;
+
+            if (int.Parse(txtPrestigio.Text) < 20) rcbxPatente.Text = "Recruta";
+            if (int.Parse(txtPrestigio.Text) >= 20) rcbxPatente.Text = "Operador";
+            if (int.Parse(txtPrestigio.Text) >= 50) rcbxPatente.Text = "Agente especial";
+            if (int.Parse(txtPrestigio.Text) >= 100) rcbxPatente.Text = "Oficial de operações";
+            if (int.Parse(txtPrestigio.Text) >= 200) rcbxPatente.Text = "Agente de elite";
+        }
+        private void btnIncreaseVontade_MouseClick(object sender, MouseEventArgs e) => incrementaPericiaoBtn(sender,e.Button);
+        private void btnDecreasePericia_Click(object sender, MouseEventArgs e) => decrementaPericia(sender, e.Button);
     }
 }
 

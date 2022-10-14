@@ -1,1492 +1,984 @@
 [
   {
     "Poder": "Saber e Poder",
-    "Descricao": "Uma vez por cena, quando fizer um teste usando Intelecto, voce pode gastar 2 PE para receber +5 nesse teste.",
+    "Descricao": "Quando fizer um teste usando Intelecto, voce pode gastar 2 PE para receber +5 nesse teste.",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Academico",
-    "Elemento": null
+    "Origem": "Academico"
   },
   {
     "Poder": "Tecninca Medicinal",
     "Descricao": "Sempre que cura um personagem, voce adiciona seu Intelecto no total de PV curados.",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Agente de Saude",
-    "Elemento": null
+    "Origem": "Agente de Saude"
   },
   {
     "Poder": "Vislumbres do Passado",
     "Descricao": "Uma vez por missao, voce pode fazer um teste de Intelecto (DT 10) para reconhecer pessoas ou lugares familiares, que tenha encontrado antes de perder a memoria. Se passar, recebe 1d4 PE temporarios e, a criterio do mestre, uma informacao util",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Amnesico",
-    "Elemento": null
+    "Origem": "Amnesico"
   },
   {
     "Poder": "Magnum Opus",
-    "Descricao": "Voce e famoso por uma de suas obras. Uma vez por missao, pode determinar que um personagem envolvido em uma cena de Interacao o reconheca. Voce recebe +5 em testes de Diplomacia, Enganacao, Intuicao e Intimidacao contra aquele personagem. A criterio do mestre, pode receber esses b�nus em outras situacoes nas quais seria reconhecido.",
+    "Descricao": "Voce e famoso por uma de suas obras. Uma vez por missao, pode determinar que um personagem envolvido em uma cena de Interacao o reconheca. Voce recebe +5 em testes de Diplomacia, Enganacao, Intuicao e Intimidacao contra aquele personagem. A criterio do mestre, pode receber esses bônus em outras situacões nas quais seria reconhecido.",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Artista",
-    "Elemento": null
+    "Origem": "Artista"
   },
   {
     "Poder": "110 Por Cento",
-    "Descricao": "Uma vez por cena, quando fizer um teste de pericia usando Forca ou Agilidade (exceto testes de ataque) voce pode gastar 2 PE para receber +5 nesse teste.",
+    "Descricao": "Quando fizer um teste de perícia usando Forca ou Agilidade (exceto testes de ataque) voce pode gastar 2 PE para receber +5 nesse teste.",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Atleta",
-    "Elemento": null
+    "Origem": "Atleta"
   },
   {
     "Poder": "O Crime Compensa",
-    "Descricao": "No final de uma missao, escolha um item encontrado na missao. Em sua proxima missao, voce pode incluir esse item em seu inventario sem que ele conte em seu limite de itens por Prestigio",
+    "Descricao": "No final de uma missao, escolha um item encontrado na missao. Em sua proxima missao, voce pode incluir esse item em seu inventario sem que ele conte em seu limite de itens por Prestígio",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Criminoso",
-    "Elemento": null
+    "Origem": "Criminoso"
   },
   {
     "Poder": "Tracos do Outro Lado",
-    "Descricao": "Voce possui um poder paranormal a sua escolha",
+    "Descricao": "Voce possui um poder paranormal à sua escolha,Porem comeca o jogo com metade da sua sanidade normal para a sua classe",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Cultista Arrependido",
-    "Elemento": null
+    "Origem": "Cultista Arrependido"
   },
   {
     "Poder": "Calejado",
-    "Descricao": "Voce recebe +5 pontos de vida.",
+    "Descricao": "Você recebe +1 PV para cada 5 de NEX.",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Desgarrado",
-    "Elemento": null
+    "Origem": "Desgarrado"
   },
   {
     "Poder": "Ferramentas Favoritas",
-    "Descricao": "Voce pode escolher um kit de pericia e considerar sua categoria como uma abaixo da real (por exemplo, um kit de pericia de categoria II conta como categoria I para voce)",
+    "Descricao": "Um item a sua escolha (exceto armas) conta como uma categoria abaixo (por exemplo, um item de categoria II conta como categoria I para você).",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Engenheiro",
-    "Elemento": null
+    "Origem": "Engenheiro"
   },
   {
     "Poder": "Processo Otimizado",
-    "Descricao": "Sempre que faz um teste de pericia durante um teste estendido, pode pagar 2 PE para receber +5 nesse teste",
+    "Descricao": "Sempre que faz um teste de perícia durante um teste estendido, pode pagar 2 PE para receber +5 nesse teste",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Executivo",
-    "Elemento": null
+    "Origem": "Executivo"
   },
   {
     "Poder": "Faro para Pistas",
     "Descricao": "Uma vez por cena, quando fizer um teste para procurar pistas, voce pode gastar 2 PE para receber +5 nesse teste",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Investigador",
-    "Elemento": null
+    "Origem": "Investigador"
   },
   {
     "Poder": "Mao Pesada",
     "Descricao": "Voce recebe +1 em rolagens de dano com ataques corpo a corpo",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Lutador",
-    "Elemento": null
+    "Origem": "Lutador"
   },
   {
     "Poder": "Patrocinador da Ordem",
     "Descricao": "Seu limite de credito e sempre considerado um acima do atual.",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Magnata",
-    "Elemento": null
+    "Origem": "Magnata"
   },
   {
     "Poder": "Posicao de Combate",
     "Descricao": "No primeiro turno de cada cena de acao, voce pode gastar 2 PE para receber uma acao de movimento adicional",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Mercenario",
-    "Elemento": null
+    "Origem": "Mercenario"
   },
   {
     "Poder": "Para Bellum",
-    "Descricao": "Voce recebe +1 em rolagens de dano com armas de fogo.",
+    "Descricao": "Voce recebe +2 em rolagens de dano com armas de fogo.",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Militar",
-    "Elemento": null
+    "Origem": "Militar"
   },
   {
     "Poder": "Ferramentas da Profissao",
-    "Descricao": "Escolha uma arma simples ou tatica que, a criterio do mestre, poderia ser usada como ferramenta em sua profissao (como uma marreta para um pedreiro). Voce sabe usar a arma escolhida e recebe +2 nas rolagens de dano com ela.",
+    "Descricao": "Escolha uma arma simples ou tatica que, a criterio do mestre, poderia ser usada como ferramenta em sua profissao (como uma marreta para um pedreiro). Voce sabe usar a arma escolhida e recebe +1 em testes de ataque, rolagens de dano e margem de ameaça com ela.",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Operario",
-    "Elemento": null
+    "Origem": "Operario"
   },
   {
     "Poder": "Patrulha",
-    "Descricao": "Voce recebe +1 em Defesa. ",
+    "Descricao": "Voce recebe +2 em Defesa. ",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Policial",
-    "Elemento": null
+    "Origem": "Policial"
   },
   {
     "Poder": "Acalentar",
-    "Descricao": "Voce pode usar Religiao em vez de Diplomacia para fazer a acao acalmar. Alem disso, quando acalma uma pessoa, ela fica com 1d6 de Sanidade, em vez de 1.",
+    "Descricao": "Você recebe +5 em testes de Religião para acalmar. Além disso, quando acalma uma pessoa, ela recebe um número de pontos de Sanidade igual a 1d6 + a sua Presença.",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Religioso",
-    "Elemento": null
+    "Origem": "Religioso"
   },
   {
-    "Poder": "Espirito Civico",
-    "Descricao": "Sempre que faz um teste para prestar ajuda, voce pode gastar 1 PE para aumentar o b�nus concedido em +2.",
+    "Poder": "Espírito Cívico",
+    "Descricao": "Sempre que faz um teste para prestar ajuda, voce pode gastar 1 PE para aumentar o bônus concedido em +2.",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Servidor Publico",
-    "Elemento": null
+    "Origem": "Servidor Publico"
   },
   {
     "Poder": "Eu Ja Sabia",
-    "Descricao": "Voce nao se abala com entidades ou anomalias. Afinal, sempre soube que isso tudo existia. Uma vez por cena, voce pode gastar 3 PE para ignorar um dano em Sanidade.",
+    "Descricao": "Voce nao se abala com entidades ou anomalias. Afinal, sempre soube que isso tudo existia. Voce Recebe Resistencia a Dano Mental Igual ao seu intelecto",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Teorico da Conspiracao",
-    "Elemento": null
+    "Origem": "Teorico da Conspiracao"
   },
   {
     "Poder": "Motor de Busca",
-    "Descricao": "A criterio do Mestre, sempre que tiver acesso a internet, voce pode gastar 2 PE para substituir um teste de pericia qualquer por um teste de Tecnologia",
+    "Descricao": "A criterio do Mestre, sempre que tiver acesso a internet, voce pode gastar 2 PE para substituir um teste de perícia qualquer por um teste de Tecnologia",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "T.I.",
-    "Elemento": null
+    "Origem": "T.I."
   },
   {
     "Poder": "Desbravador",
-    "Descricao": "Voce nao sofre penalidade em deslocamento e Sobrevivencia por clima ruim e por terreno dificil natural",
+    "Descricao": "Quando faz um teste de Adestramento ou Sobrevivência, você pode gastar 2 PE para receber +5 nesse teste. Além disso, você não sofre penalidade em deslocamento por terreno difícil.",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Trabalhador Rural",
-    "Elemento": null
+    "Origem": "Trabalhador Rural"
   },
   {
     "Poder": "Impostor",
-    "Descricao": "Uma vez por cena, voce pode gastar 2 PE para substituir um teste de pericia qualquer por um teste de Enganacao.",
+    "Descricao": "Uma vez por cena, voce pode gastar 2 PE para substituir um teste de perícia qualquer por um teste de Enganacao.",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Trambiqueiro",
-    "Elemento": null
+    "Origem": "Trambiqueiro"
+  },
+  {
+    "Poder": "Dedicacao",
+    "Descricao": "Você recebe +1 PE, e mais 1 PE adicional a cada NEX ímpar (15, 25...). Alem disso, seu limite de PE por turno aumenta em 1 (em NEX 5 seu limite e 2, em NEX 10 é 3 e assim por diante).",
+    "Nex": 0,
+    "Origem": "Universitario"
   },
   {
     "Poder": "Empenho",
-    "Descricao": "Voce pode nao ter muita experiencia, mas compensa com dedicacao e esforco. Quando faz um teste de pericia, voce pode gastar 2 PE para receber +1d6 nesse teste",
+    "Descricao": "Voce pode nao ter muita experiencia, mas compensa com dedicacao e esforco. Quando faz um teste de perícia (exceto Luta e Pontaria), voce pode gastar 2 PE para receber +1d6 nesse teste",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": "Trambiqueiro",
-    "Elemento": null
+    "Origem": "Trambiqueiro"
+  },
+  {
+    "Poder": "Ingrediente Secreto",
+    "Descricao": "Em cenas de interludio, voce pode gastar uma acao para cozinhar um prato gostoso. Cada membro do grupo (incluindo voce) que gastar uma ação para se alimentar recebe o beneficio de dois pratos (caso o mesmo beneficio seja escolhido duas vezes, seus efeitos se acumulam).",
+    "Nex": 0,
+    "Origem": "Chef"
+  },
+  {
+    "Poder": "Cicatrizes Psicologicas",
+    "Descricao": "Voce recebe +1 de Sanidade para cada 5 de NEX.",
+    "Nex": 0,
+    "Origem": "Vitima"
   },
   {
     "Poder": "Ataque Especial",
-    "Descricao": "Quando faz um ataque, voce pode gastar 2 PE para receber +5 no teste de ataque ou na rolagem de dano. Conforme avanca de NEX, voce pode gastar +1 PE para receber mais b�nus de +5 .Voce pode aplicar cada b�nus de +5 em ataque ou dano.",
+    "Descricao": "Quando faz um ataque, voce pode gastar 2 PE para receber +5 no teste de ataque ou na rolagem de dano. Conforme avanca de NEX, voce pode gastar +1 PE para receber mais bônus de +5 .Voce pode aplicar cada bônus de +5 em ataque ou dano.",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Combatente",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Combatente"
   },
   {
-    "Poder": "Acuidade com Arma",
-    "Descricao": "Quando usa uma arma leve de corpo a corpo ou uma arma de arremesso, voce pode usar sua Agilidade em vez de Forca nos testes de ataque e rolagens de dano",
+    "Poder": "Artista Marcial",
+    "Descricao": "Seus ataques desarmados causam 1d6 pontos de dano, podem causar dano letal e contam como armas ágeis. Em NEX 35, o dano aumenta para 1d8 e, em NEX 70, para 1d10.",
     "Nex": 0,
-    "Requisito": "Agi 2",
-    "Classe": "Combatente",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Combatente"
   },
   {
     "Poder": "Armamento Pesado",
     "Descricao": "Quando usa uma armaVoce recebe proficiencia com Armas Pesadas. leve de corpo a corpo ou uma arma de arremesso, voce pode usar sua Agilidade em vez de Forca nos testes de ataque e rolagens de dano",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Combatente",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Requisito": "For 2",
+    "Classe": "Combatente"
   },
   {
     "Poder": "Ataque de Oportunidade",
     "Descricao": "Sempre que um inimigo sair voluntariamente de um espaco adjacente ao seu, voce pode gastar uma reacao e 1 PE para realizar um ataque contra ele",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Combatente",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Combatente"
   },
   {
     "Poder": "Combater com Duas Armas",
-    "Descricao": "Se estiver usando duas armas (e pelo menos uma for leve) e fizer a acao agredir, voce pode fazer dois ataques, um com cada arma. Se fizer isso, sofre �1d em todos os testes de ataque ate o seu proximo turno",
+    "Descricao": "Se estiver usando duas armas (e pelo menos uma for leve) e fizer a acao agredir, voce pode fazer dois ataques, um com cada arma. Se fizer isso, sofre –1d em todos os testes de ataque ate o seu proximo turno",
     "Nex": 0,
     "Requisito": "Agi 3;Luta ou Pontaria",
-    "Classe": "Combatente",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Combatente"
   },
   {
     "Poder": "Combate Defensivo",
-    "Descricao": "Quando usa a acao agredir, voce pode combater defensivamente. Se fizer isso, ate seu proximo turno, sofre �1d em todos os testes de ataque, mas recebe +5 na Defesa.",
+    "Descricao": "Quando usa a acao agredir, voce pode combater defensivamente. Se fizer isso, ate seu proximo turno, sofre –1d em todos os testes de ataque, mas recebe +5 na Defesa.",
     "Nex": 0,
     "Requisito": "Int 2",
-    "Classe": "Combatente",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Combatente"
   },
   {
     "Poder": "Golpe Demolidor",
     "Descricao": "Quando usa a manobra quebrar ou ataca um objeto, voce pode gastar 1 PE para causar dois dados de dano extra do mesmo tipo de sua arma.",
     "Nex": 0,
     "Requisito": "For 2; Luta",
-    "Classe": "Combatente",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Combatente"
   },
   {
     "Poder": "Golpe Pesado",
     "Descricao": "O dano de suas armas corpo a corpo aumenta em um passo",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Combatente",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Combatente"
   },
   {
     "Poder": "Incansavel",
     "Descricao": "Uma vez por cena, voce pode gastar 2 PE para fazer uma acao de investigacao adicional, mas deve usar Forca ou Agilidade como atributo-base do teste",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Combatente",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Combatente"
   },
   {
     "Poder": "Presteza Atletica",
-    "Descricao": "Quando faz um teste de Facilitar a Investigacao, voce pode gastar 1 PE para usar Forca ou Agilidade no lugar do atributo-base da pericia. Se passar no teste, o proximo aliado que usar seu b�nus tambem recebe +1d no teste.",
+    "Descricao": "Quando faz um teste de Facilitar a Investigacao, voce pode gastar 1 PE para usar Forca ou Agilidade no lugar do atributo-base da perícia. Se passar no teste, o proximo aliado que usar seu bônus tambem recebe +1d no teste.",
     "Nex": 30,
-    "Requisito": null,
-    "Classe": "Combatente",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Combatente"
   },
   {
     "Poder": "Protecao Pesada",
-    "Descricao": "Voce recebe proficiencia com Protecoes Pesadas.",
+    "Descricao": "Voce recebe proficiencia com Protecões Pesadas.",
     "Nex": 0,
     "Requisito": "Agi 2",
-    "Classe": "Combatente",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Combatente"
   },
   {
     "Poder": "Reflexos Defensivos",
     "Descricao": "Voce recebe +5 em Defesa e em testes de resistencia contra inimigos em alcance curto.",
     "Nex": 0,
     "Requisito": "Iniciativa",
-    "Classe": "Combatente",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Combatente"
   },
   {
     "Poder": "Saque Rapido",
     "Descricao": "Voce pode sacar ou guardar itens como uma acao livre (em vez de acao de movimento). Alem disso, a acao que voce gasta para recarregar uma arma de disparo diminui em uma categoria (acao completa para padrao, padrao para movimento, movimento para livre).",
-    "Nex": 60,
-    "Requisito": null,
-    "Classe": "Combatente",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Nex": 0,
+    "Classe": "Combatente"
   },
   {
     "Poder": "Segurar o Gatilho",
-    "Descricao": "Ao acertar um ataque com uma arma de fogo, voce pode fazer outro contra o mesmo alvo, pagando uma quantidade de PE igual a quantidade de ataques que voce ja realizou no turno. Ou seja, pode fazer o primeiro ataque extra gastando 1 PE e, se acertar, pode fazer um segundo ataque extra gastando mais 2 PE e assim por diante, ate o limite de seus PE por rodada ou ate atingir o maximo de ataques com a arma antes de precisar recarrega-la",
-    "Nex": 0,
-    "Requisito": "Percepcao e Tatica",
-    "Classe": "Combatente",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Descricao": "Ao acertar um ataque com uma arma de fogo, voce pode fazer outro contra o mesmo alvo, pagando uma quantidade de PE igual à quantidade de ataques que voce ja realizou no turno. Ou seja, pode fazer o primeiro ataque extra gastando 2 PE e, se acertar, pode fazer um segundo ataque extra gastando mais 4 PE e assim por diante, ate o limite de seus PE por rodada ou ate atingir o maximo de ataques com a arma antes de precisar recarrega-la",
+    "Nex": 60,
+    "Classe": "Combatente"
   },
   {
     "Poder": "Sentido Tatico",
     "Descricao": "Voce pode gastar uma acao de movimento e 2 PE para analisar o ambiente. Se fizer isso, recebe +5 em Defesa e em testes de resistencia ate o final da cena.",
     "Nex": 0,
-    "Requisito": "Protecao Pesada",
-    "Classe": "Combatente",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Requisito": "Percepcao e Tatica",
+    "Classe": "Combatente"
   },
   {
     "Poder": "Tanque de Guerra",
     "Descricao": "Se estiver usando uma protecao pesada, a Defesa e a resistencia a dano que ela fornece aumentam em +2",
     "Nex": 0,
-    "Requisito": "Pontaria",
-    "Classe": "Combatente",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Requisito": "Protecao Pesada",
+    "Classe": "Combatente"
   },
   {
     "Poder": "Tiro Certeiro",
     "Descricao": "Se estiver usando uma arma de disparo, voce soma sua Agilidade nas rolagens de dano e ignora a penalidade contra alvos envolvidos em combate corpo a corpo (mesmo se nao usar a acao mirar).",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Combatente",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Requisito": "Pontaria",
+    "Classe": "Combatente"
   },
   {
     "Poder": "Tiro de Cobertura",
-    "Descricao": "Voce pode gastar uma acao padrao e 1 PE para disparar uma arma de fogo na direcao de um personagem no alcance da arma apenas para forca-lo a se proteger. Faca um teste de Pontaria contra a Vontade do alvo. Se vencer, ate o inicio do seu proximo turno o alvo nao pode sair do lugar onde esta e sofre �5 em testes de ataque. A criterio do mestre, o alvo recebe +5 no teste de Vontade se estiver em um lugar extremamente perigoso, como uma casa em chamas ou um barco afundando. Este e um efeito de medo.",
+    "Descricao": "Voce pode gastar uma acao padrao e 1 PE para disparar uma arma de fogo na direcao de um personagem no alcance da arma apenas para forca-lo a se proteger. Faca um teste de Pontaria contra a Vontade do alvo. Se vencer, ate o início do seu proximo turno o alvo nao pode sair do lugar onde esta e sofre –5 em testes de ataque. A criterio do mestre, o alvo recebe +5 no teste de Vontade se estiver em um lugar extremamente perigoso, como uma casa em chamas ou um barco afundando. Este e um efeito de medo.",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Combatente",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Combatente"
   },
   {
     "Poder": "A Favorita",
-    "Descricao": "Escolha uma de suas armas para ser sua favorita. A categoria da arma escolhida e reduzida em I e ela ocupa 1 espaco a menos em seu inventario (minimo de 0 espaco). Em NEX 40%, a categoria e reduzida em II, em 65% reduzida em III e em 99% reduzida em IV (minimo de 0).",
+    "Descricao": "Escolha uma arma para ser sua favorita, como katana ou fuzil de assalto. A categoria da arma escolhida e reduzida em I.",
     "Nex": 10,
-    "Requisito": null,
     "Classe": "Combatente",
-    "Trilha": "Aniquilador",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Aniquilador"
   },
   {
     "Poder": "Tecnica Secreta",
-    "Descricao": "Quando faz um ataque com sua arma favorita, voce pode gastar 2 PE para executar um dos efeitos abaixo como parte do ataque. Voce pode adicionar mais efeitos gastando +2 PE por efeito adicional. \n\nAmplo. O ataque pode atingir um alvo adicional em seu alcance e adjacente ao original (use o mesmo teste de ataque para ambos). \n\nDestruidor. Aumenta o multiplicador de critico da arma em +1.",
+    "Descricao": "Quando faz um ataque com sua arma favorita, voce pode gastar 2 PE para executar um dos efeitos abaixo como parte do ataque. Voce pode adicionar mais efeitos gastando +2 PE por efeito adicional. \n\nAmplo. O ataque pode atingir um alvo adicional em seu alcance e adjacente ao original (use o mesmo teste de ataque para ambos). \n\nDestruidor. Aumenta o multiplicador de crítico da arma em +1.",
     "Nex": 40,
-    "Requisito": null,
     "Classe": "Combatente",
-    "Trilha": "Aniquilador",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Aniquilador"
   },
   {
     "Poder": "Tecnica Sublime",
-    "Descricao": "Tecnica Sublime. Voce adiciona os seguintes efeitos a lista de sua Tecnica Secreta: \n\nLetal. Aumenta a margem de ameaca em +2. Voce pode escolher este efeito duas vezes para aumentar a margem de ameaca em +5. \n\nPerfurante. Ignora ate 5 pontos de resistencia a dano de qualquer tipo do alvo",
+    "Descricao": "Tecnica Sublime. Voce adiciona os seguintes efeitos à lista de sua Tecnica Secreta: \n\nLetal. Aumenta a margem de ameaca em +2. Voce pode escolher este efeito duas vezes para aumentar a margem de ameaca em +5. \n\nPerfurante. Ignora ate 5 pontos de resistencia a dano de qualquer tipo do alvo",
     "Nex": 65,
-    "Requisito": null,
     "Classe": "Combatente",
-    "Trilha": "Aniquilador",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Aniquilador"
   },
   {
     "Poder": "Maquina de Matar",
     "Descricao": "Sua arma favorita recebe +2 na margem de ameaca e seu dano aumenta em um passo.",
     "Nex": 99,
-    "Requisito": null,
     "Classe": "Combatente",
-    "Trilha": "Aniquilador",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Aniquilador"
   },
   {
     "Poder": "Inspirar Confianca",
     "Descricao": "Sua lideranca inspira seus aliados a darem o melhor de si. Voce pode gastar uma reacao e 2 PE para fazer um aliado em alcance curto rolar novamente um teste recem realizado",
     "Nex": 10,
-    "Requisito": null,
     "Classe": "Combatente",
-    "Trilha": "Comandante de Campo",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Comandante de Campo"
   },
   {
     "Poder": "Estrategista",
     "Descricao": "Voce pode direcionar aliados em alcance curto. Gaste uma acao padrao e 1 PE por aliado que quiser direcionar (limitado pelo seu Intelecto). No proximo turno do aliado, ele ganha uma acao de movimento",
     "Nex": 40,
-    "Requisito": null,
     "Classe": "Combatente",
-    "Trilha": "Comandante de Campo",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Comandante de Campo"
   },
   {
     "Poder": "Brecha na Guarda",
     "Descricao": ". Uma vez por rodada, quando um aliado causar dano em um inimigo que esteja em seu alcance curto, voce pode gastar uma reacao e 2 PE para que voce ou outro aliado em alcance curto faca um ataque adicional contra o mesmo inimigo.",
     "Nex": 65,
-    "Requisito": null,
     "Classe": "Combatente",
-    "Trilha": "Comandante de Campo",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Comandante de Campo"
   },
   {
     "Poder": "Oficial Comandante",
     "Descricao": "Voce pode gastar uma acao completa e 5 PE para que cada aliado que voce possa ver em alcance medio receba uma acao padrao adicional no proximo turno dele.",
     "Nex": 99,
-    "Requisito": null,
     "Classe": "Combatente",
-    "Trilha": "Comandante de Campo",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Comandante de Campo"
   },
   {
     "Poder": "Tecnica Letal",
     "Descricao": "Voce recebe um aumento de +2 na margem de ameaca com todos os seus ataques corpo a corpo",
     "Nex": 10,
-    "Requisito": null,
     "Classe": "Combatente",
-    "Trilha": "Guerreiro",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Guerreiro"
   },
   {
     "Poder": "Revidar",
     "Descricao": "Sempre que bloquear um ataque, voce pode gastar uma reacao e 2 PE para fazer um ataque corpo a corpo no inimigo que o atacou.",
     "Nex": 40,
-    "Requisito": null,
     "Classe": "Combatente",
-    "Trilha": "Guerreiro",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Guerreiro"
   },
   {
     "Poder": "Forca Opressora",
-    "Descricao": "Quando acerta um ataque corpo a corpo, voce pode gastar 1 PE para realizar uma manobra derrubar ou empurrar contra o alvo do ataque como acao livre. Se escolher empurrar, recebe um b�nus de +5 para cada 10 pontos de dano que causou no alvo. Se escolher derrubar e vencer no teste oposto, voce pode gastar 1 PE para fazer um ataque adicional contra o alvo caido",
+    "Descricao": "Quando acerta um ataque corpo a corpo, voce pode gastar 1 PE para realizar uma manobra derrubar ou empurrar contra o alvo do ataque como acao livre. Se escolher empurrar, recebe um bônus de +5 para cada 10 pontos de dano que causou no alvo. Se escolher derrubar e vencer no teste oposto, voce pode gastar 1 PE para fazer um ataque adicional contra o alvo caído",
     "Nex": 65,
-    "Requisito": null,
     "Classe": "Combatente",
-    "Trilha": "Guerreiro",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Guerreiro"
   },
   {
     "Poder": "Potencia Maxima",
-    "Descricao": "Quando usa seu Ataque Especial com armas corpo a corpo, todos os b�nus numericos sao dobrados. Por exemplo, se usar 5 PE para receber +10 no ataque, +5 no dano e +2 na margem de ameaca, voce recebe +20 no ataque, +10 no dano e +4 na margem de ameaca. Dobre os b�nus depois de definir a distribuicao",
+    "Descricao": "Quando usa seu Ataque Especial com armas corpo a corpo, todos os bônus numericos sao dobrados. Por exemplo, se usar 5 PE para receber +10 no ataque, +5 no dano e +2 na margem de ameaca, voce recebe +20 no ataque, +10 no dano e +4 na margem de ameaca. Dobre os bônus depois de definir a distribuicao",
     "Nex": 99,
-    "Requisito": null,
     "Classe": "Combatente",
-    "Trilha": "Guerreiro",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Guerreiro"
   },
   {
     "Poder": "Iniciativa Aprimorada",
     "Descricao": "Voce recebe +5 em Iniciativa.",
     "Nex": 10,
-    "Requisito": null,
     "Classe": "Combatente",
-    "Trilha": "Operacoes Especiais",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Operacões Especiais"
   },
   {
     "Poder": "Ataque Extra",
     "Descricao": "Uma vez por rodada, quando faz um ataque, voce pode gastar 2 PE para fazer um ataque adicional",
     "Nex": 40,
-    "Requisito": null,
     "Classe": "Combatente",
-    "Trilha": "Operacoes Especiais",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Operacões Especiais"
   },
   {
     "Poder": "Surto de Adrenalina",
     "Descricao": "Uma vez por rodada, voce pode gastar 5 PE para realizar uma acao padrao ou de movimento adicional",
     "Nex": 65,
-    "Requisito": null,
     "Classe": "Combatente",
-    "Trilha": "Operacoes Especiais",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Operacões Especiais"
   },
   {
     "Poder": "Sempre Alerta",
-    "Descricao": "Voce recebe uma acao padrao adicional no inicio de cada cena de combate.",
+    "Descricao": "Voce recebe uma acao padrao adicional no início de cada cena de combate.",
     "Nex": 99,
-    "Requisito": null,
     "Classe": "Combatente",
-    "Trilha": "Operacoes Especiais",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Operacões Especiais"
   },
   {
     "Poder": "Casca Grossa",
     "Descricao": "Voce recebe +1 PV para cada 5% de NEX e, quando faz um bloqueio, soma seu Vigor na resistencia a dano recebida",
     "Nex": 10,
-    "Requisito": null,
     "Classe": "Combatente",
-    "Trilha": "Tropa de Choque",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Tropa de Choque"
   },
   {
     "Poder": "Cai Dentro",
-    "Descricao": "Sempre que um oponente em alcance curto ataca um de seus aliados, voce pode gastar uma reacao e 1 PE para fazer com que esse oponente faca um teste de Vontade (DT Vig). Se falhar, o oponente deve atacar voce em vez de seu aliado. Este poder so funciona se voce puder ser efetivamente atacado e estiver no alcance do ataque (por exemplo, adjacente a um oponente atacando em corpo a corpo ou dentro do alcance de uma arma de ataque a distancia). Um oponente que passe no teste de Vontade nao pode ser afetado por seu poder Cai Dentro ate o final da cena",
+    "Descricao": "Sempre que um oponente em alcance curto ataca um de seus aliados, voce pode gastar uma reacao e 1 PE para fazer com que esse oponente faca um teste de Vontade (DT Vig). Se falhar, o oponente deve atacar voce em vez de seu aliado. Este poder so funciona se voce puder ser efetivamente atacado e estiver no alcance do ataque (por exemplo, adjacente a um oponente atacando em corpo a corpo ou dentro do alcance de uma arma de ataque à distância). Um oponente que passe no teste de Vontade nao pode ser afetado por seu poder Cai Dentro ate o final da cena",
     "Nex": 40,
-    "Requisito": null,
     "Classe": "Combatente",
-    "Trilha": "Tropa de Choque",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Tropa de Choque"
   },
   {
     "Poder": "Duro de Matar",
-    "Descricao": "Ao sofrer dano nao magico, voce pode gastar uma reacao e 2 PE para reduzir esse dano a metade. Em NEX 99%, voce pode usar esta habilidade para reduzir dano magico tambem.",
+    "Descricao": "Ao sofrer dano nao magico, voce pode gastar uma reacao e 2 PE para reduzir esse dano à metade. Em NEX 99%, voce pode usar esta habilidade para reduzir dano magico tambem.",
     "Nex": 65,
-    "Requisito": null,
     "Classe": "Combatente",
-    "Trilha": "Tropa de Choque",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Tropa de Choque"
   },
   {
     "Poder": "Inquebravel",
-    "Descricao": "Enquanto estiver machucado, voce recebe +10 na Defesa e resistencia a dano 5. Enquanto estiver morrendo, em vez do normal, voce nao fica indefeso e ainda pode realizar acoes. Voce ainda segue as regras de morte normalmente.",
+    "Descricao": "Enquanto estiver machucado, voce recebe +10 na Defesa e resistencia a dano 5. Enquanto estiver morrendo, em vez do normal, voce nao fica indefeso e ainda pode realizar acões. Voce ainda segue as regras de morte normalmente.",
     "Nex": 99,
-    "Requisito": null,
     "Classe": "Combatente",
-    "Trilha": "Tropa de Choque",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Tropa de Choque"
   },
   {
     "Poder": "Ecletico",
-    "Descricao": "Quando faz um teste de uma pericia, voce pode gastar 2 PE para receber os beneficios de ser treinado nesta pericia",
+    "Descricao": "Quando faz um teste de uma perícia, voce pode gastar 2 PE para receber os benefícios de ser treinado nesta perícia",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Especialista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Especialista"
   },
   {
     "Poder": "Perito",
-    "Descricao": "Escolha duas pericias nas quais voce e treinado (exceto Luta e Pontaria). Quando faz um teste de uma dessas pericias, voce pode gastar 2 PE para somar +1d6 no resultado do teste. Conforme avanca de NEX, voce pode gastar +1 PE para aumentar o dado de b�nus. Por exemplo, em NEX 55%, pode gastar 4 PE para receber +1d12 no teste.",
+    "Descricao": "Escolha duas perícias nas quais voce e treinado (exceto Luta e Pontaria). Quando faz um teste de uma dessas perícias, voce pode gastar 2 PE para somar +1d6 no resultado do teste. Conforme avanca de NEX, voce pode gastar +1 PE para aumentar o dado de bônus. Por exemplo, em NEX 55%, pode gastar 4 PE para receber +1d12 no teste.",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Especialista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Especialista"
   },
   {
-    "Poder": "Acuidade com Arma",
-    "Descricao": "Quando usa uma arma leve de corpo a corpo ou uma arma de arremesso, voce pode usar sua Agilidade em vez de Forca nos testes de ataque e rolagens de dano",
+    "Poder": "Artista Marcial",
+    "Descricao": "Seus ataques desarmados causam 1d6 pontos de dano, podem causar dano letal e contam como armas ágeis. Em NEX 35, o dano aumenta para 1d8 e, em NEX 70, para 1d10.",
     "Nex": 0,
-    "Requisito": "Agi 2",
-    "Classe": "Especialista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Combatente"
   },
   {
-    "Poder": "Balistica Avancada",
+    "Poder": "Balística Avancada",
     "Descricao": "Voce recebe proficiencia com armas taticas de fogo e +2 em rolagens de dano com essas armas",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Especialista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Especialista"
   },
   {
     "Poder": "Conhecimento Aplicado",
-    "Descricao": "Quando faz um teste de pericia (exceto Luta e Pontaria), voce pode gastar 2 PE para mudar o atributo-base da pericia para Int.",
+    "Descricao": "Quando faz um teste de perícia (exceto Luta e Pontaria), voce pode gastar 2 PE para mudar o atributo-base da perícia para Int.",
     "Nex": 0,
     "Requisito": "Int 2",
-    "Classe": "Especialista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Especialista"
   },
   {
     "Poder": "Hacker",
     "Descricao": "Voce recebe +5 em testes de Tecnologia para invadir sistemas e diminui o tempo necessario para hackear qualquer sistema para uma acao completa, independentemente da DT",
     "Nex": 0,
     "Requisito": "Tecnologia",
-    "Classe": "Especialista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Especialista"
   },
   {
     "Poder": "Maos Rapidas",
     "Descricao": "Ao fazer um teste de Crime, voce pode pagar 1 PM para faze-lo como uma acao livre",
     "Nex": 0,
     "Requisito": "Agi 3 e Crime",
-    "Classe": "Especialista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Especialista"
   },
   {
     "Poder": "Mochila de Utilidades",
-    "Descricao": "Um kit de pericia que voce escolha conta como uma categoria abaixo e ocupa 1 espaco a menos.",
+    "Descricao": "Um kit de perícia que voce escolha conta como uma categoria abaixo e ocupa 1 espaco a menos.",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Especialista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Especialista"
   },
   {
     "Poder": "Movimento Tatico",
-    "Descricao": "Voce pode gastar 1 PE para ignorar a penalidade em deslocamento por terreno dificil e receber deslocamento de escalada igual ao seu deslocamento ate o final do turno.",
+    "Descricao": "Voce pode gastar 1 PE para ignorar a penalidade em deslocamento por terreno difícil e receber deslocamento de escalada igual ao seu deslocamento ate o final do turno.",
     "Nex": 0,
     "Requisito": "Atletismo",
-    "Classe": "Especialista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Especialista"
   },
   {
     "Poder": "Na Trilha Certa",
-    "Descricao": "Sempre que tiver sucesso em um teste para procurar pistas durante uma cena de interacao, voce pode gastar 1 PE para receber +1d no proximo teste. Os custos e os b�nus sao cumulativos (se passar num segundo teste, pode pagar 2 PE para receber um total de +2d no proximo teste, e assim por diante).",
+    "Descricao": "Sempre que tiver sucesso em um teste para procurar pistas durante uma cena de interacao, voce pode gastar 1 PE para receber +1d no proximo teste. Os custos e os bônus sao cumulativos (se passar num segundo teste, pode pagar 2 PE para receber um total de +2d no proximo teste, e assim por diante).",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Especialista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Especialista"
   },
   {
     "Poder": "Nerd",
     "Descricao": "Voce e um repositorio de conhecimento util (e inutil). Uma vez por cena, pode gastar 2 PE para fazer um teste de Atualidades (DT 20). Se passar, recebe uma informacao util para essa cena (se for uma investigacao, uma dica para uma pista; se for um combate, uma fraqueza de um inimigo, e assim por diante). A fonte da informacao pode ser desde um livro antigo que voce leu na biblioteca ate um episodio de sua serie de ficcao favorita.",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Especialista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Especialista"
   },
   {
     "Poder": "Ninja Urbano",
     "Descricao": "Voce recebe proficiencia com armas taticas de ataque corpo a corpo e +2 em rolagens de dano com essas armas.",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Especialista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Especialista"
   },
   {
     "Poder": "Pensamento Agil",
     "Descricao": "Uma vez por rodada, durante uma cena de investigacao, voce pode gastar 2 PE para fazer uma acao de procurar pistas adicional",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Especialista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Especialista"
   },
   {
     "Poder": "Perito em Explosivos",
     "Descricao": "Voce soma seu Intelecto na DT para resistir aos seus explosivos e pode excluir dos efeitos da explosao um numero de alvos igual ao seu valor de Intelecto",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Especialista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Especialista"
   },
   {
     "Poder": "Primeira Impressao",
     "Descricao": "Voce recebe +2d no primeiro teste de Diplomacia, Enganacao, Intimidacao ou Intuicao que fizer em uma cena.",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Especialista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Especialista"
   },
   {
     "Poder": "Engenhosidade",
-    "Descricao": "Em NEX 40%, quando usa sua habilidade Ecletico, voce pode gastar 2 PE adicionais para receber os beneficios de ser competente na pericia. Em NEX 75%, pode gastar 4 PE adicionais para receber os beneficios de ser expert na pericia.",
+    "Descricao": "Em NEX 40%, quando usa sua habilidade Ecletico, voce pode gastar 2 PE adicionais para receber os benefícios de ser competente na perícia. Em NEX 75%, pode gastar 4 PE adicionais para receber os benefícios de ser expert na perícia.",
     "Nex": 40,
-    "Requisito": null,
-    "Classe": "Especialista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Especialista"
   },
   {
     "Poder": "Mira de Elite",
     "Descricao": "Voce recebe proficiencia com armas de fogo longas e soma seu Intelecto em rolagens de dano com essas armas",
     "Nex": 10,
-    "Requisito": null,
     "Classe": "Especialista",
-    "Trilha": "Atirador de Elite",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Atirador de Elite"
   },
   {
     "Poder": "Disparo Letal",
     "Descricao": "Quando faz a acao mirar voce pode gastar 1 PE para aumentar em +2 a margem de ameaca do proximo ataque que fizer ate o final de seu proximo turno.",
     "Nex": 40,
-    "Requisito": null,
     "Classe": "Especialista",
-    "Trilha": "Atirador de Elite",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Atirador de Elite"
   },
   {
     "Poder": "Disparo Impactante",
-    "Descricao": "Se estiver usando uma arma de fogo com calibre medio ou grosso voce pode gastar 2 PE para fazer as manobras derrubar, desarmar, empurrar e quebrar usando um ataque a distancia",
+    "Descricao": "Se estiver usando uma arma de fogo com calibre medio ou grosso voce pode gastar 2 PE para fazer as manobras derrubar, desarmar, empurrar e quebrar usando um ataque a distância",
     "Nex": 65,
-    "Requisito": null,
     "Classe": "Especialista",
-    "Trilha": "Atirador de Elite",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Atirador de Elite"
   },
   {
     "Poder": "Atirar para Matar",
-    "Descricao": "Quando faz um acerto critico com uma arma de fogo, voce causa dano maximo, sem precisar rolar dados",
+    "Descricao": "Quando faz um acerto crítico com uma arma de fogo, voce causa dano maximo, sem precisar rolar dados",
     "Nex": 99,
-    "Requisito": null,
     "Classe": "Especialista",
-    "Trilha": "Atirador de Elite",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Atirador de Elite"
   },
   {
     "Poder": "Ataque Furtivo",
-    "Descricao": "Voce sabe atingir os pontos vitais de um inimigo distraido. Uma vez por rodada, quando atinge um alvo desprevenido com um ataque corpo a corpo ou em alcance curto, ou um alvo que voce esteja flanqueando, voce pode gastar 1 PE para causar +1d6 pontos de dano do mesmo tipo da arma. Em NEX 40% o dano adicional aumenta para +2d6, em NEX 65% aumenta para +3d6 e em NEX 99% aumenta para +4d6.",
+    "Descricao": "Voce sabe atingir os pontos vitais de um inimigo distraído. Uma vez por rodada, quando atinge um alvo desprevenido com um ataque corpo a corpo ou em alcance curto, ou um alvo que voce esteja flanqueando, voce pode gastar 1 PE para causar +1d6 pontos de dano do mesmo tipo da arma. Em NEX 40% o dano adicional aumenta para +2d6, em NEX 65% aumenta para +3d6 e em NEX 99% aumenta para +4d6.",
     "Nex": 10,
-    "Requisito": null,
     "Classe": "Especialista",
-    "Trilha": "Infiltrador",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Infiltrador"
   },
   {
     "Poder": "Gatuno",
     "Descricao": "Voce recebe +5 em Atletismo e Crime e pode percorrer seu deslocamento normal quando e se esconder sem penalidade",
     "Nex": 40,
-    "Requisito": null,
     "Classe": "Especialista",
-    "Trilha": "Infiltrador",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Infiltrador"
   },
   {
     "Poder": "Assassinar",
-    "Descricao": "Voce pode gastar uma acao de movimento e 3 PE para analisar um alvo em alcance curto. Ate o fim de seu proximo turno, seu primeiro Ataque Furtivo que causar dano a ele tem seus dados de dano extras dessa habilidade dobrados. Alem disso, se sofrer dano de seu ataque, o alvo fica inconsciente ou morrendo, a sua escolha (Fortitude DT Agi evita)",
+    "Descricao": "Voce pode gastar uma acao de movimento e 3 PE para analisar um alvo em alcance curto. Ate o fim de seu proximo turno, seu primeiro Ataque Furtivo que causar dano a ele tem seus dados de dano extras dessa habilidade dobrados. Alem disso, se sofrer dano de seu ataque, o alvo fica inconsciente ou morrendo, à sua escolha (Fortitude DT Agi evita)",
     "Nex": 65,
-    "Requisito": null,
     "Classe": "Especialista",
-    "Trilha": "Infiltrador",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Infiltrador"
   },
   {
     "Poder": "Sombra Fugaz",
-    "Descricao": "Quando faz um teste de Furtividade apos atacar ou fazer outra acao chamativa, voce pode gastar 3 PE para nao sofrer a penalidade de �20 no teste",
+    "Descricao": "Quando faz um teste de Furtividade apos atacar ou fazer outra acao chamativa, voce pode gastar 3 PE para nao sofrer a penalidade de –20 no teste",
     "Nex": 99,
-    "Requisito": null,
     "Classe": "Especialista",
-    "Trilha": "Infiltrador",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Infiltrador"
   },
   {
     "Poder": "Paramedico",
     "Descricao": "Voce pode usar uma acao padrao e 2 PE para curar 2d10 pontos de vida de um aliado adjacente. Voce pode curar +1d10 PV respectivamente em NEX 40%, 65% e 99%, gastando +1 PE por dado adicional de cura",
     "Nex": 10,
-    "Requisito": null,
     "Classe": "Especialista",
-    "Trilha": "Medico de Campo",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Medico de Campo"
   },
   {
     "Poder": "Equipe de Trauma",
     "Descricao": "Voce pode usar uma acao padrao e 2 PE para remover uma condicao negativa (exceto morrendo) de um aliado adjacente.",
     "Nex": 40,
-    "Requisito": null,
     "Classe": "Especialista",
-    "Trilha": "Medico de Campo",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Medico de Campo"
   },
   {
     "Poder": "Resgate",
-    "Descricao": "Uma vez por rodada, se estiver em alcance curto de um aliado machucado ou morrendo, voce pode se aproximar do aliado com uma acao livre (desde que seja capaz de faze-lo usando seu deslocamento normal). Alem disso, sempre que curar PV ou remover condicoes do aliado, voce e o aliado recebem +5 na Defesa ate o inicio de seu proximo turno. Por fim, para voce, o total de espacos ocupados por carregar um personagem e reduzido pela metade.",
+    "Descricao": "Uma vez por rodada, se estiver em alcance curto de um aliado machucado ou morrendo, voce pode se aproximar do aliado com uma acao livre (desde que seja capaz de faze-lo usando seu deslocamento normal). Alem disso, sempre que curar PV ou remover condicões do aliado, voce e o aliado recebem +5 na Defesa ate o início de seu proximo turno. Por fim, para voce, o total de espacos ocupados por carregar um personagem e reduzido pela metade.",
     "Nex": 65,
-    "Requisito": null,
     "Classe": "Especialista",
-    "Trilha": "Medico de Campo",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Medico de Campo"
   },
   {
     "Poder": "Reanimacao",
     "Descricao": "Uma vez por cena, voce pode gastar uma acao completa e 10 PE para trazer de volta a vida um personagem que tenha morrido na mesma cena (exceto morte por dano massivo).",
     "Nex": 99,
-    "Requisito": null,
     "Classe": "Especialista",
-    "Trilha": "Medico de Campo",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Medico de Campo"
   },
   {
     "Poder": "Eloquencia",
     "Descricao": "Voce pode usar uma acao completa e 1 PE por alvo em alcance curto para afetar outros personagens com sua fala. Faca um teste de Diplomacia, Enganacao ou Intimidacao contra a Vontade dos alvos. Se voce vencer, os alvos ficam fascinados enquanto voce se concentrar (uma acao padrao por rodada). Um alvo hostil ou que esteja envolvido em combate recebe +5 em seu teste de resistencia e tem direito a um novo teste por rodada, sempre que voce se concentrar Um personagem que passar no teste fica imune a este efeito por um dia",
     "Nex": 10,
-    "Requisito": null,
     "Classe": "Especialista",
-    "Trilha": "Negociador",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Negociador"
   },
   {
     "Poder": "Discurso Motivador",
-    "Descricao": "Voce pode gastar uma acao padrao e 4 PE para inspirar seus aliados com suas palavras. Voce e todos os seus aliados em alcance curto ganham +1d em testes de pericia ate o fim da cena. A partir de NEX 65%, voce pode gastar 8 PE para fornecer um b�nus total de +2d.",
+    "Descricao": "Voce pode gastar uma acao padrao e 4 PE para inspirar seus aliados com suas palavras. Voce e todos os seus aliados em alcance curto ganham +1d em testes de perícia ate o fim da cena. A partir de NEX 65%, voce pode gastar 8 PE para fornecer um bônus total de +2d.",
     "Nex": 40,
-    "Requisito": null,
     "Classe": "Especialista",
-    "Trilha": "Negociador",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Negociador"
   },
   {
     "Poder": "Eu Conheco um Cara",
-    "Descricao": "Uma vez por missao, voce pode ativar sua rede de contatos para pedir um favor, como por exemplo trocar todo o equipamento do seu grupo (como se tivesse uma segunda fase de preparacao de missao), conseguir um local de descanso ou mesmo ser resgatado de uma cena. O mestre tem a palavra final de quando e possivel usar essa habilidade e quais favores podem ser obtidos.",
+    "Descricao": "Uma vez por missao, voce pode ativar sua rede de contatos para pedir um favor, como por exemplo trocar todo o equipamento do seu grupo (como se tivesse uma segunda fase de preparacao de missao), conseguir um local de descanso ou mesmo ser resgatado de uma cena. O mestre tem a palavra final de quando e possível usar essa habilidade e quais favores podem ser obtidos.",
     "Nex": 65,
-    "Requisito": null,
     "Classe": "Especialista",
-    "Trilha": "Negociador",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Negociador"
   },
   {
     "Poder": "Truque de Mestre",
-    "Descricao": "Acostumado a uma vida de fingimento e manipulacao, voce pode gastar 5 PE para simular o efeito de qualquer habilidade que voce tenha visto um de seus aliados usar durante a cena. Voce ignora os pre-requisitos da habilidade, mas ainda precisa pagar todos os seus custos, incluindo acoes, PE e materiais, e ela usa os seus parametros de jogo, como se voce estivesse usando a habilidade em questao",
+    "Descricao": "Acostumado a uma vida de fingimento e manipulacao, voce pode gastar 5 PE para simular o efeito de qualquer habilidade que voce tenha visto um de seus aliados usar durante a cena. Voce ignora os pre-requisitos da habilidade, mas ainda precisa pagar todos os seus custos, incluindo acões, PE e materiais, e ela usa os seus parâmetros de jogo, como se voce estivesse usando a habilidade em questao",
     "Nex": 99,
-    "Requisito": null,
     "Classe": "Especialista",
-    "Trilha": "Negociador",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Negociador"
   },
   {
     "Poder": "Inventario Otimizado",
-    "Descricao": "Voce soma seu Intelecto a sua Forca para calcular seu valor de inventario. Por exemplo, se voce tem Forca 1 e Intelecto 3, seu inventario tem 20 espacos.",
+    "Descricao": "Voce soma seu Intelecto à sua Forca para calcular seu valor de inventario. Por exemplo, se voce tem Forca 1 e Intelecto 3, seu inventario tem 20 espacos.",
     "Nex": 10,
-    "Requisito": null,
     "Classe": "Especialista",
-    "Trilha": "Tecnico",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Tecnico"
   },
   {
     "Poder": "Remendao",
     "Descricao": "Voce pode gastar uma acao completa e 1 PE para remover a condicao quebrado de um equipamento adjacente ate o final da cena. Alem disso, qualquer equipamento de investigacao tem sua categoria reduzida em I para voce",
     "Nex": 40,
-    "Requisito": null,
     "Classe": "Especialista",
-    "Trilha": "Tecnico",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Tecnico"
   },
   {
     "Poder": "Improvisar",
     "Descricao": "Voce pode improvisar equipamentos com materiais ao seu redor. Escolha um equipamento de investigacao e gaste uma acao completa e 2 PE, mais 2 PE por categoria do item escolhido. Voce cria uma versao funcional do equipamento, que segue suas regras de espaco e categoria como normal. Ao final da cena, seu equipamento improvisado se torna inutil.",
     "Nex": 65,
-    "Requisito": null,
     "Classe": "Especialista",
-    "Trilha": "Tecnico",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Tecnico"
   },
   {
     "Poder": "Preparado para Tudo",
     "Descricao": "Voce sempre tem o que precisa para qualquer situacao. Quando precisar de um equipamento de investigacao ou combate (nao incluindo armas) que nao esta em seu inventario, voce pode gastar 3 PE por categoria do item para lembrar que colocou ele no fundo da bolsa! Depois de encontrado, o item segue normalmente as regras de inventario",
     "Nex": 99,
-    "Requisito": null,
     "Classe": "Especialista",
-    "Trilha": "Tecnico",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Tecnico"
   },
   {
     "Poder": "Camuflar Ocultismo",
-    "Descricao": "Voce pode gastar uma acao livre para esconder simbolos e sigilos que estejam desenhados ou gravados em objetos ou em sua pele, tornando-os invisiveis para outras pessoas alem de voce mesmo. Alem disso, quando lanca um ritual, voce pode gastar +2 PE para lanca-lo sem gesticular e falar, usando apenas concentracao. Isso permite conjurar um ritual com as maos presas, amordacado etc. Outros personagens so perceberao que voce lancou uma ritual se passarem num teste de Ocultismo (DT 20)",
+    "Descricao": "Voce pode gastar uma acao livre para esconder símbolos e sigilos que estejam desenhados ou gravados em objetos ou em sua pele, tornando-os invisíveis para outras pessoas alem de voce mesmo. Alem disso, quando lanca um ritual, voce pode gastar +2 PE para lanca-lo sem gesticular e falar, usando apenas concentracao. Isso permite conjurar um ritual com as maos presas, amordacado etc. Outros personagens so perceberao que voce lancou uma ritual se passarem num teste de Ocultismo (DT 20)",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Ocultista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Ocultista"
   },
   {
     "Poder": "Envolto em Misterio",
     "Descricao": "Sua aparencia e postura assombrosas o permitem manipular e assustar pessoas ignorantes ou supersticiosas. O mestre define o que exatamente voce pode fazer e quem se encaixa nessa descricao. Como regra geral, voce recebe +5 em Enganacao e Intimidacao contra pessoas nao treinadas em Ocultismo",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Ocultista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Ocultista"
   },
   {
     "Poder": "Especialista em Elemento",
     "Descricao": "Escolha um Elemento. A DT para resistir aos seus rituais desse Elemento aumenta em +2",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Ocultista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Ocultista"
   },
   {
     "Poder": "Ferramentas Paranormais",
     "Descricao": "Uma vez por cena voce pode ativar um equipamento paranormal sem custo. Voce ainda precisa pagar qualquer custo por rodada",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Ocultista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Ocultista"
   },
   {
     "Poder": "Fluxo de Poder",
     "Descricao": "Voce pode manter dois efeitos sustentados de rituais ativos simultaneamente com apenas uma acao livre, pagando o custo de cada efeito separadamente.",
     "Nex": 60,
-    "Requisito": null,
-    "Classe": "Ocultista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Ocultista"
   },
   {
     "Poder": "Guiado pelo Paranormal",
     "Descricao": "Uma vez por cena, voce pode gastar 2 PE para fazer uma acao de investigacao adicional",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Ocultista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Ocultista"
   },
   {
     "Poder": "Identificacao Paranormal",
     "Descricao": "Voce recebe +10 em testes de Ocultismo para identificar uma criatura, objeto ou ritual.",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Ocultista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Ocultista"
   },
   {
     "Poder": "Intuicao Paranormal",
-    "Descricao": "Sempre que usa a acao facilitar investigacao, voce soma seu Intelecto ou Presenca no teste (a sua escolha)",
+    "Descricao": "Sempre que usa a acao facilitar investigacao, voce soma seu Intelecto ou Presenca no teste (à sua escolha)",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Ocultista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Ocultista"
   },
   {
     "Poder": "Mestre em Elemento",
-    "Descricao": "Escolha um Elemento. O custo para lancar rituais desse Elemento diminui em �1 PM.",
+    "Descricao": "Escolha um Elemento. O custo para lancar rituais desse Elemento diminui em –1 PM.",
     "Nex": 45,
     "Requisito": "Especialista em Elemento",
-    "Classe": "Ocultista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Ocultista"
   },
   {
     "Poder": "Ritual Potente",
     "Descricao": "Voce soma seu Intelecto nas rolagens de dano ou nos efeitos de cura de seus rituais. Pre-requisito: Int +1.",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Ocultista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Ocultista"
   },
   {
     "Poder": "Ritual Predileto",
-    "Descricao": "Escolha um ritual que voce conhece. Voce reduz em �1 PE o custo do ritual. Essa reducao se acumula com reducoes fornecidas por outras fontes",
+    "Descricao": "Escolha um ritual que voce conhece. Voce reduz em –1 PE o custo do ritual. Essa reducao se acumula com reducões fornecidas por outras fontes",
     "Nex": 0,
     "Requisito": "Int 2",
-    "Classe": "Ocultista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Ocultista"
   },
   {
-    "Poder": "Tatuagem Ritualistica",
-    "Descricao": "Simbolos marcados em sua pele reduzem em �1 PE o custo de rituais de alcance pessoal que tem voce como alvo.",
+    "Poder": "Tatuagem Ritualística",
+    "Descricao": "Símbolos marcados em sua pele reduzem em –1 PE o custo de rituais de alcance pessoal que tem voce como alvo.",
     "Nex": 0,
-    "Requisito": null,
-    "Classe": "Ocultista",
-    "Trilha": null,
-    "Origem": null,
-    "Elemento": null
+    "Classe": "Ocultista"
+  },
+  {
+    "Poder": "Criar Selo",
+    "Descricao": "Você sabe fabricar selos amaldicoados. Escolha um ritual que você conheça para gravar no selo. O processo de fabricação gasta uma hora e um número de PE iguais ao custo de conjurar o ritual. No final do processo, faça um teste de Ocultismo (DT 15 + PE gastos). \nSe passar, você cria o selo. Você pode ter um número máximo de selos criados a qualquer momento igual à sua Presença.",
+    "Nex": 0,
+    "Classe": "Ocultista"
+  },
+  {
+    "Poder": "Improvisar Componentes",
+    "Descricao": "Uma vez por cena, voce pode gastar uma acao completa para fazer um teste de Investigacao (DT 15). Se passar, encontra objetos que podem servir como componentes ritualisticos de um elemento a sua escolha. O mestre define se e possíiel usar esse poder na cena atual.",
+    "Nex": 0,
+    "Classe": "Ocultista"
   },
   {
     "Poder": "Ampliar Ritual",
     "Descricao": "Quando lanca um ritual, voce pode gastar +2 PE para aumentar seu alcance em um passo (de curto para medio, de medio para longo ou de longo para extremo) ou dobrar sua area de efeito",
     "Nex": 10,
-    "Requisito": null,
     "Classe": "Ocultista",
-    "Trilha": "Conduite",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Conduíte"
   },
   {
     "Poder": "Acelerar Ritual",
     "Descricao": "Uma vez por rodada, voce pode gastar +4 PE para conjurar um ritual como acao livre",
     "Nex": 40,
-    "Requisito": null,
     "Classe": "Ocultista",
-    "Trilha": "Conduite",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Conduíte"
   },
   {
     "Poder": "Anular Ritual",
     "Descricao": "Quando for alvo de um ritual, voce pode gastar uma quantidade de PE igual ao custo pago por esse ritual e fazer um teste oposto de Ocultismo contra o conjurador. Se vencer, voce anula o ritual, cancelando todos os seus efeitos.",
     "Nex": 65,
-    "Requisito": null,
     "Classe": "Ocultista",
-    "Trilha": "Conduite",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Conduíte"
   },
   {
     "Poder": "Poder do Flagelo",
-    "Descricao": "Ao conjurar um ritual, voce pode gastar seus proprios pontos de vida para pagar o custo em pontos de esforco, a taxa de 2 PV por PE pago. Pontos de vida gastos dessa forma so podem ser recuperados com descanso.",
+    "Descricao": "Ao conjurar um ritual, voce pode gastar seus proprios pontos de vida para pagar o custo em pontos de esforco, à taxa de 2 PV por PE pago. Pontos de vida gastos dessa forma so podem ser recuperados com descanso.",
     "Nex": 10,
-    "Requisito": null,
     "Classe": "Ocultista",
-    "Trilha": "Flagelador",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Flagelador"
   },
   {
     "Poder": "Abracar a Dor",
-    "Descricao": "Sempre que sofrer dano nao magico, voce pode gastar uma reacao e 2 PE para reduzir esse dano a metade",
+    "Descricao": "Sempre que sofrer dano nao magico, voce pode gastar uma reacao e 2 PE para reduzir esse dano à metade",
     "Nex": 40,
-    "Requisito": null,
     "Classe": "Ocultista",
-    "Trilha": "Flagelador",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Flagelador"
   },
   {
     "Poder": "Absorver Agonia",
-    "Descricao": "Sempre que reduz um ou mais inimigos a 0 PV com um ritual, voce recebe uma quantidade de PE temporarios igual ao circulo do ritual utilizado. Por exemplo, se ativar esse poder com um ritual de Segundo circulo, recebera 2 PE.",
+    "Descricao": "Sempre que reduz um ou mais inimigos a 0 PV com um ritual, voce recebe uma quantidade de PE temporarios igual ao círculo do ritual utilizado. Por exemplo, se ativar esse poder com um ritual de Segundo círculo, recebera 2 PE.",
     "Nex": 65,
-    "Requisito": null,
     "Classe": "Ocultista",
-    "Trilha": "Flagelador",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Flagelador"
   },
   {
     "Poder": "Saber Ampliado",
-    "Descricao": "Voce aprende um ritual adicional de Primeiro circulo. Toda vez que ganha acesso a um novo circulo de rituais, aprende um ritual adicional daquele circulo. Esses rituais nao contam no seu limite de rituais",
+    "Descricao": "Voce aprende um ritual adicional de Primeiro círculo. Toda vez que ganha acesso a um novo círculo de rituais, aprende um ritual adicional daquele círculo. Esses rituais nao contam no seu limite de rituais",
     "Nex": 10,
-    "Requisito": null,
     "Classe": "Ocultista",
-    "Trilha": "Graduado",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Graduado"
   },
   {
-    "Poder": "Grimorio Ritualistico",
-    "Descricao": "Voce cria um grimorio especial, que armazena rituais que sua mente nao seria capaz de guardar. Voce aprende uma quantidade de rituais igual ao seu Intelecto, de quaisquer circulos a que voce tem acesso. Quando ganha acesso a um novo circulo, pode incluir um novo ritual desse circulo em seu grimorio. Voce pode lancar esses rituais normalmente e eles nao contam em seu limite de rituais conhecidos. Entretanto, para lancar um ritual armazenado em seu grimorio, voce precisa primeiramente gastar uma acao completa folheando o grimorio e relembrando o ritual",
+    "Poder": "Grimorio Ritualístico",
+    "Descricao": "Voce cria um grimorio especial, que armazena rituais que sua mente nao seria capaz de guardar. Voce aprende uma quantidade de rituais igual ao seu Intelecto, de quaisquer círculos a que voce tem acesso. Quando ganha acesso a um novo círculo, pode incluir um novo ritual desse círculo em seu grimorio. Voce pode lancar esses rituais normalmente e eles nao contam em seu limite de rituais conhecidos. Entretanto, para lancar um ritual armazenado em seu grimorio, voce precisa primeiramente gastar uma acao completa folheando o grimorio e relembrando o ritual",
     "Nex": 40,
-    "Requisito": null,
     "Classe": "Ocultista",
-    "Trilha": "Graduado",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Graduado"
   },
   {
     "Poder": "Rituais Eficientes",
     "Descricao": "A DT para resistir a todos os seus rituais aumenta em +5.",
     "Nex": 65,
-    "Requisito": null,
     "Classe": "Ocultista",
-    "Trilha": "Graduado",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Graduado"
   },
   {
     "Poder": "Mente Sa",
     "Descricao": "Voce compreende melhor as entidades do Outro Lado, e passa a ser menos abalado por seus efeitos. Voce recebe resistencia paranormal +5 (+5 em testes de resistencia contra efeitos paranormais).",
     "Nex": 10,
-    "Requisito": null,
     "Classe": "Ocultista",
-    "Trilha": "Intuitivo",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Intuitivo"
   },
   {
     "Poder": "Presenca Poderosa",
     "Descricao": "Sua resiliencia mental faz com que voce possa extrair mais do Outro Lado. Voce adiciona sua Presenca no seu limite de PE que voce pode gastar a cada rodada, mas apenas para conjurar rituais.",
     "Nex": 40,
-    "Requisito": null,
     "Classe": "Ocultista",
-    "Trilha": "Intuitivo",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Intuitivo"
   },
   {
     "Poder": "Inabalavel",
-    "Descricao": "Voce recebe resistencia a dano mental e paranormal igual a sua Presenca. Alem disso, quando e alvo de um efeito paranormal que permite um teste de Vontade para reduzir o dano a metade, voce nao sofre dano algum se passar.",
+    "Descricao": "Voce recebe resistencia a dano mental e paranormal igual a sua Presenca. Alem disso, quando e alvo de um efeito paranormal que permite um teste de Vontade para reduzir o dano à metade, voce nao sofre dano algum se passar.",
     "Nex": 65,
-    "Requisito": null,
     "Classe": "Ocultista",
-    "Trilha": "Intuitivo",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Intuitivo"
   },
   {
-    "Poder": "Lamina Maldita",
-    "Descricao": "Voce aprende o ritual Amaldicoar Arma. Se voce ja conhece esse ritual, seu custo e reduzido em �1 PE. Alem disso, esse ritual recebe o seguinte aprimoramento: \n\n+0 PE. Voce pode usar Ocultismo, em vez de Luta ou Pontaria, para testes de ataque com a arma amaldicoada",
+    "Poder": "Lâmina Maldita",
+    "Descricao": "Voce aprende o ritual Amaldicoar Arma. Se voce ja conhece esse ritual, seu custo e reduzido em –1 PE. Alem disso, esse ritual recebe o seguinte aprimoramento: \n\n+0 PE. Voce pode usar Ocultismo, em vez de Luta ou Pontaria, para testes de ataque com a arma amaldicoada",
     "Nex": 10,
-    "Requisito": null,
     "Classe": "Ocultista",
-    "Trilha": "Lamina Paranormal",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Lâmina Paranormal"
   },
   {
     "Poder": "Gladiador Paranormal",
     "Descricao": "Sempre que acerta um ataque corpo a corpo em um inimigo, voce recebe 2 PE temporarios. Voce pode ganhar um maximo de PE temporarios por cena igual ao seu limite de PE por rodada. PE temporarios desaparecem no final da cena",
     "Nex": 40,
-    "Requisito": null,
     "Classe": "Ocultista",
-    "Trilha": "Lamina Paranormal",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Lâmina Paranormal"
   },
   {
     "Poder": "Conjuracao Marcial",
     "Descricao": "Uma vez por rodada, quando voce lanca um ritual com execucao de uma acao padrao, pode gastar 2 PE para fazer um ataque corpo a corpo como uma acao livre",
     "Nex": 65,
-    "Requisito": null,
     "Classe": "Ocultista",
-    "Trilha": "Lamina Paranormal",
-    "Origem": null,
-    "Elemento": null
+    "Trilha": "Lâmina Paranormal"
   },
   {
     "Poder": "Expansao de Conhecimento",
-    "Descricao": "Voce se conecta com o Conhecimento do Outro Lado, rompendo os limites de sua compreensao. Voce aprende um poder de classe que nao pertence a sua classe. \n\nAfinidade: Escolha um segundo poder de classe que nao pertence a sua classe",
-    "Nex": null,
+    "Descricao": "Voce se conecta com o Conhecimento do Outro Lado, rompendo os limites de sua compreensao. Voce aprende um poder de classe que nao pertence à sua classe. \n\nAfinidade: Escolha um segundo poder de classe que nao pertence à sua classe",
     "Requisito": "Conhecimento I",
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
     "Elemento": "Conhecimento"
   },
   {
     "Poder": "Percepcao Paranormal",
-    "Descricao": "O Conhecimento parece sussurrar sugestoes em sua mente. Em cenas de investigacao, sempre que fizer um teste para Procurar Pistas, voce pode escolher rolar novamente um dado com resultado abaixo de 5. Voce deve aceitar a segunda rolagem, mesmo que seja menor que a primeira. \n\nAfinidade: voce pode rolar novamente um dado resultado abaixo de 10.",
-    "Nex": null,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
+    "Descricao": "O Conhecimento parece sussurrar sugestões em sua mente. Em cenas de investigacao, sempre que fizer um teste para Procurar Pistas, voce pode escolher rolar novamente um dado com resultado abaixo de 5. Voce deve aceitar a segunda rolagem, mesmo que seja menor que a primeira. \n\nAfinidade: voce pode rolar novamente um dado resultado abaixo de 10.",
     "Elemento": "Conhecimento"
   },
   {
     "Poder": "Precognicao",
-    "Descricao": "Voce desenvolve um tipo de �sexto sentido� que te avisa do perigo momentos antes que ele aconteca. Voce recebe b�nus de +5 em testes de Esquiva contra ataques de personagens que estejam em alcance curto ou menor. \n\nAfinidade: voce pode pegar esse poder pela segunda vez para expandir seu conhecimento precognitivo. O b�nus em Esquiva passa a valer para ataques de qualquer distancia e voce fica imune a condicao Desprevenido",
-    "Nex": null,
+    "Descricao": "Voce desenvolve um tipo de “sexto sentido” que te avisa do perigo momentos antes que ele aconteca. Voce recebe bônus de +5 em testes de Esquiva contra ataques de personagens que estejam em alcance curto ou menor. \n\nAfinidade: voce pode pegar esse poder pela segunda vez para expandir seu conhecimento precognitivo. O bônus em Esquiva passa a valer para ataques de qualquer distância e voce fica imune à condicao Desprevenido",
     "Requisito": "Conhecimento I",
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
     "Elemento": "Conhecimento"
   },
   {
     "Poder": "Resistir ao Conhecimento",
     "Descricao": "Resistir ao Conhecimento Voce recebe Resistencia Paranormal 5 contra efeitos de Conhecimento. \n\nAfinidade: aumenta a Resistencia concedida por esse poder para 10",
-    "Nex": null,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
     "Elemento": "Conhecimento"
   },
   {
     "Poder": "Sensitivo",
-    "Descricao": "Sensitivo Voce consegue sentir vagamente as emocoes e intencoes de outros personagens, como medo, raiva ou malicia, recebendo +1D em Testes de Diplomacia, Intimidacao e Intuicao. \n\nAfinidade: quando voce faz um Teste Resistido usando uma dessas pericias, o oponente joga com -1D.",
-    "Nex": null,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
+    "Descricao": "Sensitivo Voce consegue sentir vagamente as emocões e intencões de outros personagens, como medo, raiva ou malícia, recebendo +1D em Testes de Diplomacia, Intimidacao e Intuicao. \n\nAfinidade: quando voce faz um Teste Resistido usando uma dessas perícias, o oponente joga com -1D.",
     "Elemento": "Conhecimento"
   },
   {
     "Poder": "Visao do Oculto",
-    "Descricao": "Seus olhos nao sao mais responsaveis por sua visao, voce agora enxerga atraves da percepcao do Conhecimento dentro de sua mente. Voce e capaz de enxergar perfeitamente no escuro, recebe b�nus de +1D em testes de Percepcao baseados na visao. \n\nAfinidade: voce trata a Camuflagem de um alvo como uma categoria a menos (de total para menor, de menor para nula)",
-    "Nex": null,
+    "Descricao": "Seus olhos nao sao mais responsaveis por sua visao, voce agora enxerga atraves da percepcao do Conhecimento dentro de sua mente. Voce e capaz de enxergar perfeitamente no escuro, recebe bônus de +1D em testes de Percepcao baseados na visao. \n\nAfinidade: voce trata a Camuflagem de um alvo como uma categoria a menos (de total para menor, de menor para nula)",
     "Requisito": "Conhecimento II",
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
     "Elemento": "Conhecimento"
   },
   {
     "Poder": "Afortunado",
-    "Descricao": "A Energia considera resultados mediocres entediantes. Voce pode rolar novamente um resultado 1 em qualquer dado que nao seja 1D20. Esse poder so funciona uma unica vez por rolagem de dado. \n\nAfinidade: alem disso, uma vez por cena, pode rolar novamente um resultado 1 em 1D20",
-    "Nex": null,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
+    "Descricao": "A Energia considera resultados medíocres entediantes. Voce pode rolar novamente um resultado 1 em qualquer dado que nao seja 1D20. Esse poder so funciona uma unica vez por rolagem de dado. \n\nAfinidade: alem disso, uma vez por cena, pode rolar novamente um resultado 1 em 1D20",
     "Elemento": "Energia"
   },
   {
     "Poder": "Sortudo",
-    "Descricao": "Voce sempre acaba esbarrando na solucao para os seus problemas. Em cenas de Investigacao, a DT para Procurar Pistas e diminuida em uma categoria para voce ate voce encontrar uma pista. \n\nAfinidade: a DT para Procurar Pista e sempre considerada uma categoria abaixo para voce.",
-    "Nex": null,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
+    "Descricao": "Voce sempre acaba esbarrando na solucao para os seus problemas. Em cenas de Investigacao, a DT para Procurar Pistas e diminuída em uma categoria para voce ate voce encontrar uma pista. \n\nAfinidade: a DT para Procurar Pista e sempre considerada uma categoria abaixo para voce.",
     "Elemento": "Energia"
   },
   {
     "Poder": "Golpe de Sorte",
-    "Descricao": "Quanto menos voce se esforca, mais a Energia faz questao que a sorte trabalhe por voce. Seus Ataques tem a Margem de Ameaca dobrada. Esse efeito e aplicado antes de qualquer outro efeito de aumento de Margem de Ameaca. \n\nAfinidade: aumenta o b�nus de dano de seus acertos criticos em +1D",
-    "Nex": null,
+    "Descricao": "Quanto menos voce se esforca, mais a Energia faz questao que a sorte trabalhe por voce. Seus Ataques tem a Margem de Ameaca dobrada. Esse efeito e aplicado antes de qualquer outro efeito de aumento de Margem de Ameaca. \n\nAfinidade: aumenta o bônus de dano de seus acertos críticos em +1D",
     "Requisito": "Energia II",
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
     "Elemento": "Energia"
   },
   {
     "Poder": "Manipular Entropia",
-    "Descricao": "Nada diverte mais a Energia do que a possibilidade de um desastre ainda maior. Uma vez por cena, voce pode fazer um alvo em alcance curto rolar novamente um dos dados em um Teste de Pericia, mas precisa escolher ativar esse poder antes do resultado ser anunciado pelo Mestre. \n\nAfinidade: voce pode escolher rolar novamente todos os dados de um teste de pericia",
-    "Nex": null,
+    "Descricao": "Nada diverte mais a Energia do que a possibilidade de um desastre ainda maior. Uma vez por cena, voce pode fazer um alvo em alcance curto rolar novamente um dos dados em um Teste de Perícia, mas precisa escolher ativar esse poder antes do resultado ser anunciado pelo Mestre. \n\nAfinidade: voce pode escolher rolar novamente todos os dados de um teste de perícia",
     "Requisito": "Energia I",
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
     "Elemento": "Energia"
   },
   {
     "Poder": "Passou Raspando",
-    "Descricao": "Voce parece se esquivar de forma quase inconsciente do perigo, como se ele desviasse de voce! Voce recebe +1D em testes de Reflexo. \n\nAfinidade: o b�nus aumenta para +2D e, quando passa em um teste de Reflexo que reduziria dano pela metade, ao inves disso voce nao recebe nenhum dano",
-    "Nex": null,
+    "Descricao": "Voce parece se esquivar de forma quase inconsciente do perigo, como se ele desviasse de voce! Voce recebe +1D em testes de Reflexo. \n\nAfinidade: o bônus aumenta para +2D e, quando passa em um teste de Reflexo que reduziria dano pela metade, ao inves disso voce nao recebe nenhum dano",
     "Requisito": "Energia I",
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
     "Elemento": "Energia"
   },
   {
-    "Poder": "Resistir a Energia",
+    "Poder": "Resistir à Energia",
     "Descricao": "Voce recebe Resistencia Paranormal 5 contra efeitos de Energia. \n\nAfinidade: aumenta a Resistencia concedida por esse poder para 10.",
-    "Nex": null,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
     "Elemento": "Morte"
   },
   {
     "Poder": "Encarar a Morte",
-    "Descricao": "A sua conexao com a Morte te tornou apatico diante da possibilidade do fim. Voce nao hesita em situacoes de perigo. Durante as Cenas de Acao, seu limite de gasto de PE por rodada aumenta em +1. \n\nAfinidade: O aumento do limite de gastos de PE sobe para +2.",
-    "Nex": null,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
+    "Descricao": "A sua conexao com a Morte te tornou apatico diante da possibilidade do fim. Voce nao hesita em situacões de perigo. Durante as Cenas de Acao, seu limite de gasto de PE por rodada aumenta em +1. \n\nAfinidade: O aumento do limite de gastos de PE sobe para +2.",
     "Elemento": "Morte"
   },
   {
     "Poder": "Escapar da Morte",
     "Descricao": "Uma vez por cena, quando receber dano que o deixaria com 0 PV ou menos, voce fica com 1 PV. Nao funciona em caso de Dano Massivo. \n \nAfinidade: ao inves do normal, voce evita completamente o dano. Em caso de Dano Massivo, voce fica com 1 PV.",
-    "Nex": null,
     "Requisito": "Morte I",
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
     "Elemento": "Morte"
   },
   {
     "Poder": "Potencial Aprimorado",
-    "Descricao": "A Morte lhe concede potencial latente de momentos roubados de outro lugar. Voce recebe +1 Ponto de Esforco por NEX. Quando sobe de nivel, os PE que recebe por este poder aumentam de acordo. Por exemplo, se escolher este poder em NEX 30%, recebe 6 PE. Quando subir para 35%, recebe +1 PE adicional, e assim por diante. \n\nAfinidade: recebe +1 PE adicional a cada NEX (para um total de +2 PE por NEX)",
-    "Nex": null,
+    "Descricao": "A Morte lhe concede potencial latente de momentos roubados de outro lugar. Voce recebe +1 Ponto de Esforco por NEX. Quando sobe de nível, os PE que recebe por este poder aumentam de acordo. Por exemplo, se escolher este poder em NEX 30%, recebe 6 PE. Quando subir para 35%, recebe +1 PE adicional, e assim por diante. \n\nAfinidade: recebe +1 PE adicional a cada NEX (para um total de +2 PE por NEX)",
     "Requisito": "Morte I",
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
     "Elemento": "Morte"
   },
   {
     "Poder": "Potencial Reaproveitado",
     "Descricao": "Voce absorve os momentos desperdicados de outros seres. Uma vez por rodada, quando passa num Teste de Resistencia, voce ganha 1 Ponto de Esforco Temporario. Os pontos desaparecem no final da cena. \n\nAfinidade: recebe 2 PE temporario ao inves de 1.",
-    "Nex": null,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
     "Elemento": "Morte"
   },
   {
-    "Poder": "Resistir a Morte",
+    "Poder": "Resistir à Morte",
     "Descricao": "Voce recebe Resistencia Paranormal 5 contra efeitos de Morte. \n\nAfinidade: aumenta a Resistencia concedida por esse poder para 10.",
-    "Nex": null,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
     "Elemento": "Morte"
   },
   {
     "Poder": "Surto Temporal",
     "Descricao": "A sua percepcao temporal se torna distorcida e espiralizada, a nocao de passagem do tempo nunca mais sera a mesma para voce. Uma vez por cena, durante seu turno, voce pode realizar uma acao padrao adicional. \n\nAfinidade: Ao inves disso, voce faz um turno inteiro adicional. Voce deve escolher realizar esse turno adicional no final do seu turno",
-    "Nex": null,
     "Requisito": "Morte II",
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
     "Elemento": "Morte"
   },
   {
     "Poder": "Anatomia Insana",
-    "Descricao": "O seu corpo e transfigurado e parece desenvolver um instinto proprio separado da sua consciencia. Voce tem 50% de chance (resultado \"par\" em 1D4) de ignorar o dano adicional de um acerto critico ou ataque furtivo. \n\nAfinidade: Ao inves disso, voce e imune aos efeitos de acerto critico e ataque furtivo.",
-    "Nex": null,
+    "Descricao": "O seu corpo e transfigurado e parece desenvolver um instinto proprio separado da sua consciencia. Voce tem 50% de chance (resultado \"par\" em 1D4) de ignorar o dano adicional de um acerto crítico ou ataque furtivo. \n\nAfinidade: Ao inves disso, voce e imune aos efeitos de acerto crítico e ataque furtivo.",
     "Requisito": "Sangue I",
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
     "Elemento": "Sangue"
   },
   {
     "Poder": "Arma de Sangue",
-    "Descricao": "O Sangue devora parte de seu corpo e se manifesta como parte de voce. Voce pode gastar 2 PV para produzir garras, chifres ou ate uma lamina de sangue cristalizado que brota de seu antebraco. Ela e considerada uma Arma Simples Leve Especial para efeitos de estatisticas. Quando voce usa a acao atacar, pode gastar 1 PE para fazer um ataque corpo a corpo adicional com essa arma. A arma dura ate o final da cena, e entao se desfaz numa poca de sangue coagulado. \n\nAfinidade: a arma se torna permanentemente parte de voce e causa dano de Sangue ao inves de dano Fisico.",
-    "Nex": null,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
+    "Descricao": "O Sangue devora parte de seu corpo e se manifesta como parte de voce. Voce pode gastar 2 PV para produzir garras, chifres ou ate uma lâmina de sangue cristalizado que brota de seu antebraco. Ela e considerada uma Arma Simples Leve Especial para efeitos de estatísticas. Quando voce usa a acao atacar, pode gastar 1 PE para fazer um ataque corpo a corpo adicional com essa arma. A arma dura ate o final da cena, e entao se desfaz numa poca de sangue coagulado. \n\nAfinidade: a arma se torna permanentemente parte de voce e causa dano de Sangue ao inves de dano Físico.",
     "Elemento": "Sangue"
   },
   {
     "Poder": "Resistir ao Sangue",
     "Descricao": "Voce recebe Resistencia Paranormal 5 contra efeitos de Sangue. \n\nAfinidade: aumenta a Resistencia concedida por esse poder para 10",
-    "Nex": null,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
     "Elemento": "Sangue"
   },
   {
     "Poder": "Sangue de Ferro",
     "Descricao": "O seu sangue flui de forma paranormal e agressiva, concedendo uma saude perfeita. Voce recebe 3PV adicionais + 1PV adicional por NEX. \n\nAfinidade: voce se torna imune a Venenos e Doencas",
-    "Nex": null,
-    "Requisito": null,
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
     "Elemento": "Sangue"
   },
   {
     "Poder": "Sangue Fervente",
-    "Descricao": "A intensidade da dor desperta em voce sentimentos bestiais e prazerosos que voce nem imaginava que existiam. Enquanto estiver machucado voce recebe +1 em Agilidade, Forca ou Vigor, a sua escolha. \n\nAfinidade: Recebe tambem +1 em dois atributos a sua escolha, entre Agilidade, Forca e Vigor",
-    "Nex": null,
+    "Descricao": "A intensidade da dor desperta em voce sentimentos bestiais e prazerosos que voce nem imaginava que existiam. Enquanto estiver machucado voce recebe +1 em Agilidade, Forca ou Vigor, à sua escolha. \n\nAfinidade: Recebe tambem +1 em dois atributos à sua escolha, entre Agilidade, Forca e Vigor",
     "Requisito": "Sangue II",
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
     "Elemento": "Sangue"
   },
   {
     "Poder": "Sangue Vivo",
-    "Descricao": "A carnificina nao pode parar, o Sangue precisa continuar fluindo. Na primeira vez que ficar Machucado durante uma cena, voce recebe Cura Acelerada 2. Esse efeito nunca cura voce acima da metade dos PV maximos (ou seja, voce nunca deixa de estar Machucado) e para de funcionar caso voce perca a condicao Machucado. \n\nAfinidade: aumenta a Cura Acelerada para 5 e torna voce imune a Traumas Fisicos enquanto o poder estiver ativo, podendo, por exemplo, recolocar membros decepados",
-    "Nex": null,
+    "Descricao": "A carnificina nao pode parar, o Sangue precisa continuar fluindo. Na primeira vez que ficar Machucado durante uma cena, voce recebe Cura Acelerada 2. Esse efeito nunca cura voce acima da metade dos PV maximos (ou seja, voce nunca deixa de estar Machucado) e para de funcionar caso voce perca a condicao Machucado. \n\nAfinidade: aumenta a Cura Acelerada para 5 e torna voce imune a Traumas Físicos enquanto o poder estiver ativo, podendo, por exemplo, recolocar membros decepados",
     "Requisito": "Sangue I",
-    "Classe": null,
-    "Trilha": null,
-    "Origem": null,
     "Elemento": "Sangue"
   }
 ]

@@ -28,6 +28,7 @@ namespace RPGFichas.Domain.Objects
         public string Classe { get; set; }
         public int Nex { get; set; }
         public string Patente { get; set; }
+        public string Trilha { get; set; }
         public int Prestigio { get; set; }
     }
     public class Atributos

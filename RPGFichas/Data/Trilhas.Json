@@ -1,0 +1,62 @@
+﻿[
+  {
+    "Trilha": "Aniquilador",
+    "Classe": "Combatente"
+  },
+  {
+    "Trilha": "Comandante de Campo",
+    "Classe": "Combatente"
+  },
+  {
+    "Trilha": "Guerreiro",
+    "Classe": "Combatente"
+  },
+  {
+    "Trilha": "Operacoes Especiais",
+    "Classe": "Combatente"
+  },
+  {
+    "Trilha": "Tropa de Choque",
+    "Classe": "Combatente"
+  },
+  {
+    "Trilha": "Atirador de Elite",
+    "Classe": "Especialista"
+  },
+  {
+    "Trilha": "Infiltrador",
+    "Classe": "Especialista"
+  },
+  {
+    "Trilha": "Medico de Campo",
+    "Classe": "Especialista"
+  },
+  {
+    "Trilha": "Negociador",
+    "Classe": "Especialista"
+  },
+  {
+    "Trilha": "Tecnico",
+    "Classe": "Especialista"
+  },
+  {
+    "Trilha": "Conduite",
+    "Classe": "Ocultista"
+  },
+  {
+    "Trilha": "Flagelador",
+    "Classe": "Ocultista"
+  },
+  {
+    "Trilha": "Graduado",
+    "Classe": "Ocultista"
+  },
+  {
+    "Trilha": "Intuitivo",
+    "Classe": "Ocultista"
+  },
+  {
+    "Trilha": "Lamina Paranormal",
+    "Classe": "Ocultista"
+  }
+]

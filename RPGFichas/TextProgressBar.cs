@@ -17,6 +17,8 @@ namespace ProgressBarSample
 
     public class TextProgressBar : ProgressBar
     {
+
+
         [Description("Font of the text on ProgressBar"), Category("Additional Options")]
         public Font TextFont { get; set; } = new Font(FontFamily.GenericSerif, 11, FontStyle.Bold | FontStyle.Italic);
 
@@ -34,6 +36,19 @@ namespace ProgressBarSample
                 _textColourBrush = new SolidBrush(value);
             }
         }
+        private Color _backgoroundColor = Color.Black;
+        [Category("Additional Options")]
+        public Color BackgroundColor
+        {
+            get
+            {
+                return _backgoroundColor;
+            }
+            set
+            {
+                _backgoroundColor = value;
+            }
+        }
 
         private SolidBrush _progressColourBrush = (SolidBrush)Brushes.LightGreen;
         [Category("Additional Options"), Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
@@ -47,6 +62,21 @@ namespace ProgressBarSample
             {
                 _progressColourBrush.Dispose();
                 _progressColourBrush = new SolidBrush(value);
+            }
+        }
+
+        private int _Incremento = 0;
+        [Category("Additional Options"), Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
+        public int Incremento
+        {
+            get
+            {
+                return _Incremento;
+            }
+            set
+            {
+                _Incremento = value;
+                Invalidate();//redraw component after change value from VS Properties section
             }
         }
 
@@ -114,7 +144,7 @@ namespace ProgressBarSample
         {
             get
             {
-                return $"{Value}/{Maximum}";
+                return $"{Maximum}/{Value + _Incremento}";
             }
         }
 
@@ -144,6 +174,10 @@ namespace ProgressBarSample
 
             ProgressBarRenderer.DrawHorizontalBar(g, rect);
 
+            using(var brush = new SolidBrush(_backgoroundColor))
+            {
+                g.FillRectangle(brush, rect);
+            }
             rect.Inflate(-3, -3);
 
             if (Value > 0)

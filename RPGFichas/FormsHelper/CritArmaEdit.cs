@@ -14,17 +14,27 @@ namespace RPGFichas.FormsHelper
     public partial class CritArmaEdit : Form
     {
         Ficha fichaSender;
-        int rowEdit;
-        public CritArmaEdit(Ficha sender, int row)
+        ArmaForms ArmaForms;
+        public CritArmaEdit(Ficha sender, ArmaForms armaForms)
         {
             InitializeComponent();
             fichaSender = sender;
-            rowEdit = row;
+            ArmaForms = armaForms;
         }
         private void btnOk_Click(object sender, EventArgs e)
         {
-            fichaSender.editaCritico((Int32)numMargem.Value, (Int32)numMulti.Value, rowEdit);
+            fichaSender.editaCritico((Int32)numMargem.Value, (Int32)numMulti.Value, ArmaForms);
             this.Dispose();
+        }
+
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (Form.ModifierKeys == Keys.None && keyData == Keys.Escape)
+            {
+                this.Dispose();
+                return true;
+            }
+            return base.ProcessDialogKey(keyData);
         }
     }
 }

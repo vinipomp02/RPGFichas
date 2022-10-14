@@ -31,14 +31,14 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.flpFichas = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAddFicha = new System.Windows.Forms.Button();
+            this.lblVersion = new System.Windows.Forms.Label();
             this.flpFichas.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Enabled = false;
+            this.lblTitle.BackColor = System.Drawing.Color.White;
             this.lblTitle.Font = new System.Drawing.Font("Euphorigenic", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTitle.ForeColor = System.Drawing.Color.Black;
             this.lblTitle.Location = new System.Drawing.Point(562, 24);
@@ -49,6 +49,7 @@
             // 
             // flpFichas
             // 
+            this.flpFichas.AutoScroll = true;
             this.flpFichas.Controls.Add(this.btnAddFicha);
             this.flpFichas.Location = new System.Drawing.Point(304, 126);
             this.flpFichas.Name = "flpFichas";
@@ -67,16 +68,28 @@
             this.btnAddFicha.UseVisualStyleBackColor = false;
             this.btnAddFicha.Click += new System.EventHandler(this.btnAddFicha_Click);
             // 
+            // lblVersion
+            // 
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblVersion.Location = new System.Drawing.Point(1832, 1000);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(60, 32);
+            this.lblVersion.TabIndex = 5;
+            this.lblVersion.Text = "V2.0";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.lblVersion);
             this.Controls.Add(this.flpFichas);
             this.Controls.Add(this.lblTitle);
             this.Name = "Menu";
-            this.Text = "Form1";
+            this.Text = "Menu";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.flpFichas.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -89,5 +102,6 @@
         private Label lblTitle;
         private FlowLayoutPanel flpFichas;
         private Button btnAddFicha;
+        private Label lblVersion;
     }
 }

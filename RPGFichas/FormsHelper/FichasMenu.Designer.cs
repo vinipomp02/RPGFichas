@@ -50,10 +50,11 @@
             this.btnImage.BackColor = System.Drawing.Color.White;
             this.btnImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnImage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnImage.Location = new System.Drawing.Point(-2, 0);
+            this.btnImage.Location = new System.Drawing.Point(0, 0);
             this.btnImage.Name = "btnImage";
-            this.btnImage.Size = new System.Drawing.Size(284, 259);
+            this.btnImage.Size = new System.Drawing.Size(280, 259);
             this.btnImage.TabIndex = 1;
             this.btnImage.Text = "IMG";
             this.btnImage.UseVisualStyleBackColor = false;
@@ -62,15 +63,18 @@
             // lblPersonagem
             // 
             this.lblPersonagem.BackColor = System.Drawing.Color.Transparent;
-            this.lblPersonagem.Enabled = false;
+            this.lblPersonagem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblPersonagem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblPersonagem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPersonagem.Font = new System.Drawing.Font("Euphorigenic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblPersonagem.ForeColor = System.Drawing.Color.Black;
-            this.lblPersonagem.Location = new System.Drawing.Point(4, 262);
+            this.lblPersonagem.Location = new System.Drawing.Point(0, 258);
             this.lblPersonagem.Name = "lblPersonagem";
-            this.lblPersonagem.Size = new System.Drawing.Size(274, 169);
+            this.lblPersonagem.Size = new System.Drawing.Size(280, 169);
             this.lblPersonagem.TabIndex = 2;
             this.lblPersonagem.Text = "Personagem";
             this.lblPersonagem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPersonagem.Click += new System.EventHandler(this.btnImage_Click);
             // 
             // FichasMenu
             // 
@@ -79,7 +83,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(283, 433);
             this.Controls.Add(this.groupBox1);
-            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FichasMenu";
             this.Text = "FichasMenu";

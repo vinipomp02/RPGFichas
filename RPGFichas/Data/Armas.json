@@ -9,7 +9,6 @@
     "Ataque": "Luta",
     "Tipo": "Simples - Leve",
     "TipoDano": "P",
-    "Municao": null,
     "Categoria": 0,
     "Especial": "Discreta"
   },
@@ -18,40 +17,32 @@
     "Name": "Martelo",
     "Espacos": 1,
     "Dano": "1D6+F",
-    "Alcance": null,
     "Critico": "20\/x2",
     "Ataque": "Luta",
     "Tipo": "Simples - Leve",
     "TipoDano": "I",
-    "Municao": null,
-    "Categoria": 0,
-    "Especial": null
+    "Categoria": 0
   },
   {
     "Id": 3,
     "Name": "Punhal",
     "Espacos": 1,
     "Dano": "1D4+F",
-    "Alcance": null,
     "Critico": "20\/x3",
     "Ataque": "Luta",
     "Tipo": "Simples - Leve",
     "TipoDano": "P",
-    "Municao": null,
-    "Categoria": 0,
-    "Especial": null
+    "Categoria": 0
   },
   {
     "Id": 4,
     "Name": "Bastao 1M",
     "Espacos": 1,
     "Dano": "1D6+F",
-    "Alcance": null,
     "Critico": "20\/x2",
     "Ataque": "Luta",
     "Tipo": "Simples - Uma Mao",
     "TipoDano": "I",
-    "Municao": null,
     "Categoria": 0,
     "Especial": "Adaptavel"
   },
@@ -60,12 +51,10 @@
     "Name": "Bastao 2M",
     "Espacos": 1,
     "Dano": "1D8+F",
-    "Alcance": null,
     "Critico": "20\/x2",
     "Ataque": "Luta",
     "Tipo": "Simples - Duas Maos",
     "TipoDano": "I",
-    "Municao": null,
     "Categoria": 0,
     "Especial": "Adaptavel"
   },
@@ -74,14 +63,11 @@
     "Name": "Machete",
     "Espacos": 1,
     "Dano": "1D6+F",
-    "Alcance": null,
     "Critico": "19\/x2",
     "Ataque": "Luta",
     "Tipo": "Simples - Uma Mao",
     "TipoDano": "I",
-    "Municao": null,
-    "Categoria": 0,
-    "Especial": null
+    "Categoria": 0
   },
   {
     "Id": 7,
@@ -93,21 +79,17 @@
     "Ataque": "Luta",
     "Tipo": "Simples - Uma Mao",
     "TipoDano": "P",
-    "Municao": null,
-    "Categoria": 0,
-    "Especial": null
+    "Categoria": 0
   },
   {
     "Id": 8,
     "Name": "Cajado",
     "Espacos": 2,
     "Dano": "1D6+F",
-    "Alcance": null,
     "Critico": "20\/x2",
     "Ataque": "Luta",
     "Tipo": "Simples - Duas Maos",
     "TipoDano": "I",
-    "Municao": null,
     "Categoria": 0,
     "Especial": "Adaptavel"
   },
@@ -122,8 +104,7 @@
     "Tipo": "Simples - Duas Maos",
     "TipoDano": "P",
     "Municao": "Flecha",
-    "Categoria": 0,
-    "Especial": null
+    "Categoria": 0
   },
   {
     "Id": 10,
@@ -136,8 +117,7 @@
     "Tipo": "Simples - Duas Maos",
     "TipoDano": "P",
     "Municao": "Flecha",
-    "Categoria": 0,
-    "Especial": null
+    "Categoria": 0
   },
   {
     "Id": 11,
@@ -178,8 +158,7 @@
     "Tipo": "Longa - Duas Maos",
     "TipoDano": "B",
     "Municao": "Longa",
-    "Categoria": 1,
-    "Especial": null
+    "Categoria": 1
   },
   {
     "Id": 14,
@@ -191,35 +170,28 @@
     "Ataque": "Luta",
     "Tipo": "Tatica - Leve",
     "TipoDano": "C",
-    "Municao": null,
-    "Categoria": 0,
-    "Especial": null
+    "Categoria": 0
   },
   {
     "Id": 15,
     "Name": "Nunchaku",
     "Espacos": 1,
     "Dano": "1D8+F",
-    "Alcance": null,
     "Critico": "20\/x2",
     "Ataque": "Luta",
     "Tipo": "Tatica - Leve",
     "TipoDano": "I",
-    "Municao": null,
-    "Categoria": 0,
-    "Especial": null
+    "Categoria": 0
   },
   {
     "Id": 16,
     "Name": "Corrente",
     "Espacos": 1,
     "Dano": "1D8+F",
-    "Alcance": null,
     "Critico": "20\/x2",
     "Ataque": "Luta",
     "Tipo": "Tatica - Uma Mao",
     "TipoDano": "I",
-    "Municao": null,
     "Categoria": 0,
     "Especial": "Versatil"
   },
@@ -228,143 +200,121 @@
     "Name": "Espada 1M",
     "Espacos": 1,
     "Dano": "1D8+F",
-    "Alcance": null,
     "Critico": "19\/x2",
     "Ataque": "Luta",
     "Tipo": "Tatica - Uma Mao",
     "TipoDano": "C",
-    "Municao": null,
-    "Categoria": 1,
-    "Especial": null
+    "Categoria": 1
   },
   {
     "Id": 18,
     "Name": "Espada 2M",
     "Espacos": 1,
     "Dano": "1D10+F",
-    "Alcance": null,
     "Critico": "19\/x2",
     "Ataque": "Luta",
     "Tipo": "Tatica - Duas Maos",
     "TipoDano": "C",
-    "Municao": null,
-    "Categoria": 1,
-    "Especial": null
+    "Categoria": 1
   },
   {
     "Id": 19,
     "Name": "Florete",
     "Espacos": 2,
     "Dano": "1D6+F",
-    "Alcance": null,
     "Critico": "18\/x2",
     "Ataque": "Luta",
     "Tipo": "Tatica - Uma Mao",
     "TipoDano": "C",
-    "Municao": null,
-    "Categoria": 1,
-    "Especial": null
+    "Categoria": 1
   },
   {
     "Id": 20,
     "Name": "Machado",
     "Espacos": 1,
     "Dano": "1D8+F",
-    "Alcance": null,
     "Critico": "20\/x3",
     "Ataque": "Luta",
     "Tipo": "Tatica - Uma Mao",
     "TipoDano": "C",
-    "Municao": null,
-    "Categoria": 1,
-    "Especial": null
+    "Categoria": 1
   },
   {
     "Id": 21,
-    "Name": "Marreta",
+    "Name": "Maca",
     "Espacos": 1,
     "Dano": "2D4+F",
-    "Alcance": null,
     "Critico": "20\/x2",
     "Ataque": "Luta",
     "Tipo": "Tatica - Uma Mao",
     "TipoDano": "I",
-    "Municao": null,
-    "Categoria": 1,
-    "Especial": null
+    "Categoria": 1
   },
   {
     "Id": 22,
+    "Name": "Marreta",
+    "Espacos": 1,
+    "Dano": "3D4+F",
+    "Critico": "20\/x2",
+    "Ataque": "Luta",
+    "Tipo": "Tatica - Uma Mao",
+    "TipoDano": "I",
+    "Categoria": 1
+  },
+  {
+    "Id": 23,
     "Name": "Acha",
     "Espacos": 2,
     "Dano": "1D12+F",
-    "Alcance": null,
     "Critico": "20\/x3",
     "Ataque": "Luta",
     "Tipo": "Tatica - Duas Maos",
     "TipoDano": "C",
-    "Municao": null,
-    "Categoria": 1,
-    "Especial": null
+    "Categoria": 1
   },
   {
-    "Id": 23,
+    "Id": 24,
     "Name": "Gadanho",
     "Espacos": 2,
     "Dano": "2D4+F",
-    "Alcance": null,
     "Critico": "20\/x4",
     "Ataque": "Luta",
     "Tipo": "Tatica - Duas Maos",
     "TipoDano": "C",
-    "Municao": null,
-    "Categoria": 1,
-    "Especial": null
-  },
-  {
-    "Id": 24,
-    "Name": "Katana",
-    "Espacos": 2,
-    "Dano": "1D10+F",
-    "Alcance": null,
-    "Critico": "19\/x2",
-    "Ataque": "Luta",
-    "Tipo": "Tatica - Duas Maos",
-    "TipoDano": null,
-    "Municao": null,
-    "Categoria": 1,
-    "Especial": null
+    "Categoria": 1
   },
   {
     "Id": 25,
-    "Name": "Montante",
+    "Name": "Katana",
     "Espacos": 2,
-    "Dano": "2D6+F",
-    "Alcance": null,
+    "Dano": "1D10+F",
     "Critico": "19\/x2",
     "Ataque": "Luta",
     "Tipo": "Tatica - Duas Maos",
-    "TipoDano": null,
-    "Municao": null,
-    "Categoria": 1,
-    "Especial": null
+    "Categoria": 1
   },
   {
     "Id": 26,
-    "Name": "Moto-Serra",
+    "Name": "Montante",
     "Espacos": 2,
-    "Dano": "3D6+F",
-    "Alcance": null,
-    "Critico": "20\/x2",
+    "Dano": "2D6+F",
+    "Critico": "19\/x2",
     "Ataque": "Luta",
     "Tipo": "Tatica - Duas Maos",
-    "TipoDano": null,
-    "Municao": null,
-    "Categoria": 1,
-    "Especial": null
+    "Categoria": 1
   },
   {
     "Id": 27,
+    "Name": "Moto-Serra",
+    "Espacos": 2,
+    "Dano": "3D6+F",
+    "Critico": "20\/x2",
+    "Ataque": "Luta",
+    "Tipo": "Tatica - Duas Maos",
+    "Categoria": 1
+  },
+  {
+    "Id": 28,
     "Name": "Arco Composto",
     "Espacos": 2,
     "Dano": "1D10+F",
@@ -374,11 +324,10 @@
     "Tipo": "Tatica - Duas Maos",
     "TipoDano": "P",
     "Municao": "Flecha",
-    "Categoria": 1,
-    "Especial": null
+    "Categoria": 1
   },
   {
-    "Id": 28,
+    "Id": 29,
     "Name": "Balestra",
     "Espacos": 2,
     "Dano": "1D12",
@@ -388,11 +337,10 @@
     "Tipo": "Tatica - Duas Maos",
     "TipoDano": "P",
     "Municao": "Flecha",
-    "Categoria": 1,
-    "Especial": null
+    "Categoria": 1
   },
   {
-    "Id": 29,
+    "Id": 30,
     "Name": "Submetralhadora",
     "Espacos": 1,
     "Dano": "2D6",
@@ -406,7 +354,7 @@
     "Especial": "Automatica"
   },
   {
-    "Id": 30,
+    "Id": 31,
     "Name": "Espingarda",
     "Espacos": 2,
     "Dano": "4D6",
@@ -416,11 +364,10 @@
     "Tipo": "Longa - Duas Maos",
     "TipoDano": "B",
     "Municao": "Cartuchos",
-    "Categoria": 1,
-    "Especial": null
+    "Categoria": 1
   },
   {
-    "Id": 31,
+    "Id": 32,
     "Name": "Fuzil de Assalto",
     "Espacos": 2,
     "Dano": "2D10",
@@ -434,7 +381,7 @@
     "Especial": "Automatica"
   },
   {
-    "Id": 32,
+    "Id": 33,
     "Name": "Fuzil de Precisao",
     "Espacos": 2,
     "Dano": "2D10",
@@ -444,25 +391,23 @@
     "Tipo": "Longa - Duas Maos",
     "TipoDano": "B",
     "Municao": "Longa",
-    "Categoria": 3,
-    "Especial": null
+    "Categoria": 3
   },
   {
-    "Id": 33,
+    "Id": 34,
     "Name": "Bazuca",
     "Espacos": 2,
     "Dano": "10D8",
-    "Alcance": "Médio",
+    "Alcance": "MÃ©dio",
     "Critico": "20\/x2",
     "Ataque": "Pontaria",
     "Tipo": "Longa - Duas Maos",
     "TipoDano": "I",
     "Municao": "Foguete",
-    "Categoria": 3,
-    "Especial": null
+    "Categoria": 3
   },
   {
-    "Id": 34,
+    "Id": 35,
     "Name": "Lanca-Chamas M9",
     "Espacos": 2,
     "Dano": "6D6",
@@ -472,11 +417,10 @@
     "Tipo": "Longa - Duas Maos",
     "TipoDano": "Fogo",
     "Municao": "Combustivel",
-    "Categoria": 3,
-    "Especial": null
+    "Categoria": 3
   },
   {
-    "Id": 35,
+    "Id": 36,
     "Name": "Metralhadora",
     "Espacos": 2,
     "Dano": "2D12",

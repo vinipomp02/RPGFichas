@@ -13,18 +13,28 @@ namespace RPGFichas.FormsHelper
     public partial class DanoArmaEdit : Form
     {
         Ficha fichaSender;
-        int rowEdit;
-        public DanoArmaEdit(Ficha sender,int row)
+        ArmaForms ArmaForms;
+        public DanoArmaEdit(Ficha sender,ArmaForms armaForms)
         {
             InitializeComponent();
             fichaSender = sender;
-            rowEdit = row;
+            ArmaForms = armaForms;
         }
         private void btnOk_Click(object sender, EventArgs e)
         {
-            fichaSender.editaDano((Int32)numDados.Value, (Int32)numLados.Value, (Int32)numBonus.Value, cbxForca.Checked,rowEdit);
+            fichaSender.editaDano((Int32)numDados.Value, (Int32)numLados.Value, (Int32)numBonus.Value, cbxForca.Checked, ArmaForms);
             this.Dispose();
 
+        }
+
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (Form.ModifierKeys == Keys.None && keyData == Keys.Escape)
+            {
+                this.Dispose();
+                return true;
+            }
+            return base.ProcessDialogKey(keyData);
         }
     }
 }

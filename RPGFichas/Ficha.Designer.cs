@@ -32,14 +32,6 @@ namespace RPGFichas
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ficha));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAgi = new RPGFichas.RoundButton();
             this.lblDados = new System.Windows.Forms.Label();
             this.lblDadosJogados = new System.Windows.Forms.Label();
@@ -79,25 +71,8 @@ namespace RPGFichas
             this.cbxRollNext = new System.Windows.Forms.CheckBox();
             this.cbxRollAll = new System.Windows.Forms.CheckBox();
             this.btnNext = new System.Windows.Forms.Button();
-            this.numPe = new System.Windows.Forms.NumericUpDown();
-            this.numSan = new System.Windows.Forms.NumericUpDown();
-            this.txtSan = new System.Windows.Forms.TextBox();
-            this.txtPe = new System.Windows.Forms.TextBox();
             this.txtDefPassiva = new System.Windows.Forms.TextBox();
-            this.txtDefBloqueio = new System.Windows.Forms.TextBox();
             this.txtDefEsquiva = new System.Windows.Forms.TextBox();
-            this.dgvArmas = new System.Windows.Forms.DataGridView();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ataque = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Alcance = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dano = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Critico = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Municao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Modificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Especial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAddArma = new System.Windows.Forms.Button();
-            this.btnExcluirArma = new RPGFichas.RoundButton();
             this.lblAtletismo = new System.Windows.Forms.Label();
             this.lblCiencia = new System.Windows.Forms.Label();
             this.lblAtualidades = new System.Windows.Forms.Label();
@@ -121,11 +96,7 @@ namespace RPGFichas
             this.lblPontaria = new System.Windows.Forms.Label();
             this.lblPilotagem = new System.Windows.Forms.Label();
             this.lblDefPassiva = new System.Windows.Forms.Label();
-            this.lblDefBloqueio = new System.Windows.Forms.Label();
             this.lblDefEsquiva = new System.Windows.Forms.Label();
-            this.lblPV = new System.Windows.Forms.Label();
-            this.lblSan = new System.Windows.Forms.Label();
-            this.lblPE = new System.Windows.Forms.Label();
             this.lblResFrio = new System.Windows.Forms.Label();
             this.txtResFrio = new System.Windows.Forms.TextBox();
             this.txtResImpacto = new System.Windows.Forms.TextBox();
@@ -189,17 +160,15 @@ namespace RPGFichas
             this.Condicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoCondicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Upgrade = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnAddCondition = new System.Windows.Forms.Button();
-            this.btnExcluirCodicao = new RPGFichas.RoundButton();
+            this.btnAddCondicoes = new System.Windows.Forms.Button();
             this.txtProeficiencia = new System.Windows.Forms.TextBox();
-            this.btnAddItem = new System.Windows.Forms.Button();
+            this.btnAddItens = new System.Windows.Forms.Button();
             this.dgvItens = new System.Windows.Forms.DataGridView();
             this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Detalhes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Espacos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prestigio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnExcluirItem = new RPGFichas.RoundButton();
             this.lblEspacoLivre = new System.Windows.Forms.Label();
             this.lblEspacoAtual = new System.Windows.Forms.Label();
             this.lblEspacoTotal = new System.Windows.Forms.Label();
@@ -293,11 +262,25 @@ namespace RPGFichas
             this.pbxToken = new System.Windows.Forms.PictureBox();
             this.cbxOrigem = new System.Windows.Forms.ComboBox();
             this.cbxClasse = new System.Windows.Forms.ComboBox();
-            this.cbxPatente = new System.Windows.Forms.ComboBox();
             this.SaveTimer = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.numPe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvArmas)).BeginInit();
+            this.tpbPv = new ProgressBarSample.TextProgressBar();
+            this.tpbSan = new ProgressBarSample.TextProgressBar();
+            this.tpbPe = new ProgressBarSample.TextProgressBar();
+            this.btnIncreasePv = new System.Windows.Forms.Button();
+            this.btnIncreaseSan = new System.Windows.Forms.Button();
+            this.btnIncreasePe = new System.Windows.Forms.Button();
+            this.btnDecreasePe = new System.Windows.Forms.Button();
+            this.btnDecreaseSan = new System.Windows.Forms.Button();
+            this.btnDecreasePv = new System.Windows.Forms.Button();
+            this.lblTrilha = new System.Windows.Forms.Label();
+            this.cbxTrilha = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblRituais = new RPGFichas.VerticalLabel();
+            this.flpArmas = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnAddArma = new System.Windows.Forms.Button();
+            this.verticalLabel1 = new RPGFichas.VerticalLabel();
+            this.tipPatente = new System.Windows.Forms.ToolTip(this.components);
+            this.rcbxPatente = new ProjectMentor.Windows.Controls.ReadOnlyComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numBonus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCondicoes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItens)).BeginInit();
@@ -307,6 +290,8 @@ namespace RPGFichas
             this.flpRituais.SuspendLayout();
             this.flpPoderes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxToken)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.flpArmas.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAgi
@@ -381,6 +366,7 @@ namespace RPGFichas
             resources.ApplyResources(this.btnFor, "btnFor");
             this.btnFor.Name = "btnFor";
             this.btnFor.UseVisualStyleBackColor = false;
+            this.btnFor.TextChanged += new System.EventHandler(this.btnFor_TextChanged);
             this.btnFor.Click += new System.EventHandler(this.btnSelect);
             // 
             // btnVantagem
@@ -468,6 +454,7 @@ namespace RPGFichas
             this.cbxLuta.Name = "cbxLuta";
             this.cbxLuta.UseVisualStyleBackColor = false;
             this.cbxLuta.CheckedChanged += new System.EventHandler(this.cbxSelect);
+            this.cbxLuta.TextChanged += new System.EventHandler(this.cbxReflexos_TextChanged);
             // 
             // cbxTatica
             // 
@@ -548,6 +535,7 @@ namespace RPGFichas
             this.cbxReflexos.Name = "cbxReflexos";
             this.cbxReflexos.UseVisualStyleBackColor = false;
             this.cbxReflexos.CheckedChanged += new System.EventHandler(this.cbxSelect);
+            this.cbxReflexos.TextChanged += new System.EventHandler(this.cbxReflexos_TextChanged);
             // 
             // cbxProfissao
             // 
@@ -620,53 +608,14 @@ namespace RPGFichas
             this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // numPe
-            // 
-            this.numPe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.numPe, "numPe");
-            this.numPe.Name = "numPe";
-            // 
-            // numSan
-            // 
-            this.numSan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.numSan, "numSan");
-            this.numSan.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
-            this.numSan.Name = "numSan";
-            // 
-            // txtSan
-            // 
-            this.txtSan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.txtSan, "txtSan");
-            this.txtSan.Name = "txtSan";
-            this.txtSan.ReadOnly = true;
-            this.txtSan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInt_keyPress);
-            // 
-            // txtPe
-            // 
-            this.txtPe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.txtPe, "txtPe");
-            this.txtPe.Name = "txtPe";
-            this.txtPe.ReadOnly = true;
-            this.txtPe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInt_keyPress);
-            // 
             // txtDefPassiva
             // 
             this.txtDefPassiva.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.txtDefPassiva, "txtDefPassiva");
             this.txtDefPassiva.Name = "txtDefPassiva";
             this.txtDefPassiva.ReadOnly = true;
+            this.txtDefPassiva.TextChanged += new System.EventHandler(this.txtDefPassiva_TextChanged);
             this.txtDefPassiva.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInt_keyPress);
-            // 
-            // txtDefBloqueio
-            // 
-            this.txtDefBloqueio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.txtDefBloqueio, "txtDefBloqueio");
-            this.txtDefBloqueio.Name = "txtDefBloqueio";
-            this.txtDefBloqueio.ReadOnly = true;
             // 
             // txtDefEsquiva
             // 
@@ -674,138 +623,6 @@ namespace RPGFichas
             resources.ApplyResources(this.txtDefEsquiva, "txtDefEsquiva");
             this.txtDefEsquiva.Name = "txtDefEsquiva";
             this.txtDefEsquiva.ReadOnly = true;
-            // 
-            // dgvArmas
-            // 
-            this.dgvArmas.AllowUserToAddRows = false;
-            this.dgvArmas.AllowUserToDeleteRows = false;
-            this.dgvArmas.AllowUserToResizeRows = false;
-            this.dgvArmas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvArmas.BackgroundColor = System.Drawing.Color.White;
-            this.dgvArmas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvArmas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvArmas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArmas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nome,
-            this.Tipo,
-            this.Ataque,
-            this.Alcance,
-            this.Dano,
-            this.Critico,
-            this.Municao,
-            this.Modificador,
-            this.Especial});
-            this.dgvArmas.GridColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.dgvArmas, "dgvArmas");
-            this.dgvArmas.Name = "dgvArmas";
-            this.dgvArmas.ReadOnly = true;
-            this.dgvArmas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvArmas.RowHeadersVisible = false;
-            this.dgvArmas.RowTemplate.Height = 25;
-            this.dgvArmas.ShowEditingIcon = false;
-            this.dgvArmas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArmas_CellContentClick);
-            this.dgvArmas.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArmas_CellMouseEnter);
-            this.dgvArmas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvArmas_MouseClick);
-            // 
-            // Nome
-            // 
-            dataGridViewCellStyle1.NullValue = "---";
-            this.Nome.DefaultCellStyle = dataGridViewCellStyle1;
-            resources.ApplyResources(this.Nome, "Nome");
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            // 
-            // Tipo
-            // 
-            dataGridViewCellStyle2.NullValue = "---";
-            this.Tipo.DefaultCellStyle = dataGridViewCellStyle2;
-            resources.ApplyResources(this.Tipo, "Tipo");
-            this.Tipo.Name = "Tipo";
-            this.Tipo.ReadOnly = true;
-            // 
-            // Ataque
-            // 
-            this.Ataque.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            resources.ApplyResources(this.Ataque, "Ataque");
-            this.Ataque.Name = "Ataque";
-            this.Ataque.ReadOnly = true;
-            this.Ataque.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Ataque.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Alcance
-            // 
-            dataGridViewCellStyle3.NullValue = "---";
-            this.Alcance.DefaultCellStyle = dataGridViewCellStyle3;
-            resources.ApplyResources(this.Alcance, "Alcance");
-            this.Alcance.Name = "Alcance";
-            this.Alcance.ReadOnly = true;
-            // 
-            // Dano
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.NullValue = "---";
-            this.Dano.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Dano.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            resources.ApplyResources(this.Dano, "Dano");
-            this.Dano.Name = "Dano";
-            this.Dano.ReadOnly = true;
-            this.Dano.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dano.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Critico
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.NullValue = "---";
-            this.Critico.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Critico.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            resources.ApplyResources(this.Critico, "Critico");
-            this.Critico.Name = "Critico";
-            this.Critico.ReadOnly = true;
-            this.Critico.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Critico.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Municao
-            // 
-            dataGridViewCellStyle6.NullValue = "---";
-            this.Municao.DefaultCellStyle = dataGridViewCellStyle6;
-            resources.ApplyResources(this.Municao, "Municao");
-            this.Municao.Name = "Municao";
-            this.Municao.ReadOnly = true;
-            // 
-            // Modificador
-            // 
-            dataGridViewCellStyle7.NullValue = "---";
-            this.Modificador.DefaultCellStyle = dataGridViewCellStyle7;
-            resources.ApplyResources(this.Modificador, "Modificador");
-            this.Modificador.Name = "Modificador";
-            this.Modificador.ReadOnly = true;
-            // 
-            // Especial
-            // 
-            dataGridViewCellStyle8.NullValue = "---";
-            this.Especial.DefaultCellStyle = dataGridViewCellStyle8;
-            resources.ApplyResources(this.Especial, "Especial");
-            this.Especial.Name = "Especial";
-            this.Especial.ReadOnly = true;
-            // 
-            // btnAddArma
-            // 
-            resources.ApplyResources(this.btnAddArma, "btnAddArma");
-            this.btnAddArma.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddArma.FlatAppearance.BorderSize = 0;
-            this.btnAddArma.Name = "btnAddArma";
-            this.btnAddArma.UseVisualStyleBackColor = false;
-            this.btnAddArma.Click += new System.EventHandler(this.btnAddArma_Click);
-            // 
-            // btnExcluirArma
-            // 
-            this.btnExcluirArma.BackColor = System.Drawing.Color.Red;
-            this.btnExcluirArma.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnExcluirArma, "btnExcluirArma");
-            this.btnExcluirArma.ForeColor = System.Drawing.Color.White;
-            this.btnExcluirArma.Name = "btnExcluirArma";
-            this.btnExcluirArma.UseVisualStyleBackColor = false;
-            this.btnExcluirArma.Click += new System.EventHandler(this.btnExcluirArma_Click);
             // 
             // lblAtletismo
             // 
@@ -968,40 +785,12 @@ namespace RPGFichas
             this.lblDefPassiva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblDefPassiva.Name = "lblDefPassiva";
             // 
-            // lblDefBloqueio
-            // 
-            resources.ApplyResources(this.lblDefBloqueio, "lblDefBloqueio");
-            this.lblDefBloqueio.BackColor = System.Drawing.Color.Transparent;
-            this.lblDefBloqueio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblDefBloqueio.Name = "lblDefBloqueio";
-            // 
             // lblDefEsquiva
             // 
             resources.ApplyResources(this.lblDefEsquiva, "lblDefEsquiva");
             this.lblDefEsquiva.BackColor = System.Drawing.Color.Transparent;
             this.lblDefEsquiva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblDefEsquiva.Name = "lblDefEsquiva";
-            // 
-            // lblPV
-            // 
-            resources.ApplyResources(this.lblPV, "lblPV");
-            this.lblPV.BackColor = System.Drawing.Color.Transparent;
-            this.lblPV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblPV.Name = "lblPV";
-            // 
-            // lblSan
-            // 
-            resources.ApplyResources(this.lblSan, "lblSan");
-            this.lblSan.BackColor = System.Drawing.Color.Transparent;
-            this.lblSan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblSan.Name = "lblSan";
-            // 
-            // lblPE
-            // 
-            resources.ApplyResources(this.lblPE, "lblPE");
-            this.lblPE.BackColor = System.Drawing.Color.Transparent;
-            this.lblPE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblPE.Name = "lblPE";
             // 
             // lblResFrio
             // 
@@ -1124,7 +913,8 @@ namespace RPGFichas
             // 
             // txtNEX
             // 
-            this.txtNEX.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNEX.BackColor = System.Drawing.Color.White;
+            this.txtNEX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.txtNEX, "txtNEX");
             this.txtNEX.Name = "txtNEX";
             this.txtNEX.ReadOnly = true;
@@ -1224,6 +1014,8 @@ namespace RPGFichas
             this.lblPatente.BackColor = System.Drawing.Color.Transparent;
             this.lblPatente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPatente.Name = "lblPatente";
+            this.lblPatente.MouseLeave += new System.EventHandler(this.rcbxPatente_MouseLeave);
+            this.lblPatente.MouseHover += new System.EventHandler(this.rcbxPatente_MouseHover);
             // 
             // lblPrestigio
             // 
@@ -1234,10 +1026,12 @@ namespace RPGFichas
             // 
             // txtPrestigio
             // 
-            this.txtPrestigio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPrestigio.BackColor = System.Drawing.Color.White;
+            this.txtPrestigio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.txtPrestigio, "txtPrestigio");
             this.txtPrestigio.Name = "txtPrestigio";
             this.txtPrestigio.ReadOnly = true;
+            this.txtPrestigio.TextChanged += new System.EventHandler(this.txtPrestigio_TextChanged);
             this.txtPrestigio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInt_keyPress);
             // 
             // lblAdestramento
@@ -1450,7 +1244,8 @@ namespace RPGFichas
             this.dgvCondicoes.RowTemplate.Height = 25;
             this.dgvCondicoes.ShowEditingIcon = false;
             this.dgvCondicoes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCondicoes_CellClick);
-            this.dgvCondicoes.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCondicoes_CellMouseEnter);
+            this.dgvCondicoes.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_CellMouseDown);
+            this.dgvCondicoes.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellMouseEnter);
             // 
             // Condicao
             // 
@@ -1472,24 +1267,14 @@ namespace RPGFichas
             this.Upgrade.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Upgrade.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // btnAddCondition
+            // btnAddCondicoes
             // 
-            resources.ApplyResources(this.btnAddCondition, "btnAddCondition");
-            this.btnAddCondition.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddCondition.FlatAppearance.BorderSize = 0;
-            this.btnAddCondition.Name = "btnAddCondition";
-            this.btnAddCondition.UseVisualStyleBackColor = false;
-            this.btnAddCondition.Click += new System.EventHandler(this.btnAddCondition_Click);
-            // 
-            // btnExcluirCodicao
-            // 
-            this.btnExcluirCodicao.BackColor = System.Drawing.Color.Red;
-            this.btnExcluirCodicao.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnExcluirCodicao, "btnExcluirCodicao");
-            this.btnExcluirCodicao.ForeColor = System.Drawing.Color.White;
-            this.btnExcluirCodicao.Name = "btnExcluirCodicao";
-            this.btnExcluirCodicao.UseVisualStyleBackColor = false;
-            this.btnExcluirCodicao.Click += new System.EventHandler(this.btnExcluirCodicao_Click);
+            resources.ApplyResources(this.btnAddCondicoes, "btnAddCondicoes");
+            this.btnAddCondicoes.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddCondicoes.FlatAppearance.BorderSize = 0;
+            this.btnAddCondicoes.Name = "btnAddCondicoes";
+            this.btnAddCondicoes.UseVisualStyleBackColor = false;
+            this.btnAddCondicoes.Click += new System.EventHandler(this.btnAddCondition_Click);
             // 
             // txtProeficiencia
             // 
@@ -1499,14 +1284,14 @@ namespace RPGFichas
             this.txtProeficiencia.Name = "txtProeficiencia";
             this.txtProeficiencia.ReadOnly = true;
             // 
-            // btnAddItem
+            // btnAddItens
             // 
-            resources.ApplyResources(this.btnAddItem, "btnAddItem");
-            this.btnAddItem.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddItem.FlatAppearance.BorderSize = 0;
-            this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.UseVisualStyleBackColor = false;
-            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
+            resources.ApplyResources(this.btnAddItens, "btnAddItens");
+            this.btnAddItens.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddItens.FlatAppearance.BorderSize = 0;
+            this.btnAddItens.Name = "btnAddItens";
+            this.btnAddItens.UseVisualStyleBackColor = false;
+            this.btnAddItens.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // dgvItens
             // 
@@ -1531,46 +1316,43 @@ namespace RPGFichas
             this.dgvItens.RowHeadersVisible = false;
             this.dgvItens.RowTemplate.Height = 25;
             this.dgvItens.ShowEditingIcon = false;
+            this.dgvItens.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_CellMouseDown);
+            this.dgvItens.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellMouseEnter);
             this.dgvItens.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvItens_CellValidating);
             this.dgvItens.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.atualizaPeso);
             // 
             // Quantidade
             // 
+            this.Quantidade.FillWeight = 10F;
             resources.ApplyResources(this.Quantidade, "Quantidade");
             this.Quantidade.MaxInputLength = 2;
             this.Quantidade.Name = "Quantidade";
             // 
             // Item
             // 
+            this.Item.FillWeight = 20F;
             resources.ApplyResources(this.Item, "Item");
             this.Item.Name = "Item";
             // 
             // Detalhes
             // 
+            this.Detalhes.FillWeight = 60F;
             resources.ApplyResources(this.Detalhes, "Detalhes");
             this.Detalhes.Name = "Detalhes";
             // 
             // Espacos
             // 
+            this.Espacos.FillWeight = 10F;
             resources.ApplyResources(this.Espacos, "Espacos");
             this.Espacos.MaxInputLength = 1;
             this.Espacos.Name = "Espacos";
             // 
             // Prestigio
             // 
+            this.Prestigio.FillWeight = 10F;
             resources.ApplyResources(this.Prestigio, "Prestigio");
             this.Prestigio.MaxInputLength = 1;
             this.Prestigio.Name = "Prestigio";
-            // 
-            // btnExcluirItem
-            // 
-            this.btnExcluirItem.BackColor = System.Drawing.Color.Red;
-            this.btnExcluirItem.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnExcluirItem, "btnExcluirItem");
-            this.btnExcluirItem.ForeColor = System.Drawing.Color.White;
-            this.btnExcluirItem.Name = "btnExcluirItem";
-            this.btnExcluirItem.UseVisualStyleBackColor = false;
-            this.btnExcluirItem.Click += new System.EventHandler(this.btnExcluirItem_Click);
             // 
             // lblEspacoLivre
             // 
@@ -1813,7 +1595,7 @@ namespace RPGFichas
             this.btnDecreaseAcrobacia.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseAcrobacia.Name = "btnDecreaseAcrobacia";
             this.btnDecreaseAcrobacia.UseVisualStyleBackColor = false;
-            this.btnDecreaseAcrobacia.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseAcrobacia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseAcrobacia
             // 
@@ -1822,7 +1604,7 @@ namespace RPGFichas
             this.btnIncreaseAcrobacia.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseAcrobacia.Name = "btnIncreaseAcrobacia";
             this.btnIncreaseAcrobacia.UseVisualStyleBackColor = false;
-            this.btnIncreaseAcrobacia.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseAcrobacia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnIncreaseAdestramento
             // 
@@ -1831,7 +1613,7 @@ namespace RPGFichas
             this.btnIncreaseAdestramento.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseAdestramento.Name = "btnIncreaseAdestramento";
             this.btnIncreaseAdestramento.UseVisualStyleBackColor = false;
-            this.btnIncreaseAdestramento.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseAdestramento.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseAdestramento
             // 
@@ -1840,7 +1622,7 @@ namespace RPGFichas
             this.btnDecreaseAdestramento.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseAdestramento.Name = "btnDecreaseAdestramento";
             this.btnDecreaseAdestramento.UseVisualStyleBackColor = false;
-            this.btnDecreaseAdestramento.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseAdestramento.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseArtes
             // 
@@ -1849,7 +1631,7 @@ namespace RPGFichas
             this.btnIncreaseArtes.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseArtes.Name = "btnIncreaseArtes";
             this.btnIncreaseArtes.UseVisualStyleBackColor = false;
-            this.btnIncreaseArtes.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseArtes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseArtes
             // 
@@ -1858,7 +1640,7 @@ namespace RPGFichas
             this.btnDecreaseArtes.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseArtes.Name = "btnDecreaseArtes";
             this.btnDecreaseArtes.UseVisualStyleBackColor = false;
-            this.btnDecreaseArtes.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseArtes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseAtletismo
             // 
@@ -1867,7 +1649,7 @@ namespace RPGFichas
             this.btnIncreaseAtletismo.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseAtletismo.Name = "btnIncreaseAtletismo";
             this.btnIncreaseAtletismo.UseVisualStyleBackColor = false;
-            this.btnIncreaseAtletismo.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseAtletismo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseAtletismo
             // 
@@ -1876,7 +1658,7 @@ namespace RPGFichas
             this.btnDecreaseAtletismo.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseAtletismo.Name = "btnDecreaseAtletismo";
             this.btnDecreaseAtletismo.UseVisualStyleBackColor = false;
-            this.btnDecreaseAtletismo.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseAtletismo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseDiplomacia
             // 
@@ -1885,7 +1667,7 @@ namespace RPGFichas
             this.btnIncreaseDiplomacia.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseDiplomacia.Name = "btnIncreaseDiplomacia";
             this.btnIncreaseDiplomacia.UseVisualStyleBackColor = false;
-            this.btnIncreaseDiplomacia.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseDiplomacia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseDiplomacia
             // 
@@ -1894,7 +1676,7 @@ namespace RPGFichas
             this.btnDecreaseDiplomacia.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseDiplomacia.Name = "btnDecreaseDiplomacia";
             this.btnDecreaseDiplomacia.UseVisualStyleBackColor = false;
-            this.btnDecreaseDiplomacia.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseDiplomacia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseCrime
             // 
@@ -1903,7 +1685,7 @@ namespace RPGFichas
             this.btnIncreaseCrime.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseCrime.Name = "btnIncreaseCrime";
             this.btnIncreaseCrime.UseVisualStyleBackColor = false;
-            this.btnIncreaseCrime.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseCrime.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseCrime
             // 
@@ -1912,7 +1694,7 @@ namespace RPGFichas
             this.btnDecreaseCrime.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseCrime.Name = "btnDecreaseCrime";
             this.btnDecreaseCrime.UseVisualStyleBackColor = false;
-            this.btnDecreaseCrime.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseCrime.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseCiencia
             // 
@@ -1921,7 +1703,7 @@ namespace RPGFichas
             this.btnIncreaseCiencia.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseCiencia.Name = "btnIncreaseCiencia";
             this.btnIncreaseCiencia.UseVisualStyleBackColor = false;
-            this.btnIncreaseCiencia.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseCiencia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseCiencia
             // 
@@ -1930,7 +1712,7 @@ namespace RPGFichas
             this.btnDecreaseCiencia.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseCiencia.Name = "btnDecreaseCiencia";
             this.btnDecreaseCiencia.UseVisualStyleBackColor = false;
-            this.btnDecreaseCiencia.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseCiencia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseAtualidades
             // 
@@ -1939,7 +1721,7 @@ namespace RPGFichas
             this.btnIncreaseAtualidades.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseAtualidades.Name = "btnIncreaseAtualidades";
             this.btnIncreaseAtualidades.UseVisualStyleBackColor = false;
-            this.btnIncreaseAtualidades.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseAtualidades.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseAtualidades
             // 
@@ -1948,7 +1730,7 @@ namespace RPGFichas
             this.btnDecreaseAtualidades.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseAtualidades.Name = "btnDecreaseAtualidades";
             this.btnDecreaseAtualidades.UseVisualStyleBackColor = false;
-            this.btnDecreaseAtualidades.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseAtualidades.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseLuta
             // 
@@ -1957,7 +1739,7 @@ namespace RPGFichas
             this.btnIncreaseLuta.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseLuta.Name = "btnIncreaseLuta";
             this.btnIncreaseLuta.UseVisualStyleBackColor = false;
-            this.btnIncreaseLuta.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseLuta.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseLuta
             // 
@@ -1966,7 +1748,7 @@ namespace RPGFichas
             this.btnDecreaseLuta.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseLuta.Name = "btnDecreaseLuta";
             this.btnDecreaseLuta.UseVisualStyleBackColor = false;
-            this.btnDecreaseLuta.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseLuta.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseInvestigacao
             // 
@@ -1975,7 +1757,7 @@ namespace RPGFichas
             this.btnIncreaseInvestigacao.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseInvestigacao.Name = "btnIncreaseInvestigacao";
             this.btnIncreaseInvestigacao.UseVisualStyleBackColor = false;
-            this.btnIncreaseInvestigacao.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseInvestigacao.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseInvestigacao
             // 
@@ -1984,7 +1766,7 @@ namespace RPGFichas
             this.btnDecreaseInvestigacao.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseInvestigacao.Name = "btnDecreaseInvestigacao";
             this.btnDecreaseInvestigacao.UseVisualStyleBackColor = false;
-            this.btnDecreaseInvestigacao.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseInvestigacao.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseIntuicao
             // 
@@ -1993,7 +1775,7 @@ namespace RPGFichas
             this.btnIncreaseIntuicao.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseIntuicao.Name = "btnIncreaseIntuicao";
             this.btnIncreaseIntuicao.UseVisualStyleBackColor = false;
-            this.btnIncreaseIntuicao.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseIntuicao.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseIntuicao
             // 
@@ -2002,7 +1784,7 @@ namespace RPGFichas
             this.btnDecreaseIntuicao.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseIntuicao.Name = "btnDecreaseIntuicao";
             this.btnDecreaseIntuicao.UseVisualStyleBackColor = false;
-            this.btnDecreaseIntuicao.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseIntuicao.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseIntimidacao
             // 
@@ -2011,7 +1793,7 @@ namespace RPGFichas
             this.btnIncreaseIntimidacao.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseIntimidacao.Name = "btnIncreaseIntimidacao";
             this.btnIncreaseIntimidacao.UseVisualStyleBackColor = false;
-            this.btnIncreaseIntimidacao.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseIntimidacao.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseIntimidacao
             // 
@@ -2020,7 +1802,7 @@ namespace RPGFichas
             this.btnDecreaseIntimidacao.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseIntimidacao.Name = "btnDecreaseIntimidacao";
             this.btnDecreaseIntimidacao.UseVisualStyleBackColor = false;
-            this.btnDecreaseIntimidacao.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseIntimidacao.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseIniciativa
             // 
@@ -2029,7 +1811,7 @@ namespace RPGFichas
             this.btnIncreaseIniciativa.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseIniciativa.Name = "btnIncreaseIniciativa";
             this.btnIncreaseIniciativa.UseVisualStyleBackColor = false;
-            this.btnIncreaseIniciativa.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseIniciativa.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseIniciativa
             // 
@@ -2038,7 +1820,7 @@ namespace RPGFichas
             this.btnDecreaseIniciativa.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseIniciativa.Name = "btnDecreaseIniciativa";
             this.btnDecreaseIniciativa.UseVisualStyleBackColor = false;
-            this.btnDecreaseIniciativa.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseIniciativa.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseFurtividade
             // 
@@ -2047,7 +1829,7 @@ namespace RPGFichas
             this.btnIncreaseFurtividade.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseFurtividade.Name = "btnIncreaseFurtividade";
             this.btnIncreaseFurtividade.UseVisualStyleBackColor = false;
-            this.btnIncreaseFurtividade.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseFurtividade.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseFurtividade
             // 
@@ -2056,7 +1838,7 @@ namespace RPGFichas
             this.btnDecreaseFurtividade.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseFurtividade.Name = "btnDecreaseFurtividade";
             this.btnDecreaseFurtividade.UseVisualStyleBackColor = false;
-            this.btnDecreaseFurtividade.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseFurtividade.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseFortitude
             // 
@@ -2065,7 +1847,7 @@ namespace RPGFichas
             this.btnIncreaseFortitude.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseFortitude.Name = "btnIncreaseFortitude";
             this.btnIncreaseFortitude.UseVisualStyleBackColor = false;
-            this.btnIncreaseFortitude.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseFortitude.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseFortitude
             // 
@@ -2074,7 +1856,7 @@ namespace RPGFichas
             this.btnDecreaseFortitude.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseFortitude.Name = "btnDecreaseFortitude";
             this.btnDecreaseFortitude.UseVisualStyleBackColor = false;
-            this.btnDecreaseFortitude.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseFortitude.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseEnganacao
             // 
@@ -2083,7 +1865,7 @@ namespace RPGFichas
             this.btnIncreaseEnganacao.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseEnganacao.Name = "btnIncreaseEnganacao";
             this.btnIncreaseEnganacao.UseVisualStyleBackColor = false;
-            this.btnIncreaseEnganacao.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseEnganacao.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseEnganacao
             // 
@@ -2092,7 +1874,7 @@ namespace RPGFichas
             this.btnDecreaseEnganacao.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseEnganacao.Name = "btnDecreaseEnganacao";
             this.btnDecreaseEnganacao.UseVisualStyleBackColor = false;
-            this.btnDecreaseEnganacao.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseEnganacao.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseVontade
             // 
@@ -2101,7 +1883,7 @@ namespace RPGFichas
             this.btnIncreaseVontade.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseVontade.Name = "btnIncreaseVontade";
             this.btnIncreaseVontade.UseVisualStyleBackColor = false;
-            this.btnIncreaseVontade.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseVontade.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseVontade
             // 
@@ -2110,7 +1892,7 @@ namespace RPGFichas
             this.btnDecreaseVontade.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseVontade.Name = "btnDecreaseVontade";
             this.btnDecreaseVontade.UseVisualStyleBackColor = false;
-            this.btnDecreaseVontade.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseVontade.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseTecnologia
             // 
@@ -2119,7 +1901,7 @@ namespace RPGFichas
             this.btnIncreaseTecnologia.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseTecnologia.Name = "btnIncreaseTecnologia";
             this.btnIncreaseTecnologia.UseVisualStyleBackColor = false;
-            this.btnIncreaseTecnologia.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseTecnologia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseTecnologia
             // 
@@ -2128,7 +1910,7 @@ namespace RPGFichas
             this.btnDecreaseTecnologia.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseTecnologia.Name = "btnDecreaseTecnologia";
             this.btnDecreaseTecnologia.UseVisualStyleBackColor = false;
-            this.btnDecreaseTecnologia.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseTecnologia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseTatica
             // 
@@ -2137,7 +1919,7 @@ namespace RPGFichas
             this.btnIncreaseTatica.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseTatica.Name = "btnIncreaseTatica";
             this.btnIncreaseTatica.UseVisualStyleBackColor = false;
-            this.btnIncreaseTatica.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseTatica.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseTatica
             // 
@@ -2146,7 +1928,7 @@ namespace RPGFichas
             this.btnDecreaseTatica.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseTatica.Name = "btnDecreaseTatica";
             this.btnDecreaseTatica.UseVisualStyleBackColor = false;
-            this.btnDecreaseTatica.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseTatica.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseSobrevivencia
             // 
@@ -2155,7 +1937,7 @@ namespace RPGFichas
             this.btnIncreaseSobrevivencia.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseSobrevivencia.Name = "btnIncreaseSobrevivencia";
             this.btnIncreaseSobrevivencia.UseVisualStyleBackColor = false;
-            this.btnIncreaseSobrevivencia.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseSobrevivencia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseSobrevivencia
             // 
@@ -2164,7 +1946,7 @@ namespace RPGFichas
             this.btnDecreaseSobrevivencia.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseSobrevivencia.Name = "btnDecreaseSobrevivencia";
             this.btnDecreaseSobrevivencia.UseVisualStyleBackColor = false;
-            this.btnDecreaseSobrevivencia.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseSobrevivencia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseReligiao
             // 
@@ -2173,7 +1955,7 @@ namespace RPGFichas
             this.btnIncreaseReligiao.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseReligiao.Name = "btnIncreaseReligiao";
             this.btnIncreaseReligiao.UseVisualStyleBackColor = false;
-            this.btnIncreaseReligiao.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseReligiao.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseReligiao
             // 
@@ -2182,7 +1964,7 @@ namespace RPGFichas
             this.btnDecreaseReligiao.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseReligiao.Name = "btnDecreaseReligiao";
             this.btnDecreaseReligiao.UseVisualStyleBackColor = false;
-            this.btnDecreaseReligiao.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseReligiao.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseReflexos
             // 
@@ -2191,7 +1973,7 @@ namespace RPGFichas
             this.btnIncreaseReflexos.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseReflexos.Name = "btnIncreaseReflexos";
             this.btnIncreaseReflexos.UseVisualStyleBackColor = false;
-            this.btnIncreaseReflexos.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseReflexos.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseReflexos
             // 
@@ -2200,7 +1982,7 @@ namespace RPGFichas
             this.btnDecreaseReflexos.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseReflexos.Name = "btnDecreaseReflexos";
             this.btnDecreaseReflexos.UseVisualStyleBackColor = false;
-            this.btnDecreaseReflexos.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseReflexos.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseProfissao
             // 
@@ -2209,7 +1991,7 @@ namespace RPGFichas
             this.btnIncreaseProfissao.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseProfissao.Name = "btnIncreaseProfissao";
             this.btnIncreaseProfissao.UseVisualStyleBackColor = false;
-            this.btnIncreaseProfissao.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseProfissao.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseProfissao
             // 
@@ -2218,7 +2000,7 @@ namespace RPGFichas
             this.btnDecreaseProfissao.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseProfissao.Name = "btnDecreaseProfissao";
             this.btnDecreaseProfissao.UseVisualStyleBackColor = false;
-            this.btnDecreaseProfissao.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseProfissao.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreasePontaria
             // 
@@ -2227,7 +2009,7 @@ namespace RPGFichas
             this.btnIncreasePontaria.ForeColor = System.Drawing.Color.Green;
             this.btnIncreasePontaria.Name = "btnIncreasePontaria";
             this.btnIncreasePontaria.UseVisualStyleBackColor = false;
-            this.btnIncreasePontaria.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreasePontaria.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreasePontaria
             // 
@@ -2236,7 +2018,7 @@ namespace RPGFichas
             this.btnDecreasePontaria.ForeColor = System.Drawing.Color.Red;
             this.btnDecreasePontaria.Name = "btnDecreasePontaria";
             this.btnDecreasePontaria.UseVisualStyleBackColor = false;
-            this.btnDecreasePontaria.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreasePontaria.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreasePilotagem
             // 
@@ -2245,7 +2027,7 @@ namespace RPGFichas
             this.btnIncreasePilotagem.ForeColor = System.Drawing.Color.Green;
             this.btnIncreasePilotagem.Name = "btnIncreasePilotagem";
             this.btnIncreasePilotagem.UseVisualStyleBackColor = false;
-            this.btnIncreasePilotagem.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreasePilotagem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreasePilotagem
             // 
@@ -2254,7 +2036,7 @@ namespace RPGFichas
             this.btnDecreasePilotagem.ForeColor = System.Drawing.Color.Red;
             this.btnDecreasePilotagem.Name = "btnDecreasePilotagem";
             this.btnDecreasePilotagem.UseVisualStyleBackColor = false;
-            this.btnDecreasePilotagem.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreasePilotagem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreasePercepcao
             // 
@@ -2263,7 +2045,7 @@ namespace RPGFichas
             this.btnIncreasePercepcao.ForeColor = System.Drawing.Color.Green;
             this.btnIncreasePercepcao.Name = "btnIncreasePercepcao";
             this.btnIncreasePercepcao.UseVisualStyleBackColor = false;
-            this.btnIncreasePercepcao.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreasePercepcao.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreasePercepcao
             // 
@@ -2272,7 +2054,7 @@ namespace RPGFichas
             this.btnDecreasePercepcao.ForeColor = System.Drawing.Color.Red;
             this.btnDecreasePercepcao.Name = "btnDecreasePercepcao";
             this.btnDecreasePercepcao.UseVisualStyleBackColor = false;
-            this.btnDecreasePercepcao.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreasePercepcao.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseOcultismo
             // 
@@ -2281,7 +2063,7 @@ namespace RPGFichas
             this.btnIncreaseOcultismo.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseOcultismo.Name = "btnIncreaseOcultismo";
             this.btnIncreaseOcultismo.UseVisualStyleBackColor = false;
-            this.btnIncreaseOcultismo.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseOcultismo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseOcultismo
             // 
@@ -2290,7 +2072,7 @@ namespace RPGFichas
             this.btnDecreaseOcultismo.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseOcultismo.Name = "btnDecreaseOcultismo";
             this.btnDecreaseOcultismo.UseVisualStyleBackColor = false;
-            this.btnDecreaseOcultismo.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseOcultismo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnIncreaseMedicina
             // 
@@ -2299,7 +2081,7 @@ namespace RPGFichas
             this.btnIncreaseMedicina.ForeColor = System.Drawing.Color.Green;
             this.btnIncreaseMedicina.Name = "btnIncreaseMedicina";
             this.btnIncreaseMedicina.UseVisualStyleBackColor = false;
-            this.btnIncreaseMedicina.Click += new System.EventHandler(this.btnIncreasePericia_Click);
+            this.btnIncreaseMedicina.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIncreaseVontade_MouseClick);
             // 
             // btnDecreaseMedicina
             // 
@@ -2308,7 +2090,7 @@ namespace RPGFichas
             this.btnDecreaseMedicina.ForeColor = System.Drawing.Color.Red;
             this.btnDecreaseMedicina.Name = "btnDecreaseMedicina";
             this.btnDecreaseMedicina.UseVisualStyleBackColor = false;
-            this.btnDecreaseMedicina.Click += new System.EventHandler(this.btnDecreasePericia_Click);
+            this.btnDecreaseMedicina.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDecreasePericia_Click);
             // 
             // btnSalvar
             // 
@@ -2398,30 +2180,227 @@ namespace RPGFichas
             resources.GetString("cbxClasse.Items1"),
             resources.GetString("cbxClasse.Items2")});
             this.cbxClasse.Name = "cbxClasse";
-            // 
-            // cbxPatente
-            // 
-            resources.ApplyResources(this.cbxPatente, "cbxPatente");
-            this.cbxPatente.FormattingEnabled = true;
-            this.cbxPatente.Items.AddRange(new object[] {
-            resources.GetString("cbxPatente.Items"),
-            resources.GetString("cbxPatente.Items1"),
-            resources.GetString("cbxPatente.Items2"),
-            resources.GetString("cbxPatente.Items3"),
-            resources.GetString("cbxPatente.Items4")});
-            this.cbxPatente.Name = "cbxPatente";
+            this.cbxClasse.SelectedIndexChanged += new System.EventHandler(this.cbxClasse_SelectedIndexChanged);
             // 
             // SaveTimer
             // 
             this.SaveTimer.Enabled = true;
-            this.SaveTimer.Interval = 18000;
+            this.SaveTimer.Interval = 180000;
             this.SaveTimer.Tick += new System.EventHandler(this.SaveTimer_tick);
+            // 
+            // tpbPv
+            // 
+            this.tpbPv.BackColor = System.Drawing.Color.Black;
+            this.tpbPv.BackgroundColor = System.Drawing.Color.Black;
+            this.tpbPv.CustomText = "PV";
+            this.tpbPv.ForeColor = System.Drawing.Color.Gainsboro;
+            resources.ApplyResources(this.tpbPv, "tpbPv");
+            this.tpbPv.Incremento = 0;
+            this.tpbPv.Maximum = 0;
+            this.tpbPv.Name = "tpbPv";
+            this.tpbPv.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.tpbPv.Step = 1;
+            this.tpbPv.TextColor = System.Drawing.Color.White;
+            this.tpbPv.TextFont = new System.Drawing.Font("Euphorigenic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tpbPv.VisualMode = ProgressBarSample.ProgressBarDisplayMode.TextAndCurrProgress;
+            this.tpbPv.Click += new System.EventHandler(this.tpb_Click);
+            this.tpbPv.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tpb_MouseDown);
+            this.tpbPv.MouseLeave += new System.EventHandler(this.tpb_MouseLeave);
+            this.tpbPv.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tpb_MouseMove);
+            // 
+            // tpbSan
+            // 
+            this.tpbSan.BackColor = System.Drawing.Color.Black;
+            this.tpbSan.BackgroundColor = System.Drawing.Color.Black;
+            this.tpbSan.CustomText = "SAN";
+            resources.ApplyResources(this.tpbSan, "tpbSan");
+            this.tpbSan.Incremento = 0;
+            this.tpbSan.Maximum = 0;
+            this.tpbSan.Name = "tpbSan";
+            this.tpbSan.ProgressColor = System.Drawing.Color.RoyalBlue;
+            this.tpbSan.Step = 1;
+            this.tpbSan.TextColor = System.Drawing.Color.White;
+            this.tpbSan.TextFont = new System.Drawing.Font("Euphorigenic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tpbSan.VisualMode = ProgressBarSample.ProgressBarDisplayMode.TextAndCurrProgress;
+            this.tpbSan.Click += new System.EventHandler(this.tpb_Click);
+            this.tpbSan.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tpb_MouseDown);
+            this.tpbSan.MouseLeave += new System.EventHandler(this.tpb_MouseLeave);
+            this.tpbSan.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tpb_MouseMove);
+            // 
+            // tpbPe
+            // 
+            this.tpbPe.BackColor = System.Drawing.Color.Black;
+            this.tpbPe.BackgroundColor = System.Drawing.Color.Black;
+            this.tpbPe.CustomText = "PE";
+            resources.ApplyResources(this.tpbPe, "tpbPe");
+            this.tpbPe.Incremento = 0;
+            this.tpbPe.Maximum = 0;
+            this.tpbPe.Name = "tpbPe";
+            this.tpbPe.ProgressColor = System.Drawing.Color.Green;
+            this.tpbPe.Step = 1;
+            this.tpbPe.TextColor = System.Drawing.Color.White;
+            this.tpbPe.TextFont = new System.Drawing.Font("Euphorigenic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tpbPe.VisualMode = ProgressBarSample.ProgressBarDisplayMode.TextAndCurrProgress;
+            this.tpbPe.Click += new System.EventHandler(this.tpb_Click);
+            this.tpbPe.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tpb_MouseDown);
+            this.tpbPe.MouseLeave += new System.EventHandler(this.tpb_MouseLeave);
+            this.tpbPe.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tpb_MouseMove);
+            // 
+            // btnIncreasePv
+            // 
+            this.btnIncreasePv.BackColor = System.Drawing.Color.Gainsboro;
+            resources.ApplyResources(this.btnIncreasePv, "btnIncreasePv");
+            this.btnIncreasePv.ForeColor = System.Drawing.Color.Green;
+            this.btnIncreasePv.Name = "btnIncreasePv";
+            this.btnIncreasePv.UseVisualStyleBackColor = false;
+            this.btnIncreasePv.Click += new System.EventHandler(this.editaSaude);
+            // 
+            // btnIncreaseSan
+            // 
+            this.btnIncreaseSan.BackColor = System.Drawing.Color.Gainsboro;
+            resources.ApplyResources(this.btnIncreaseSan, "btnIncreaseSan");
+            this.btnIncreaseSan.ForeColor = System.Drawing.Color.Green;
+            this.btnIncreaseSan.Name = "btnIncreaseSan";
+            this.btnIncreaseSan.UseVisualStyleBackColor = false;
+            this.btnIncreaseSan.Click += new System.EventHandler(this.editaSaude);
+            // 
+            // btnIncreasePe
+            // 
+            this.btnIncreasePe.BackColor = System.Drawing.Color.Gainsboro;
+            resources.ApplyResources(this.btnIncreasePe, "btnIncreasePe");
+            this.btnIncreasePe.ForeColor = System.Drawing.Color.Green;
+            this.btnIncreasePe.Name = "btnIncreasePe";
+            this.btnIncreasePe.UseVisualStyleBackColor = false;
+            this.btnIncreasePe.Click += new System.EventHandler(this.editaSaude);
+            // 
+            // btnDecreasePe
+            // 
+            this.btnDecreasePe.BackColor = System.Drawing.Color.Gainsboro;
+            resources.ApplyResources(this.btnDecreasePe, "btnDecreasePe");
+            this.btnDecreasePe.ForeColor = System.Drawing.Color.Red;
+            this.btnDecreasePe.Name = "btnDecreasePe";
+            this.btnDecreasePe.UseVisualStyleBackColor = false;
+            this.btnDecreasePe.Click += new System.EventHandler(this.editaSaude);
+            // 
+            // btnDecreaseSan
+            // 
+            this.btnDecreaseSan.BackColor = System.Drawing.Color.Gainsboro;
+            resources.ApplyResources(this.btnDecreaseSan, "btnDecreaseSan");
+            this.btnDecreaseSan.ForeColor = System.Drawing.Color.Red;
+            this.btnDecreaseSan.Name = "btnDecreaseSan";
+            this.btnDecreaseSan.UseVisualStyleBackColor = false;
+            this.btnDecreaseSan.Click += new System.EventHandler(this.editaSaude);
+            // 
+            // btnDecreasePv
+            // 
+            this.btnDecreasePv.BackColor = System.Drawing.Color.Gainsboro;
+            resources.ApplyResources(this.btnDecreasePv, "btnDecreasePv");
+            this.btnDecreasePv.ForeColor = System.Drawing.Color.Red;
+            this.btnDecreasePv.Name = "btnDecreasePv";
+            this.btnDecreasePv.UseVisualStyleBackColor = false;
+            this.btnDecreasePv.Click += new System.EventHandler(this.editaSaude);
+            // 
+            // lblTrilha
+            // 
+            resources.ApplyResources(this.lblTrilha, "lblTrilha");
+            this.lblTrilha.BackColor = System.Drawing.Color.Transparent;
+            this.lblTrilha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTrilha.Name = "lblTrilha";
+            // 
+            // cbxTrilha
+            // 
+            resources.ApplyResources(this.cbxTrilha, "cbxTrilha");
+            this.cbxTrilha.FormattingEnabled = true;
+            this.cbxTrilha.Name = "cbxTrilha";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // lblRituais
+            // 
+            this.lblRituais.BackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.lblRituais, "lblRituais");
+            this.lblRituais.ForeColor = System.Drawing.Color.White;
+            this.lblRituais.Name = "lblRituais";
+            this.lblRituais.RotateAngle = -90;
+            this.lblRituais.TextRotate = "RITUAIS";
+            // 
+            // flpArmas
+            // 
+            resources.ApplyResources(this.flpArmas, "flpArmas");
+            this.flpArmas.BackColor = System.Drawing.Color.White;
+            this.flpArmas.Controls.Add(this.btnAddArma);
+            this.flpArmas.Name = "flpArmas";
+            // 
+            // btnAddArma
+            // 
+            this.btnAddArma.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAddArma.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnAddArma, "btnAddArma");
+            this.btnAddArma.Name = "btnAddArma";
+            this.btnAddArma.UseVisualStyleBackColor = false;
+            this.btnAddArma.Click += new System.EventHandler(this.btnAddArma_Click);
+            // 
+            // verticalLabel1
+            // 
+            this.verticalLabel1.BackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.verticalLabel1, "verticalLabel1");
+            this.verticalLabel1.ForeColor = System.Drawing.Color.White;
+            this.verticalLabel1.Name = "verticalLabel1";
+            this.verticalLabel1.RotateAngle = -90;
+            this.verticalLabel1.TextRotate = "ARMAS";
+            // 
+            // tipPatente
+            // 
+            this.tipPatente.ShowAlways = true;
+            this.tipPatente.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.tipPatente.ToolTipTitle = "Patente";
+            // 
+            // rcbxPatente
+            // 
+            this.rcbxPatente.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.rcbxPatente, "rcbxPatente");
+            this.rcbxPatente.FormattingEnabled = true;
+            this.rcbxPatente.Items.AddRange(new object[] {
+            resources.GetString("rcbxPatente.Items"),
+            resources.GetString("rcbxPatente.Items1"),
+            resources.GetString("rcbxPatente.Items2"),
+            resources.GetString("rcbxPatente.Items3"),
+            resources.GetString("rcbxPatente.Items4")});
+            this.rcbxPatente.Name = "rcbxPatente";
+            this.rcbxPatente.SelectedIndexChanged += new System.EventHandler(this.readOnlyComboBox1_SelectedIndexChanged);
+            this.rcbxPatente.MouseLeave += new System.EventHandler(this.rcbxPatente_MouseLeave);
+            this.rcbxPatente.MouseHover += new System.EventHandler(this.rcbxPatente_MouseHover);
             // 
             // Ficha
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.cbxPatente);
+            this.Controls.Add(this.lblPatente);
+            this.Controls.Add(this.rcbxPatente);
+            this.Controls.Add(this.lblDadoFinal);
+            this.Controls.Add(this.verticalLabel1);
+            this.Controls.Add(this.lblRituais);
+            this.Controls.Add(this.flpArmas);
+            this.Controls.Add(this.lblTrilha);
+            this.Controls.Add(this.cbxTrilha);
+            this.Controls.Add(this.lblPrestigio);
+            this.Controls.Add(this.lblNex);
+            this.Controls.Add(this.lblClasse);
+            this.Controls.Add(this.lblOrigem);
+            this.Controls.Add(this.btnDecreasePv);
+            this.Controls.Add(this.btnDecreaseSan);
+            this.Controls.Add(this.btnDecreasePe);
+            this.Controls.Add(this.btnIncreasePe);
+            this.Controls.Add(this.btnIncreaseSan);
+            this.Controls.Add(this.btnIncreasePv);
+            this.Controls.Add(this.tpbPe);
+            this.Controls.Add(this.tpbSan);
+            this.Controls.Add(this.tpbPv);
             this.Controls.Add(this.cbxClasse);
             this.Controls.Add(this.cbxOrigem);
             this.Controls.Add(this.pbxToken);
@@ -2516,12 +2495,9 @@ namespace RPGFichas
             this.Controls.Add(this.lblEspacoTotal);
             this.Controls.Add(this.lblEspacoAtual);
             this.Controls.Add(this.lblEspacoLivre);
-            this.Controls.Add(this.btnExcluirItem);
-            this.Controls.Add(this.btnAddItem);
-            this.Controls.Add(this.dgvItens);
+            this.Controls.Add(this.btnAddItens);
             this.Controls.Add(this.txtProeficiencia);
-            this.Controls.Add(this.btnExcluirCodicao);
-            this.Controls.Add(this.btnAddCondition);
+            this.Controls.Add(this.btnAddCondicoes);
             this.Controls.Add(this.dgvCondicoes);
             this.Controls.Add(this.txtResMedo);
             this.Controls.Add(this.lblResMedo);
@@ -2550,7 +2526,6 @@ namespace RPGFichas
             this.Controls.Add(this.cbxAdestramento);
             this.Controls.Add(this.cbxAcrobacia);
             this.Controls.Add(this.txtPrestigio);
-            this.Controls.Add(this.lblPrestigio);
             this.Controls.Add(this.lblBonus);
             this.Controls.Add(this.numBonus);
             this.Controls.Add(this.lblForça);
@@ -2564,9 +2539,6 @@ namespace RPGFichas
             this.Controls.Add(this.lblAgi);
             this.Controls.Add(this.lblInt);
             this.Controls.Add(this.txtNEX);
-            this.Controls.Add(this.lblClasse);
-            this.Controls.Add(this.lblNex);
-            this.Controls.Add(this.lblOrigem);
             this.Controls.Add(this.lblResVeneno);
             this.Controls.Add(this.lblResConhecimento);
             this.Controls.Add(this.lblResEnergia);
@@ -2581,11 +2553,7 @@ namespace RPGFichas
             this.Controls.Add(this.txtResImpacto);
             this.Controls.Add(this.txtResFrio);
             this.Controls.Add(this.lblResFrio);
-            this.Controls.Add(this.lblPE);
-            this.Controls.Add(this.lblSan);
-            this.Controls.Add(this.lblPV);
             this.Controls.Add(this.lblDefEsquiva);
-            this.Controls.Add(this.lblDefBloqueio);
             this.Controls.Add(this.lblDefPassiva);
             this.Controls.Add(this.lblVontade);
             this.Controls.Add(this.lblTatica);
@@ -2609,19 +2577,11 @@ namespace RPGFichas
             this.Controls.Add(this.lblAtualidades);
             this.Controls.Add(this.lblCiencia);
             this.Controls.Add(this.lblAtletismo);
-            this.Controls.Add(this.btnExcluirArma);
-            this.Controls.Add(this.btnAddArma);
             this.Controls.Add(this.txtDefEsquiva);
-            this.Controls.Add(this.txtDefBloqueio);
             this.Controls.Add(this.txtDefPassiva);
-            this.Controls.Add(this.txtPe);
-            this.Controls.Add(this.txtSan);
-            this.Controls.Add(this.numSan);
-            this.Controls.Add(this.numPe);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.cbxRollAll);
             this.Controls.Add(this.cbxRollNext);
-            this.Controls.Add(this.lblDadoFinal);
             this.Controls.Add(this.cbxVontade);
             this.Controls.Add(this.cbxTecnologia);
             this.Controls.Add(this.cbxReligiao);
@@ -2653,17 +2613,14 @@ namespace RPGFichas
             this.Controls.Add(this.lblDadosJogados);
             this.Controls.Add(this.lblDados);
             this.Controls.Add(this.btnAgi);
-            this.Controls.Add(this.dgvArmas);
-            this.Controls.Add(this.lblPatente);
             this.Controls.Add(this.flpPoderes);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.dgvItens);
             this.Name = "Ficha";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Ficha_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Ficha_FormClosed);
             this.Load += new System.EventHandler(this.Ficha_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numPe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvArmas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBonus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCondicoes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItens)).EndInit();
@@ -2673,6 +2630,8 @@ namespace RPGFichas
             this.flpRituais.ResumeLayout(false);
             this.flpPoderes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxToken)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.flpArmas.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2723,16 +2682,11 @@ namespace RPGFichas
         private CheckBox cbxRollNext;
         private CheckBox cbxRollAll;
         private Button btnNext;
-        private NumericUpDown numSan;
-        private NumericUpDown numPe;
         private NumericUpDown numericUpDown1;
-        private TextBox txtSan;
-        private TextBox txtPe;
         private TextBox txtDefPassiva;
         private TextBox txtDefBloqueio;
         private TextBox txtDefEsquiva;
         private Label lblOrigem;
-        private DataGridView dgvArmas;
         private Button btnAddArma;
         private RoundButton btnExcluirArma;
         private Label lblAtletismo;
@@ -2760,9 +2714,6 @@ namespace RPGFichas
         private Label lblDefPassiva;
         private Label lblDefBloqueio;
         private Label lblDefEsquiva;
-        private Label lblPV;
-        private Label lblSan;
-        private Label lblPE;
         private Label lblResFrio;
         private TextBox txtResFrio;
         private TextBox txtResImpacto;
@@ -2822,18 +2773,9 @@ namespace RPGFichas
         private TextBox txtResEletricidade;
         private TextBox txtResMedo;
         private Label lblResMedo;
-        private DataGridViewTextBoxColumn Nome;
-        private DataGridViewButtonColumn Ataque;
-        private DataGridViewTextBoxColumn Alcance;
-        private DataGridViewButtonColumn Dano;
-        private DataGridViewButtonColumn Critico;
-        private DataGridViewTextBoxColumn Tipo;
-        private DataGridViewTextBoxColumn Especial;
-        private DataGridViewTextBoxColumn Modificador;
         private DataGridViewTextBoxColumn TipoDano;
-        private DataGridViewTextBoxColumn Municao;
         private DataGridView dgvCondicoes;
-        private Button btnAddCondition;
+        private Button btnAddCondicoes;
         private DataGridViewTextBoxColumn Condicao;
         private DataGridViewTextBoxColumn TipoCondicao;
         private DataGridViewButtonColumn Upgrade;
@@ -2842,7 +2784,7 @@ namespace RPGFichas
         private RoundButton btnExcluirCodition;
         private RoundButton btnExcluirCodicao;
         private TextBox txtProeficiencia;
-        private Button btnAddItem;
+        private Button btnAddItens;
         private DataGridView dgvItens;
         private RoundButton btnExcluirItem;
         private Label lblEspacoLivre;
@@ -2955,8 +2897,30 @@ namespace RPGFichas
         private ComboBox cbcOrigem;
         private ComboBox cbxOrigem;
         private ComboBox cbxClasse;
-        private ComboBox cbxPatente;
         private System.Windows.Forms.Timer SaveTimer;
-        private Label label1;
+        private ProgressBarSample.TextProgressBar tpbPe;
+        private ProgressBarSample.TextProgressBar tpbPv;
+        private ProgressBarSample.TextProgressBar tpbSan;
+        private Button button2;
+        private Button button3;
+        private Button button4;
+        private Button button5;
+        private Button button6;
+        private Button btnIncreasePv;
+        private Button btnIncreaseSan;
+        private Button btnIncreasePe;
+        private Button btnDecreaseSan;
+        private Button btnDecreasePv;
+        private Button btnDecreasePe;
+        private Label label2;
+        private ComboBox comboBox1;
+        private PictureBox pictureBox2;
+        private Label lblTrilha;
+        private ComboBox cbxTrilha;
+        private VerticalLabel lblRituais;
+        private FlowLayoutPanel flpArmas;
+        private VerticalLabel verticalLabel1;
+        private ToolTip tipPatente;
+        private ProjectMentor.Windows.Controls.ReadOnlyComboBox rcbxPatente;
     }
 }

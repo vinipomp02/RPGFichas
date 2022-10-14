@@ -19,14 +19,17 @@ namespace RPGFichas.FormsHelper
         private Ficha fichaSender;
         private string Classe;
         private string Origem;
+        private string Trilha;
         private int Nex;
 
-        public PoderForm(Ficha sender,string classe,string origem,int nex)
+        public PoderForm(Ficha sender,string classe,string origem, string trilha,int nex)
         {
             InitializeComponent();
             fichaSender = sender;
             Classe = classe;
             Origem = origem;
+            Trilha = trilha;
+            Nex = nex;
         }
         private void btnAdicionar_Click(object sender, EventArgs e) => addPoder();
         public void addPoder()
@@ -43,12 +46,12 @@ namespace RPGFichas.FormsHelper
         private void PoderForm_Load(object sender, EventArgs e)
         {
             ListPoderesFiltrados = ListPoderes.Where(c => (c.Classe == Classe || c.Classe == null) &&
+            (c.Trilha == Trilha || c.Trilha == null) &&
             (c.Origem == Origem || c.Origem == null) &&
-            (c.Nex <= Nex)).Select(x => x).ToList();
+            (c.Nex <= Nex) 
+            ).Select(x => x).ToList();
 
-            cbxPoder.DataSource = ListPoderesFiltrados.Select(x=>x.Poder).ToList();     
-
-            fichaSender.PoderForm = new(fichaSender,Classe,Origem,Nex);
+            cbxPoder.DataSource = ListPoderesFiltrados.Select(x => x.Poder).ToList();
         }
         private void cbxPoder_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -61,6 +64,15 @@ namespace RPGFichas.FormsHelper
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             fichaSender.excluirPoder(this, cbxPoder.Text);
+        }
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (Form.ModifierKeys == Keys.None && keyData == Keys.Escape)
+            {
+                this.Dispose();
+                return true;
+            }
+            return base.ProcessDialogKey(keyData);
         }
     }
 }

@@ -14,20 +14,13 @@ namespace RPGFichas.Domain
         Arma Arma = new();
         Condicoes condicoes = new();
 
-        public void DgvArmasActions(object sender, Label lblMelhorDado)
+        public void DgvArmasActions(string dano, string? crit,Label lblMelhorDado)
         {
-            var dgv = sender as DataGridView;
-            if (dgv?.CurrentCell.Value == null) return;
+            if (dano == null || dano .Length<=0) return;
 
-            Arma? armaUsada = Arma.GetArmas().FirstOrDefault(x => dgv.CurrentCell.OwningRow.Cells["Tipo"].
-            Value.ToString().Contains(x.Name));
+            if (crit!=null) DarDano(dano, crit,lblMelhorDado);
+            else DarDano(dano, null,lblMelhorDado);
 
-            switch (dgv.CurrentCell.OwningColumn.Name)
-            {
-                case "Dano": DarDano(dgv.CurrentCell, lblMelhorDado); break;
-                case "Critico": DarDanoCritico(dgv.CurrentRow, lblMelhorDado); break;
-                case "Ataque": ReduzirMunicao(dgv.CurrentRow); break;
-            }
         }
         public void DgvCondicoesActions(object sender)
         {
@@ -76,32 +69,22 @@ namespace RPGFichas.Domain
 
 
         }
-        private void DarDanoCritico(DataGridViewRow currentRow, Label lblMelhorDado)
+        public void DarDano(string dano,string? crit,Label lblMelhorDado)
         {
-            var CellCritico = currentRow.Cells["Critico"].Value.ToString();
-            if (currentRow.Cells["Dano"].Value == null) return;
-            var CellDano = currentRow.Cells["Dano"].Value.ToString();
-
-            var quantidadeDados = int.Parse(CellDano.Substring(0, CellDano.IndexOf("D"))) * int.Parse(CellCritico.Substring(CellCritico.IndexOf("x") + 1, 1));
-            var quantidadeLados = GetQuantidadeLados(CellDano);
-            var bonus = GetQuantidadeBonus(CellDano);
-
-            Dados.rollDadosBonus(quantidadeDados, quantidadeLados, lblMelhorDado);
-        }
-        public void DarDano(DataGridViewCell dgvCurrentCell,Label lblMelhorDado)
-        {
-            var Cell = dgvCurrentCell.Value.ToString();
-            var quantidadeDados = int.Parse(Cell.Substring(0, Cell.IndexOf("D")));
-            int quantidadeLados = GetQuantidadeLados(Cell);
-            var bonus = GetQuantidadeBonus(Cell);
+            var quantidadeDados = int.Parse(dano.Substring(0, dano.IndexOf("D")));
+            if (crit != null)
+            {
+                quantidadeDados *= int.Parse(crit.Substring(crit.IndexOf("x") + 1, 1));
+            }
+            int quantidadeLados = GetQuantidadeLados(dano);
+            var bonus = GetQuantidadeBonus(dano);
                 
             Dados.rollDadosBonus(quantidadeDados, quantidadeLados,lblMelhorDado,bonus);
         }
-        public void ExcluirLinha(DataGridView dgv, Button addButton) => ExcluirLinha(dgv, addButton, null,null,null);
-        public void ExcluirLinha(DataGridView dgv, Button addButton, DataGridView dgvItem, Button addButtonItem) => ExcluirLinha(dgv, addButton, null, dgvItem,addButtonItem);
-        public void ExcluirLinha(DataGridView dgv,Button addButton,Label lblEspacoAtual, DataGridView dgvItem, Button addButtonItem)
+
+        public void ExcluirLinha(DataGridView dgv, Button addButton, Label lblEspacoAtual, DataGridView dgvItem, Button addButtonItem)
         {
-            if (dgv.CurrentCell == null || dgv.Rows.Count<1) return;
+            if (dgv.CurrentCell == null || dgv.Rows.Count < 1) return;
 
             var confirmResult = MessageBox.Show("Tem Certeza que Quer Remover?", "Tem Certeza?", MessageBoxButtons.YesNo);
             if (confirmResult != DialogResult.Yes) return;
@@ -112,41 +95,18 @@ namespace RPGFichas.Domain
                 * int.Parse(dgv.CurrentRow.Cells["Quantidade"].Value.ToString()))).ToString();
             }
 
-            try
+
+            dgv.Rows.RemoveAt(dgv.CurrentCell.RowIndex);
+
+
+            if (addButton.Location.Y - addButton.Height > dgv.Location.Y)
             {
-                if (dgvItem == null || dgvItem == dgv || dgvItem.Rows.Count <= 0) throw new Exception();
-
-                for (int i = 0; i < dgvItem.Rows.Count; i++)
-                {
-                    if ((string)dgvItem.Rows[i].Cells["Item"].Value == (string)dgv.CurrentRow.Cells["Nome"].Value)
-                    {
-                        dgvItem.Rows.RemoveAt(i);
-                    }
-
-                    if (addButtonItem.Location.Y - addButtonItem.Height > dgvItem.Location.Y)
-                    {
-                        addButtonItem.Location = new Point(addButtonItem.Location.X, addButtonItem.Location.Y - addButtonItem.Height);
-                    }
-
-                };
-
-                dgv.Rows.RemoveAt(dgv.CurrentCell.RowIndex);
+                addButton.Location = new Point(addButton.Location.X, addButton.Location.Y - addButton.Height);
             }
-            catch
-            {
-                dgv.Rows.RemoveAt(dgv.CurrentCell.RowIndex);
-            }
-            finally
-            {
 
-                if (addButton.Location.Y - addButton.Height > dgv.Location.Y)
-                {
-                    addButton.Location = new Point(addButton.Location.X, addButton.Location.Y - addButton.Height);
-                }
-            }
 
         }
-        public void ShowTooltip(object sender, DataGridViewCellEventArgs e)
+        public void ShowTooltipCondicoes(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
 
@@ -206,46 +166,46 @@ namespace RPGFichas.Domain
 
             return quantidadeLados;
         }
-        public void ModificaArma(DataGridViewRow dgvRow, string[] modificadores)
+        public void ModificaArma(Form arma, string[] modificadores)
         {
             for(int i = 0;i < modificadores.Length; i++)
             {
                 switch (modificadores[i])
                 {
                     case "Certeira":
-                        dgvRow.Cells["Ataque"].Value = (int.Parse((string)dgvRow.Cells["Ataque"].Value) + 2).ToString();
+                        arma.Controls["txtAtaque"].Text = "+" + (int.Parse((string)arma.Controls["txtAtaque"].Text) + 2).ToString();
                         break;
                     case "Cruel":
-                        dgvRow.Cells["Dano"].Value += " + 2";
+                        arma.Controls["btnDano"].Text += " + 2";
                         break;
                     case "Perigosa":
-                        var cellCriticoPerigoso = dgvRow.Cells["Critico"].Value.ToString();
-                        dgvRow.Cells["Critico"].Value = int.Parse(cellCriticoPerigoso.Substring(0, cellCriticoPerigoso.IndexOf("/"))) - 2 + cellCriticoPerigoso.Substring(cellCriticoPerigoso.IndexOf("/"));
+                        var cellCriticoPerigoso = arma.Controls["btnCritico"].Text.ToString();
+                        arma.Controls["btnCritico"].Text = int.Parse(cellCriticoPerigoso.Substring(0, cellCriticoPerigoso.IndexOf("/"))) - 2 + cellCriticoPerigoso.Substring(cellCriticoPerigoso.IndexOf("/"));
                         break;
                     case "Alongada":
-                        dgvRow.Cells["Ataque"].Value = (int.Parse((string)dgvRow.Cells["Ataque"].Value) +2).ToString();
+                        arma.Controls["txtAtaque"].Text = "+" + (int.Parse(arma.Controls["txtAtaque"].Text) +2).ToString();
                         break;
                     case "Calibre Grosso":
-                        var cellDanoCG = (string)dgvRow.Cells["Dano"].Value;
-                        dgvRow.Cells["Dano"].Value = (int.Parse(cellDanoCG.Substring(0, cellDanoCG.IndexOf("D"))) + 1) + cellDanoCG.Substring(cellDanoCG.IndexOf("D"));
+                        var cellDanoCG = (string)arma.Controls["btnDano"].Text;
+                        arma.Controls["btnDano"].Text = (int.Parse(cellDanoCG.Substring(0, cellDanoCG.IndexOf("D"))) + 1) + cellDanoCG.Substring(cellDanoCG.IndexOf("D"));
                         break;
                     case "Ferrolho Automático":
-                        if (dgvRow.Cells["Especial"].Value != null) dgvRow.Cells["Especial"].Value += " + ";
-                        dgvRow.Cells["Especial"].Value += "Automática";
+                        if (arma.Controls["txtEspecial"].Text != null) arma.Controls["txtEspecial"].Text += " + ";
+                        arma.Controls["txtEspecial"].Text += "Automática";
                         break;
                     case "Mira laser":
-                        var cellCritico = dgvRow.Cells["Critico"].Value.ToString(); 
-                        dgvRow.Cells["Critico"].Value = int.Parse(cellCritico.Substring(0, cellCritico.IndexOf("/")))-2 + cellCritico.Substring(cellCritico.IndexOf("/"));
+                        var cellCritico = arma.Controls["btnCritico"].Text.ToString();
+                        arma.Controls["btnCritico"].Text = int.Parse(cellCritico.Substring(0, cellCritico.IndexOf("/")))-2 + cellCritico.Substring(cellCritico.IndexOf("/"));
                         break;
                     case "Mira Telescópica":
-                        if (dgvRow.Cells["Alcance"].Value == null) return;
-                        var cellAlcance = dgvRow.Cells["Alcance"].Value.ToString();
+                        if (arma.Controls["txtAlcance"].Text == null) return;
+                        var cellAlcance = arma.Controls["txtAlcance"].Text.ToString();
                         switch (cellAlcance) 
                         {
                             case "Curto":
-                                dgvRow.Cells["Alcance"].Value = "Médio"; break;
+                                arma.Controls["txtAlcance"].Text = "Médio"; break;
                             case "Médio":
-                                dgvRow.Cells["Alcance"].Value = "Longo"; break;
+                                arma.Controls["txtAlcance"].Text = "Longo"; break;
                             default: break;
                         }
                         break;

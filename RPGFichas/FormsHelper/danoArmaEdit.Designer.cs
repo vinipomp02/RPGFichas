@@ -75,6 +75,11 @@
             // 
             this.numDados.Location = new System.Drawing.Point(73, 8);
             this.numDados.Margin = new System.Windows.Forms.Padding(4);
+            this.numDados.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
             this.numDados.Minimum = new decimal(new int[] {
             1,
             0,
@@ -111,7 +116,6 @@
             // 
             // btnOk
             // 
-            this.btnOk.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnOk.Location = new System.Drawing.Point(643, 2);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(92, 49);

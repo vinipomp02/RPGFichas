@@ -26,7 +26,6 @@ namespace RPGFichas.Domain.Collections
             string fileName = Directory.GetParent( Directory.GetCurrentDirectory()).Parent.Parent + @"\Data\Rituais.json";
             string jsonString = File.ReadAllText(fileName);
             Rituais = JsonSerializer.Deserialize<List<Rituais>>(jsonString);
-
             return Rituais;
 
         }

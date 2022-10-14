@@ -48,19 +48,23 @@
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
+            this.pbxImagem = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagem)).BeginInit();
             this.SuspendLayout();
             // 
             // txtDescricao
             // 
+            this.txtDescricao.AcceptsReturn = true;
+            this.txtDescricao.AcceptsTab = true;
             this.txtDescricao.BackColor = System.Drawing.Color.White;
             this.txtDescricao.Font = new System.Drawing.Font("Euphorigenic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDescricao.Location = new System.Drawing.Point(9, 242);
+            this.txtDescricao.Location = new System.Drawing.Point(9, 212);
             this.txtDescricao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.ReadOnly = true;
-            this.txtDescricao.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDescricao.Size = new System.Drawing.Size(215, 87);
+            this.txtDescricao.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtDescricao.Size = new System.Drawing.Size(215, 118);
             this.txtDescricao.TabIndex = 9;
             // 
             // lblRitual
@@ -80,9 +84,9 @@
             this.cbxRitual.BackColor = System.Drawing.Color.White;
             this.cbxRitual.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbxRitual.FormattingEnabled = true;
-            this.cbxRitual.Location = new System.Drawing.Point(58, 2);
+            this.cbxRitual.Location = new System.Drawing.Point(53, 2);
             this.cbxRitual.Name = "cbxRitual";
-            this.cbxRitual.Size = new System.Drawing.Size(165, 26);
+            this.cbxRitual.Size = new System.Drawing.Size(169, 26);
             this.cbxRitual.TabIndex = 1;
             this.cbxRitual.SelectedIndexChanged += new System.EventHandler(this.cbxRitual_SelectedIndexChanged);
             // 
@@ -101,27 +105,27 @@
             // 
             this.lblCirculo.AutoSize = true;
             this.lblCirculo.Font = new System.Drawing.Font("Euphorigenic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCirculo.Location = new System.Drawing.Point(2, 66);
+            this.lblCirculo.Location = new System.Drawing.Point(7, 60);
             this.lblCirculo.Name = "lblCirculo";
-            this.lblCirculo.Size = new System.Drawing.Size(55, 20);
+            this.lblCirculo.Size = new System.Drawing.Size(51, 20);
             this.lblCirculo.TabIndex = 12;
-            this.lblCirculo.Text = "Circulo:";
+            this.lblCirculo.Text = "Circulo";
             // 
             // lblCusto
             // 
             this.lblCusto.AutoSize = true;
             this.lblCusto.Font = new System.Drawing.Font("Euphorigenic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCusto.Location = new System.Drawing.Point(2, 95);
+            this.lblCusto.Location = new System.Drawing.Point(116, 60);
             this.lblCusto.Name = "lblCusto";
-            this.lblCusto.Size = new System.Drawing.Size(45, 20);
+            this.lblCusto.Size = new System.Drawing.Size(41, 20);
             this.lblCusto.TabIndex = 13;
-            this.lblCusto.Text = "Custo:";
+            this.lblCusto.Text = "Custo";
             // 
             // lblAcao
             // 
             this.lblAcao.AutoSize = true;
             this.lblAcao.Font = new System.Drawing.Font("Euphorigenic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAcao.Location = new System.Drawing.Point(3, 126);
+            this.lblAcao.Location = new System.Drawing.Point(11, 105);
             this.lblAcao.Name = "lblAcao";
             this.lblAcao.Size = new System.Drawing.Size(43, 20);
             this.lblAcao.TabIndex = 14;
@@ -132,7 +136,7 @@
             this.lblAlcance.AutoSize = true;
             this.lblAlcance.BackColor = System.Drawing.Color.White;
             this.lblAlcance.Font = new System.Drawing.Font("Euphorigenic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAlcance.Location = new System.Drawing.Point(3, 154);
+            this.lblAlcance.Location = new System.Drawing.Point(114, 105);
             this.lblAlcance.Name = "lblAlcance";
             this.lblAlcance.Size = new System.Drawing.Size(62, 20);
             this.lblAlcance.TabIndex = 15;
@@ -143,7 +147,7 @@
             this.lblDuracao.AutoSize = true;
             this.lblDuracao.BackColor = System.Drawing.Color.White;
             this.lblDuracao.Font = new System.Drawing.Font("Euphorigenic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDuracao.Location = new System.Drawing.Point(3, 186);
+            this.lblDuracao.Location = new System.Drawing.Point(3, 154);
             this.lblDuracao.Name = "lblDuracao";
             this.lblDuracao.Size = new System.Drawing.Size(63, 20);
             this.lblDuracao.TabIndex = 16;
@@ -154,7 +158,7 @@
             this.lblResistencia.AutoSize = true;
             this.lblResistencia.BackColor = System.Drawing.Color.White;
             this.lblResistencia.Font = new System.Drawing.Font("Euphorigenic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblResistencia.Location = new System.Drawing.Point(3, 215);
+            this.lblResistencia.Location = new System.Drawing.Point(3, 183);
             this.lblResistencia.Name = "lblResistencia";
             this.lblResistencia.Size = new System.Drawing.Size(84, 20);
             this.lblResistencia.TabIndex = 17;
@@ -172,16 +176,16 @@
             // txtCirculo
             // 
             this.txtCirculo.BackColor = System.Drawing.Color.White;
-            this.txtCirculo.Location = new System.Drawing.Point(63, 64);
+            this.txtCirculo.Location = new System.Drawing.Point(2, 78);
             this.txtCirculo.Name = "txtCirculo";
             this.txtCirculo.ReadOnly = true;
-            this.txtCirculo.Size = new System.Drawing.Size(159, 25);
+            this.txtCirculo.Size = new System.Drawing.Size(101, 25);
             this.txtCirculo.TabIndex = 3;
             // 
             // txtResistencia
             // 
             this.txtResistencia.BackColor = System.Drawing.Color.White;
-            this.txtResistencia.Location = new System.Drawing.Point(88, 212);
+            this.txtResistencia.Location = new System.Drawing.Point(88, 180);
             this.txtResistencia.Name = "txtResistencia";
             this.txtResistencia.ReadOnly = true;
             this.txtResistencia.Size = new System.Drawing.Size(135, 25);
@@ -190,7 +194,7 @@
             // txtDuracao
             // 
             this.txtDuracao.BackColor = System.Drawing.Color.White;
-            this.txtDuracao.Location = new System.Drawing.Point(72, 183);
+            this.txtDuracao.Location = new System.Drawing.Point(72, 151);
             this.txtDuracao.Name = "txtDuracao";
             this.txtDuracao.ReadOnly = true;
             this.txtDuracao.Size = new System.Drawing.Size(152, 25);
@@ -199,28 +203,28 @@
             // txtAlcance
             // 
             this.txtAlcance.BackColor = System.Drawing.Color.White;
-            this.txtAlcance.Location = new System.Drawing.Point(64, 152);
+            this.txtAlcance.Location = new System.Drawing.Point(107, 120);
             this.txtAlcance.Name = "txtAlcance";
             this.txtAlcance.ReadOnly = true;
-            this.txtAlcance.Size = new System.Drawing.Size(159, 25);
+            this.txtAlcance.Size = new System.Drawing.Size(117, 25);
             this.txtAlcance.TabIndex = 6;
             // 
             // txtAcao
             // 
             this.txtAcao.BackColor = System.Drawing.Color.White;
-            this.txtAcao.Location = new System.Drawing.Point(48, 123);
+            this.txtAcao.Location = new System.Drawing.Point(5, 120);
             this.txtAcao.Name = "txtAcao";
             this.txtAcao.ReadOnly = true;
-            this.txtAcao.Size = new System.Drawing.Size(175, 25);
+            this.txtAcao.Size = new System.Drawing.Size(96, 25);
             this.txtAcao.TabIndex = 5;
             // 
             // txtCusto
             // 
             this.txtCusto.BackColor = System.Drawing.Color.White;
-            this.txtCusto.Location = new System.Drawing.Point(47, 92);
+            this.txtCusto.Location = new System.Drawing.Point(109, 78);
             this.txtCusto.Name = "txtCusto";
             this.txtCusto.ReadOnly = true;
-            this.txtCusto.Size = new System.Drawing.Size(175, 25);
+            this.txtCusto.Size = new System.Drawing.Size(113, 25);
             this.txtCusto.TabIndex = 4;
             // 
             // btnAdicionar
@@ -228,7 +232,7 @@
             this.btnAdicionar.BackColor = System.Drawing.Color.White;
             this.btnAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionar.Font = new System.Drawing.Font("Euphorigenic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAdicionar.Location = new System.Drawing.Point(9, 333);
+            this.btnAdicionar.Location = new System.Drawing.Point(8, 337);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(165, 59);
             this.btnAdicionar.TabIndex = 21;
@@ -241,7 +245,7 @@
             this.btnCancel.BackColor = System.Drawing.Color.White;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.ForeColor = System.Drawing.Color.Red;
-            this.btnCancel.Location = new System.Drawing.Point(180, 333);
+            this.btnCancel.Location = new System.Drawing.Point(179, 337);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(43, 59);
             this.btnCancel.TabIndex = 22;
@@ -255,7 +259,7 @@
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Euphorigenic", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnExcluir.ForeColor = System.Drawing.Color.Red;
-            this.btnExcluir.Location = new System.Drawing.Point(9, 333);
+            this.btnExcluir.Location = new System.Drawing.Point(8, 337);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(214, 23);
             this.btnExcluir.TabIndex = 20;
@@ -264,13 +268,30 @@
             this.btnExcluir.Visible = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
+            // pbxImagem
+            // 
+            this.pbxImagem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbxImagem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxImagem.Location = new System.Drawing.Point(2, 366);
+            this.pbxImagem.Name = "pbxImagem";
+            this.pbxImagem.Size = new System.Drawing.Size(222, 215);
+            this.pbxImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxImagem.TabIndex = 23;
+            this.pbxImagem.TabStop = false;
+            this.pbxImagem.Visible = false;
+            // 
             // RitualForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(226, 397);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(226, 400);
             this.ControlBox = false;
+            this.Controls.Add(this.lblAlcance);
+            this.Controls.Add(this.lblAcao);
+            this.Controls.Add(this.lblCusto);
+            this.Controls.Add(this.lblCirculo);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAdicionar);
@@ -283,20 +304,19 @@
             this.Controls.Add(this.txtElemento);
             this.Controls.Add(this.lblResistencia);
             this.Controls.Add(this.lblDuracao);
-            this.Controls.Add(this.lblAlcance);
-            this.Controls.Add(this.lblAcao);
-            this.Controls.Add(this.lblCusto);
-            this.Controls.Add(this.lblCirculo);
             this.Controls.Add(this.lblElemento);
             this.Controls.Add(this.cbxRitual);
             this.Controls.Add(this.lblRitual);
             this.Controls.Add(this.txtDescricao);
+            this.Controls.Add(this.pbxImagem);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Euphorigenic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "RitualForm";
             this.Text = "RitualForm";
             this.Load += new System.EventHandler(this.RitualForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,5 +348,6 @@
         private Button btnAdicionar;
         private Button btnCancel;
         private Button btnExcluir;
+        private PictureBox pbxImagem;
     }
 }
